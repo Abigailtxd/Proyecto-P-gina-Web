@@ -76,7 +76,7 @@
 	<li class="dropdown" role="presentation"><a href="index.html">Inicio</a> <!-- /.Dropdown --> <!-- Dropdown Services --></li>
 	<li class="dropdown"><a href="espe.html"><font color="#ca6624">Especialidades</font></a></li>
 	<!-- /.Dropdown About --><!-- Portafolio -->
-	<li class="dropdown"><a id="institucional-btn" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Institucional </a>
+	<li class="dropdown"><a id="institucional-btn" style="background-color: #AB2A3E;" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Institucional </a>
 	<ul class="dropdown-menu">
 		<li><a href="direccion.html">Dirección General</a></li>
 		<li><a href="admision.html">Admision</a></li>
@@ -1158,49 +1158,42 @@ Tel: (021) 608 663</p>
 
 <script>
 $(document).ready(function () {
-  // Manejo de tabs
-  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-    var target = $(e.target).attr("href"); // id del tab activo
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  var target = $(e.target).attr("href"); // id del tab activo
+  var colorNav = ""; // variable para color del nav
+  var textColor = "white"; // por defecto blanco
 
-    // Resetear color de navbar
-    $("#lightnav").css("background-color", "");
+  // Resetear primero
+  $("#lightnav, #institucional-btn, #institucional-btn + .dropdown-menu")
+    .css("background-color", "")
+    .css("color", "");
 
-    // Resetear color del botón Institucional
-    $("#institucional-btn").css("background-color", "").css("color", ""); 
+  if (target === "#info") {
+    colorNav = "#AB2A3E"; textColor = "white";
+  } else if (target === "#mecanica_ind") {
+    colorNav = "#008000"; textColor = "white";
+  } else if (target === "#mecanica_auto") {
+    colorNav = "#000080"; textColor = "white";
+  } else if (target === "#construccion") {
+    colorNav = "#FFFACD"; textColor = "black";
+  } else if (target === "#electronica") {
+    colorNav = "#808080"; textColor = "white";
+  } else if (target === "#electromecanica") {
+    colorNav = "#0000FF"; textColor = "white";
+  } else if (target === "#electricidad") {
+    colorNav = "#87CEEB"; textColor = "black";
+  } else if (target === "#quimica") {
+    colorNav = "#03BB85"; textColor = "white";
+  }
 
-    // Cambiar color según tab
-    if (target === "#info") {
-      $("#lightnav").css("background-color", "#AB2A3E");
-      $("#institucional-btn").css("background-color", "#AB2A3E").css("color", "white");
-    } else if (target === "#mecanica_ind") {
-      $("#lightnav").css("background-color", "#008000");
-      $("#institucional-btn").css("background-color", "#008000").css("color", "white");
-    } else if (target === "#mecanica_auto") {
-      $("#lightnav").css("background-color", "#000080");
-      $("#institucional-btn").css("background-color", "#000080").css("color", "white");
-    } else if (target === "#construccion") {
-      $("#lightnav").css("background-color", "#FFFACD");
-      $("#institucional-btn").css("background-color", "#FFFACD").css("color", "black");
-    } else if (target === "#electronica") {
-      $("#lightnav").css("background-color", "#808080");
-      $("#institucional-btn").css("background-color", "#808080").css("color", "white");
-    } else if (target === "#electromecanica") {
-      $("#lightnav").css("background-color", "#0000FF");
-      $("#institucional-btn").css("background-color", "#0000FF").css("color", "white");
-    } else if (target === "#electricidad") {
-      $("#lightnav").css("background-color", "#87CEEB");
-      $("#institucional-btn").css("background-color", "#87CEEB").css("color", "black");
-    } else if (target === "#quimica") {
-      $("#lightnav").css("background-color", "#03BB85");
-      $("#institucional-btn").css("background-color", "#03BB85").css("color", "white");
-    }
-  });
-
-  // Evitar que el botón se ponga blanco al hacer click
-  $("#institucional-btn").on("click", function(e){
-    e.preventDefault(); // previene el cambio de color por default
-    $(this).css("background-color", $(this).css("background-color"));
-  });
+  // aplicar colores
+  if (colorNav !== "") {
+    $("#lightnav").css("background-color", colorNav);
+    $("#institucional-btn").css({"background-color": colorNav, "color": textColor});
+    $("#institucional-btn + .dropdown-menu").css("background-color", colorNav);
+    $("#institucional-btn + .dropdown-menu a").css("color", textColor);
+  }
+});
 });
 </script>
 

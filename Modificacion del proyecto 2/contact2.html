@@ -28,6 +28,40 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
+  /* Fuerza estilo granate en las otras páginas */
+#lightnav.navbar-default .dropdown-menu {
+  background-color: #AB2A3E !important;
+  border-radius: 0 0 2em 2em !important; /* mantiene bordes redondeados */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease; /* animación suave */
+}
+
+#lightnav.navbar-default .dropdown-menu.show,
+#lightnav.navbar-default .open > .dropdown-menu {
+  max-height: 500px; /* altura animada */
+  opacity: 1;
+}
+
+#institucional-btn {
+  background-color: #AB2A3E !important;
+  color: white !important;
+  border-radius: 2em;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Links dentro del menú */
+#lightnav.navbar-default .dropdown-menu > li > a {
+  color: white !important;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+#lightnav.navbar-default .dropdown-menu > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* efecto hover */
+}
+
   .btn-contacto {
   border: 2px solid #AB2A3E; /* borde granate */
   color: #AB2A3E;           /* texto granate */
@@ -67,6 +101,22 @@
 }
 #lightnav a:hover {
     color: black !important;
+}
+/* Estado normal */
+.social-buttons .fa-facebook {
+  color: black;              /* color inicial del ícono */
+  border: 3px solid #AB2A3E; /* borde granate */
+  padding-top: 10px;
+  transition: all 0.3s ease;
+  margin-left: -2px; /* mueve hacia la derecha */
+  margin-top: -9.25px;  /* baja el ícono */
+}
+
+/* Hover */
+.social-buttons .fa-facebook:hover {
+  color: white;              /* ícono blanco */
+  background-color: #AB2A3E; /* fondo granate */
+  border-color: #AB2A3E;     /* borde granate */
 }
 </style>
 </head>

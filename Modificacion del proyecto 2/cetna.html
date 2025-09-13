@@ -18,6 +18,40 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
+	/* Fuerza estilo granate en las otras páginas */
+#lightnav.navbar-default .dropdown-menu {
+  background-color: #AB2A3E !important;
+  border-radius: 0 0 2em 2em !important; /* mantiene bordes redondeados */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease; /* animación suave */
+}
+
+#lightnav.navbar-default .dropdown-menu.show,
+#lightnav.navbar-default .open > .dropdown-menu {
+  max-height: 500px; /* altura animada */
+  opacity: 1;
+}
+
+#institucional-btn {
+  background-color: #AB2A3E !important;
+  color: white !important;
+  border-radius: 2em;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Links dentro del menú */
+#lightnav.navbar-default .dropdown-menu > li > a {
+  color: white !important;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+#lightnav.navbar-default .dropdown-menu > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* efecto hover */
+}
+
 /* estilo base */
 .dropdown-menu {
   display: block !important;        /* siempre block para poder animar */

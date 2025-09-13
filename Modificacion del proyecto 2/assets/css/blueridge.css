@@ -160,7 +160,7 @@ Buttons
 /* White Button Small */
 .btn-white-sm123{padding:10px 25px;margin-top:-30px;border-color:#FFF;border-radius:0;text-transform:uppercase;font-family: 'Dosis', sans-serif;;font-size:16px;font-weight:300;color:#FFF;background-color:transparent;border:2px solid;-webkit-transition:all .6s;-moz-transition:all .6s;transition:all .6s}
 .btn-white-sm{padding:10px 25px;margin-bottom:10px;border-color:#FFF;border-radius:0;text-transform:uppercase;font-family: 'Dosis', sans-serif;;font-size:16px;font-weight:300;color:#FFF;background-color:transparent;border:2px solid;-webkit-transition:all .6s;-moz-transition:all .6s;transition:all .6s}
-.btn-white-sm:hover,.btn-white-sm:focus,.btn-white-sm:active,.btn-white-sm.active,.open .dropdown-toggle.btn-white-sm{border-color:#FFF;color:#4AA8D3;background-color:#FFF}
+.btn-white-sm:hover,.btn-white-sm:focus,.btn-white-sm:active,.btn-white-sm.active,.open .dropdown-toggle.btn-white-sm{border-color:#FFF;color:#AB2A3E;background-color:#FFF}
 .btn-white-sm:active,.btn-white-sm.active,.open .dropdown-toggle.btn-white-sm{background-image:none}
 .btn-white-sm.disabled,.btn-white-sm[disabled],fieldset[disabled] .btn-white-sm,.btn-white-sm.disabled:hover,.btn-white-sm[disabled]:hover,fieldset[disabled] .btn-white-sm:hover,.btn-white-sm.disabled:focus,.btn-white-sm[disabled]:focus,fieldset[disabled] .btn-white-sm:focus,.btn-white-sm.disabled:active,.btn-white-sm[disabled]:active,fieldset[disabled] .btn-white-sm:active,.btn-white-sm.disabled.active,.btn-white-sm[disabled].active,fieldset[disabled] .btn-white-sm.active{border-color:#FFF;background-color:#FFF}
 .btn-white-sm .badge{color:#FFF;background-color:#4AA8D3}
@@ -259,9 +259,9 @@ Navigation
 #lightnav.navbar-default.navbar-shrink .navbar-brand{font-size:1.5em}
 }
 #lightnav.navbar-default .navbar-nav > .open > a,#lightnav.navbar-default .navbar-nav > .open > a:hover,#lightnav.navbar-default .navbar-nav > .open > a:focus {color: #1c1e21 !important;background-color: #f9f9f9;}
-#lightnav.navbar-default .dropdown-menu {background-color: #AB2A3E !important;-webkit-background-clip: padding-box; background-clip: padding-box;border: 0px solid #ccc;border: 0px solid rgba(0, 0, 0, .15);border-radius: 0px;  -webkit-box-shadow:none !important;box-shadow: none !important;}
+#lightnav.navbar-default .dropdown-menu {background-color: #AB2A3E;-webkit-background-clip: padding-box; background-clip: padding-box;border: 0px solid #ccc;border: 0px solid rgba(0, 0, 0, .15);border-radius: 0px;  -webkit-box-shadow:none !important;box-shadow: none !important;}
 #lightnav.navbar-default .dropdown-menu > li > a {padding: 10px 20px;}
-#lightnav.navbar-default .dropdown-menu > li > a:hover {background:#7e202e;color:#FFF}
+#lightnav.navbar-default .dropdown-menu > li > a:hover {background:rgba(0, 0, 0, 0.274);color:#FFF}
 @media(max-width:991px) {
 #lightnav.navbar-default .dropdown-menu {right: auto;left: 0;}}
 #lightnav .navbar-nav > li > .dropdown-menu {margin-top:5px;}
