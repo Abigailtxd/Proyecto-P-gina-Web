@@ -1,0 +1,274 @@
+Return-Path: <informatica=ctnasuncion.edu.py@b.wordpress.com>
+Delivered-To: informatica@ctnasuncion.edu.py
+Received: from eldorado.websitewelcome.com
+	by eldorado.websitewelcome.com with LMTP
+	id oKr1AFIRQWB+hAMA3+HKTQ
+	(envelope-from <informatica=ctnasuncion.edu.py@b.wordpress.com>)
+	for <informatica@ctnasuncion.edu.py>; Thu, 04 Mar 2021 10:56:50 -0600
+Return-path: <informatica=ctnasuncion.edu.py@b.wordpress.com>
+Envelope-to: informatica@ctnasuncion.edu.py
+Delivery-date: Thu, 04 Mar 2021 10:56:50 -0600
+Received: from smtp3.dfw.wordpress.com ([192.0.81.23]:30822)
+	by eldorado.websitewelcome.com with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.93)
+	(envelope-from <informatica=ctnasuncion.edu.py@b.wordpress.com>)
+	id 1lHrHN-000xzW-Vm
+	for informatica@ctnasuncion.edu.py; Thu, 04 Mar 2021 10:56:50 -0600
+Received: from wordpress.com (unknown [192.0.86.189])
+	by smtp3.dfw.wordpress.com (Postfix) with ESMTP id 4Drxpv5CKmzPlJ0
+	for <informatica@ctnasuncion.edu.py>; Thu,  4 Mar 2021 16:56:39 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=wordpress.com;
+	s=automattic1; t=1614876999;
+	bh=VauOegAQymyTzwaXlYZv1YYcahfH0o7R5FBdUMlNfxw=;
+	h=Date:To:From:Subject:List-Help:List-Unsubscribe:List-Subscribe:
+	 List-Archive:From;
+	b=MOp0RLWiPo5CXzNCEfQ6DiOolaJtZxPernSgRvM0C0xziEQAZBUKWjxkmCQuHY9cb
+	 IE5IsnzpbU7SiCopezFkNhHsZuycTbzIwKX5B+AL497EGUL+v8ONL0rCd8mznQHOvs
+	 7Flsf8N/my/7Urs+vOxer5VrmTHlFkYuCstHlH5lz+PrSV4aTJjSOCAutQZLiytRPN
+	 TIfhpSRaEBp3X+s6yfg9saQyzuLiD39IMUjpEeTRZbiS8mlH3mJjiPfX2UFPqeNKj2
+	 vZ4NsqsXKVgObaCvGCJZJG98P9Epj6Rkg7bMtaH7dvSNiXPUZeSlKLTbJ4L7R8d69E
+	 HZU8vvBLWAe3g==
+Date: Thu, 4 Mar 2021 16:56:39 +0000
+To: informatica@ctnasuncion.edu.py
+From: Blog CTN <donotreply@wordpress.com>
+Subject: [New post] 274
+Message-ID: <155107491.274.0@wordpress.com>
+List-Help: <https://en.support.wordpress.com/following/>
+List-Unsubscribe: <https://subscribe.wordpress.com/?key=e40c9dcede46a7d5e38806b2080d189f&amp;email=informatica%40ctnasuncion.edu.py&amp;b=NLgq7OCCuwRlmpEuFm_TaGeEThxGqUiwEhkioPs35YpxAtP5MwNYtKv24vguUOEq8MU8aK8m_iNe3gmLb_12N-GsBI0HaR5L2tnu9L3rvylkZ4A%3D>
+List-Subscribe: <http://ctnasuncion.edu.py/blogctn>
+List-Archive: <http://ctnasuncion.edu.py/blogctn>
+Precedence: bulk
+X-Automattic-Destination: aW5mb3JtYXRpY2FAY3RuYXN1bmNpb24uZWR1LnB5
+X-Automattic-Tracking: 0:2:ScIGBhzK66nwiBhtvfbesw==.KNxtVhJ9DO1aFssXmA3n7qvSS91Mp9zhzNnoNProJBl9Exi9h7yFMN56CXjvb5iK:155107491:274:148784728
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_pgbABepgcFh51esImDljYDBoGFqTnTfseoZNjMSZs"
+Content-Transfer-Encoding: 8bit
+
+This is a multi-part message in MIME format.
+
+--b1_pgbABepgcFh51esImDljYDBoGFqTnTfseoZNjMSZs
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Post   : 274
+URL    : http://ctnasuncion.edu.py/blogctn/index.php/2021/03/04/274/
+Posted : March 4, 2021 at 4:56 pm
+Author : admin
+
+Calendarización Admisión 2021 ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/Clendarizacion-Admision-2021.pdf ) Descargar ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/Clendarizacion-Admision-2021.pdf )
+
+Add a comment to this post: http://ctnasuncion.edu.py/blogctn/index.php/2021/03/04/274/#respond
+
+-- 
+
+
+Manage Subscriptions
+https://subscribe.wordpress.com/?key=e40c9dcede46a7d5e38806b2080d189f&email=informatica%40ctnasuncion.edu.py
+
+Unsubscribe:
+https://subscribe.wordpress.com/?key=e40c9dcede46a7d5e38806b2080d189f&email=informatica%40ctnasuncion.edu.py&b=NLgq7OCCuwRlmpEuFm_TaGeEThxGqUiwEhkioPs35YpxAtP5MwNYtKv24vguUOEq8MU8aK8m_iNe3gmLb_12N-GsBI0HaR5L2tnu9L3rvylkZ4A%3D
+
+--b1_pgbABepgcFh51esImDljYDBoGFqTnTfseoZNjMSZs
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A<html xmlns=3D"http://www.=
+w3.org/1999/xhtml"><head><style type=3D"text/css" media=3D"all">=0A=09a:hov=
+er {=09color: red;=09}=0A=09a {=0A=09=09text-decoration: underline;=0A=09=
+=09color: #0088cc;=0A=09}=0A=0A=09a.primaryactionlink:link, a.primaryaction=
+link:visited { background-color: #2585B2; color: #fff; }=0A=09a.primaryacti=
+onlink:hover, a.primaryactionlink:active { background-color: #11729E !impor=
+tant; color: #fff !important; }=0A=0A/*=0A =09@media only screen and (max-d=
+evice-width: 480px) {=0A=09=09 .post { min-width: 700px !important; }=0A=09=
+}=0A*/=0A=09</style><title>WordPress.com</title><!--[if gte mso 12]>=0A=09<=
+style type=3D"text/css" media=3D"all">=0A=09body {=0A=09font-family: arial;=
+=0A=09font-size: 0.8em;=0A=09}=0A=09.post, .comment {=0A=09background-color=
+: white !important;=0A=09line-height: 1.4em !important;=0A=09}=0A=09</style=
+>=0A=09<![endif]--><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"></head><body class=3D"subscription-body-tag">=0A=0A<table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#DDDDDD" style=
+=3D"width: 100%; background: #DDDDDD;"><tr><td>=0A=09=09=09=09=09<span styl=
+e=3D"display:none !important">=0A=09=09=09=09admin posted: "=0ACalendarizac=
+i=C3=B3n Admisi=C3=B3n 2021Descargar=0A=0A=0A=0A=0A"=09=09=09</span>=0A=09=
+=09=09=09=09=09<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center" class=3D"subscribe-body" style=3D"width: 100%; padding: 10px">=
+<tr><td>=0A=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"direction: ltr=
+; max-width: 600px; margin: 0 auto; overflow: hidden;">=0A=09=09=09=09=09=
+=09=09<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f=
+fffff" class=3D"subscribe-wrapper" style=3D"width: 100%; background-color: =
+#fff; text-align: left; max-width: 1024px; min-width: 320px; margin: 0 auto=
+;"><tr><td>=0A=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" height=3D"8" background=3D"https://s0.wp.com/i/ema=
+ils/stripes.gif" class=3D"subscribe-header-wrap" style=3D"width: 100%; back=
+ground-image: url(https://s0.wp.com/i/emails/stripes.gif); background-repea=
+t: repeat-x; background-color: #43A4D0; height: 8px;"><tr><td></td>=0A=09=
+=09=09=09=09=09=09=09=09=09=09</tr></table><table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"subscribe-header" style=3D"width: 100%; c=
+olor: #08c; font-size: 1.6em; background-color: #EFEFEF; border-bottom: 1px=
+ solid #DDD; margin: 0; padding: 0;"><tr><td>=0A=09=09=09=09=09=09=09=09=09=
+=09=09=09=09<h2 class=3D"subscribe-title" style=3D'margin: .4em 0 .3em; fon=
+t-size: 1.8em; font-size: 16px!important; line-height: 1; font-weight: 400;=
+ color: #464646; font-family: "Helvetica Neue", Helvetica, Arial, sans-seri=
+f; margin: 5px 20px!important; padding: 0;'>=0A=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09New post on <strong>Blog CTN</strong>=09=09=09=09=09=09=09=
+=09=09=09=09=09=09</h2>=0A=09=09=09=09=09=09=09=09=09=09=09=09</td>=0A=09=
+=09=09=09=09=09=09=09=09=09=09=09<td style=3D"text-align: right;">=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09=09<img border=3D"0" class=3D"head-avatar" sr=
+c=3D"https://i0.wp.com/ctnasuncion.edu.py/blogctn/wp-content/uploads/2018/1=
+1/cropped-logo2-1.png?resize=3D32%2C32" alt=3D"" width=3D"32" height=3D"32"=
+ style=3D"vertical-align: middle; margin: 5px 20px 5px 0; vertical-align: m=
+iddle;"></td>=0A=09=09=09=09=09=09=09=09=09=09=09</tr></table><table style=
+=3D"width: 100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"20" bgcolor=
+=3D"#ffffff"><tr><td>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09<table style=
+=3D"width: 100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td v=
+align=3D"top" class=3D"the-post">=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table style=3D=
+"width: 100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td styl=
+e=3D"width: 60px !important; white-space: nowrap; vertical-align: top;">=0A=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"http=
+://ctnasuncion.edu.py/blogctn/?author=3D1" style=3D"color: #2585B2; display=
+: block; margin-right: 10px;"><img border=3D"0" alt=3D"" src=3D"http://0.gr=
+avatar.com/avatar/6d26304b015f3a7c097013f9aa4bcc57?s=3D50&amp;d=3Dhttp%3A%2=
+F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp=
+;r=3DG" class=3D"avatar avatar-50" height=3D"50" width=3D"50"></a>=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>=0A=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09<h2 class=3D"post-title" style=3D"margi=
+n: .4em 0 .3em; font-size: 1.8em; font-size: 1.6em; color: #555; margin: 0;=
+ font-size: 20px;"><a href=3D"http://ctnasuncion.edu.py/blogctn/index.php/2=
+021/03/04/274/" style=3D"color: #2585B2; text-decoration: none;">274</a></h=
+2>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<span styl=
+e=3D"color: #888;">by <a href=3D"http://ctnasuncion.edu.py/blogctn/?author=
+=3D1" style=3D"color: #2585B2; color: #888 !important;">admin</a> </span>=
+=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr></table><div class=3D"=
+post-content" style=3D"direction: ltr; margin-top: 1em; max-width: 560px;">=
+=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09<div class=3D"wp-block-file" style=3D"dire=
+ction: ltr; margin-bottom: 1.5em;">=0A<a style=3D"color: #2585B2;" href=3D"=
+http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/Clendarizacion=
+-Admision-2021.pdf">Calendarizaci=C3=B3n Admisi=C3=B3n 2021</a><a href=3D"h=
+ttp://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/Clendarizacion-=
+Admision-2021.pdf" class=3D"wp-block-file__button" download style=3D"color:=
+ #2585B2; background: #32373c; border-radius: 2em; color: #fff; font-size: =
+.8em; padding: .5em 1em; margin-left: .75em; text-decoration: none;">Descar=
+gar</a>=0A</div>=0A<div style=3D"direction: ltr; clear: both"></div>=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09</div>=0A=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div class=3D"meta" s=
+tyle=3D"direction: ltr; color: #999; font-size: .9em; margin-top: 4px; line=
+-height: 160%; padding: 15px 0 15px; border-top: 1px solid #eee; border-bot=
+tom: 1px solid #eee; overflow: hidden">=0A=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09<strong><a style=3D"color: #2585B2;" href=3D"http://ct=
+nasuncion.edu.py/blogctn/?author=3D1">admin</a></strong> | March 4, 2021 at=
+ 4:56 pm | URL: <a style=3D"color: #2585B2;" href=3D"https://wp.me/pauOxJ-4=
+q">https://wp.me/pauOxJ-4q</a>=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</div>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=0A=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=0A=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09<p class=3D"subscribe-action-links" style=3D'direction: ltr; fo=
+nt-size: 14px; line-height: 1.4em; color: #444; font-family: "Helvetica Neu=
+e", Helvetica, Arial, sans-serif; margin: 0 0 1em; font-size: 14px; color: =
+#666; padding: 0; width: auto; padding-top: 1em; padding-bottom: 0em; margi=
+n-bottom: 0; margin-left: 0; padding-left: 0;'>=0A=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09</p><table class=3D"auto-width" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" style=3D"width: 100%; width: auto"><tr><td=
+ style=3D"width: 10px;"><a href=3D"http://ctnasuncion.edu.py/blogctn/index.=
+php/2021/03/04/274/#respond" style=3D"color: #2585B2; -moz-border-radius: 1=
+0em; -webkit-border-radius: 10em; border-radius: 10em; border: 1px solid #1=
+1729E; text-decoration: none; color: #fff; text-shadow: 0 1px 0 #11729E; ba=
+ckground-color: #2585B2; padding: 5px 15px; font-size: 16px; line-height: 1=
+.4em; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-weigh=
+t: normal; margin-left: 0; white-space: nowrap;">Comment</a></td>=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<td>=C2=A0=C2=A0=C2=A0<a style=3D"color: #258=
+5B2;" class=3D"subscribe-action-link" href=3D"http://ctnasuncion.edu.py/blo=
+gctn/index.php/2021/03/04/274/#comments">See all comments</a></td>=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</tr></table></td>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr><=
+/table></td>=0A=09=09=09=09=09=09=09=09=09=09=09</tr></table><table border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"20" bgcolor=3D"#efefef" class=3D"su=
+bscribe-wrapper-sub" style=3D"width: 100%; background-color: #efefef; text-=
+align: left; border-top: 1px solid #ddd;"><tr><td class=3D"subscribe-conten=
+t" style=3D'border-top: 1px solid #f3f3f3; color: #888; font-family: "Helve=
+tica Neue", Helvetica, Arial, sans-serif; font-size: 14px; background: #efe=
+fef;'>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D'direction: ltr;=
+ font-size: 14px; line-height: 1.4em; color: #444; font-family: "Helvetica =
+Neue", Helvetica, Arial, sans-serif; margin: 0 0 1em; font-size: 12px; line=
+-height: 1.4em; margin: 0px 0px 10px 0px;'>=0A=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09<a style=3D"color: #2585B2;" href=3D"https://public-api.word=
+press.com/bar/?stat=3Dgroovemails-events&amp;bin=3Dwpcom_email_click&amp;re=
+direct_to=3Dhttps%3A%2F%2Fsubscribe.wordpress.com%2F%3Fkey%3De40c9dcede46a7=
+d5e38806b2080d189f%26email%3Dinformatica%2540ctnasuncion.edu.py%26b%3DNLgq7=
+OCCuwRlmpEuFm_TaGeEThxGqUiwEhkioPs35YpxAtP5MwNYtKv24vguUOEq8MU8aK8m_iNe3gmL=
+b_12N-GsBI0HaR5L2tnu9L3rvylkZ4A%253D&amp;sr=3D1&amp;signature=3Dc41e0b91854=
+077486cc4fa6f5945646d&amp;user=3D148784728&amp;_e=3DeyJlcnJvciI6bnVsbCwiYmx=
+vZ19pZCI6MTU1MTA3NDkxLCJibG9nX2xhbmciOiJlbiIsInNpdGVfaWRfbGFiZWwiOiJqZXRwYW=
+NrIiwiZW1haWxfbmFtZSI6ImVtYWlsX3N1YnNjcmlwdGlvbiIsIl91aSI6MTQ4Nzg0NzI4LCJlb=
+WFpbF9pZCI6IjJhMzExM2Y0NGY4YjAyZTVkMWM3Zjc5ZTFkYWU5NjQ5IiwiZGF0ZV9zZW50Ijoi=
+MjAyMS0wMy0wNCIsImxvY2FsZSI6ImVuIiwiY3VycmVuY3kiOiJVU0QiLCJjb3VudHJ5X2NvZGV=
+fc2lnbnVwIjoiUFkiLCJkb21haW4iOiJjdG5hc3VuY2lvbi5lZHUucHkiLCJmcmVxdWVuY3kiOi=
+IwIiwiZGlnZXN0IjoiMCIsImhhc19odG1sIjoiMSIsImFuY2hvcl90ZXh0IjoiVW5zdWJzY3JpY=
+mUiLCJfZHIiOm51bGwsIl9kbCI6IlwveG1scnBjLnBocD9zeW5jPTEmY29kZWM9ZGVmbGF0ZS1q=
+c29uLWFycmF5JnRpbWVzdGFtcD0xNjE0ODc2OTk3LjMmcXVldWU9c3luYyZob21lPWh0dHAlM0E=
+lMkYlMkZjdG5hc3VuY2lvbi5lZHUucHklMkZibG9nY3RuJnNpdGV1cmw9aHR0cCUzQSUyRiUyRm=
+N0bmFzdW5jaW9uLmVkdS5weSUyRmJsb2djdG4mY2Q9MC4wMDIwJnBkPTAuMDA1NSZpZGM9MSZ0a=
+W1lb3V0PTE1JmZvcj1qZXRwYWNrJndwY29tX2Jsb2dfaWQ9MTU1MTA3NDkxIiwiX3V0Ijoid3Bj=
+b206dXNlcl9pZCIsIl91bCI6ImN0bmFzdW5jaW9uMjAxOCIsIl9lbiI6IndwY29tX2VtYWlsX2N=
+saWNrIiwiX3RzIjoxNjE0ODc2OTk5NzIzLCJicm93c2VyX3R5cGUiOiJwaHAtYWdlbnQiLCJfYX=
+VhIjoid3Bjb20tdHJhY2tzLWNsaWVudC12MC4zIiwiYmxvZ190eiI6IjAiLCJ1c2VyX2xhbmciO=
+iJlbiJ9&amp;_z=3Dz">Unsubscribe</a> to no longer receive posts from Blog CT=
+N.<br>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09Change your email settin=
+gs at <a style=3D"color: #2585B2;" href=3D"https://public-api.wordpress.com=
+/bar/?stat=3Dgroovemails-events&amp;bin=3Dwpcom_email_click&amp;redirect_to=
+=3Dhttps%3A%2F%2Fsubscribe.wordpress.com%2F%3Fkey%3De40c9dcede46a7d5e38806b=
+2080d189f%26email%3Dinformatica%2540ctnasuncion.edu.py&amp;sr=3D1&amp;signa=
+ture=3D0e2994d3d0a34a0b601bc17b4afa36fd&amp;user=3D148784728&amp;_e=3DeyJlc=
+nJvciI6bnVsbCwiYmxvZ19pZCI6MTU1MTA3NDkxLCJibG9nX2xhbmciOiJlbiIsInNpdGVfaWRf=
+bGFiZWwiOiJqZXRwYWNrIiwiZW1haWxfbmFtZSI6ImVtYWlsX3N1YnNjcmlwdGlvbiIsIl91aSI=
+6MTQ4Nzg0NzI4LCJlbWFpbF9pZCI6IjJhMzExM2Y0NGY4YjAyZTVkMWM3Zjc5ZTFkYWU5NjQ5Ii=
+wiZGF0ZV9zZW50IjoiMjAyMS0wMy0wNCIsImxvY2FsZSI6ImVuIiwiY3VycmVuY3kiOiJVU0QiL=
+CJjb3VudHJ5X2NvZGVfc2lnbnVwIjoiUFkiLCJkb21haW4iOiJjdG5hc3VuY2lvbi5lZHUucHki=
+LCJmcmVxdWVuY3kiOiIwIiwiZGlnZXN0IjoiMCIsImhhc19odG1sIjoiMSIsImFuY2hvcl90ZXh=
+0IjoiTWFuYWdlIFN1YnNjcmlwdGlvbnMiLCJfZHIiOm51bGwsIl9kbCI6IlwveG1scnBjLnBocD=
+9zeW5jPTEmY29kZWM9ZGVmbGF0ZS1qc29uLWFycmF5JnRpbWVzdGFtcD0xNjE0ODc2OTk3LjMmc=
+XVldWU9c3luYyZob21lPWh0dHAlM0ElMkYlMkZjdG5hc3VuY2lvbi5lZHUucHklMkZibG9nY3Ru=
+JnNpdGV1cmw9aHR0cCUzQSUyRiUyRmN0bmFzdW5jaW9uLmVkdS5weSUyRmJsb2djdG4mY2Q9MC4=
+wMDIwJnBkPTAuMDA1NSZpZGM9MSZ0aW1lb3V0PTE1JmZvcj1qZXRwYWNrJndwY29tX2Jsb2dfaW=
+Q9MTU1MTA3NDkxIiwiX3V0Ijoid3Bjb206dXNlcl9pZCIsIl91bCI6ImN0bmFzdW5jaW9uMjAxO=
+CIsIl9lbiI6IndwY29tX2VtYWlsX2NsaWNrIiwiX3RzIjoxNjE0ODc2OTk5NzI0LCJicm93c2Vy=
+X3R5cGUiOiJwaHAtYWdlbnQiLCJfYXVhIjoid3Bjb20tdHJhY2tzLWNsaWVudC12MC4zIiwiYmx=
+vZ190eiI6IjAiLCJ1c2VyX2xhbmciOiJlbiJ9&amp;_z=3Dz">Manage Subscriptions</a>.=
+=09=09=09=09=09=09=09=09=09=09=09=09=09</p>=0A=0A=09=09=09=09=09=09=09=09=
+=09=09=09=09=09<p style=3D'direction: ltr; font-size: 14px; line-height: 1.=
+4em; color: #444; font-family: "Helvetica Neue", Helvetica, Arial, sans-ser=
+if; margin: 0 0 1em; font-size: 12px; line-height: 1.4em; margin: 0px 0px 0=
+px 0px;'>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09<strong>Trouble click=
+ing?</strong> Copy and paste this URL into your browser: <br><a style=3D"co=
+lor: #2585B2;" href=3D"http://ctnasuncion.edu.py/blogctn/index.php/2021/03/=
+04/274/">http://ctnasuncion.edu.py/blogctn/index.php/2021/03/04/274/</a>=0A=
+=09=09=09=09=09=09=09=09=09=09=09=09=09</p>=0A=09=09=09=09=09=09=09=09=09=
+=09=09=09</td>=0A=09=09=09=09=09=09=09=09=09=09=09</tr></table></td>=0A=09=
+=09=09=09=09=09=09=09</tr></table><table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" height=3D"3" background=3D"https://s0.wp.com/i/emails/stripe=
+s.gif" class=3D"subscribe-footer-wrap" style=3D"width: 100%; background-ima=
+ge: url(https://s0.wp.com/i/emails/stripes.gif); background-repeat: repeat-=
+x; background-color: #43A4D0; height: 3px;"><tr><td></td>=0A=09=09=09=09=09=
+=09=09=09</tr></table></div>=0A=09=09=09=09=09</td>=0A=09=09=09=09</tr></ta=
+ble><br></td>=0A=09</tr></table><img alt=3D"" border=3D"0" src=3D"http://pi=
+xel.wp.com/b.gif?blog=3D155107491&amp;post=3D274&amp;subd=3Dctnasuncion.edu=
+.py&amp;ref=3D&amp;email=3D1&amp;email_o=3Djetpack&amp;host=3Djetpack.wordp=
+ress.com" width=3D"1" height=3D"1"><img alt=3D"" border=3D"0" src=3D"http:/=
+/pixel.wp.com/t.gif?email_name=3Demail_subscription&amp;blog_id=3D155107491=
+&amp;_ui=3D148784728&amp;email_id=3D2a3113f44f8b02e5d1c7f79e1dae9649&amp;da=
+te_sent=3D2021-03-04&amp;locale=3Den&amp;currency=3DUSD&amp;country_code_si=
+gnup=3DPY&amp;domain=3Dctnasuncion.edu.py&amp;frequency=3D0&amp;digest=3D0&=
+amp;has_html=3D1&amp;_en=3Dwpcom_email_open&amp;browser_type=3Dphp-agent&am=
+p;_aua=3Dwpcom-tracks-client-v0.3&amp;_ul=3Dctnasuncion2018&amp;_ut=3Dwpcom=
+%3Auser_id&amp;blog_tz=3D0&amp;blog_lang=3D0&amp;user_lang=3Den&amp;_ts=3D1=
+614876999710" width=3D"1" height=3D"1"></body></html>=0A
+
+--b1_pgbABepgcFh51esImDljYDBoGFqTnTfseoZNjMSZs--
+

@@ -1,0 +1,83 @@
+head	1.5;
+access;
+symbols;
+locks
+	ctnas:1.5; strict;
+comment	@# @;
+
+
+1.5
+date	2017.03.09.18.04.26;	author ctnas;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2017.01.03.15.53.38;	author ctnas;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2016.12.03.18.25.15;	author ctnas;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2016.12.03.18.24.50;	author ctnas;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2016.12.03.18.24.49;	author ctnas;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@"Modified by /usr/local/cpanel/uapi "
+@
+text
+@admin:x:3214:3144::/home/ctnas/mail/ctnasuncion.edu.py/admin:/home/ctnas
+contacto:x:3214:3144::/home/ctnas/mail/ctnasuncion.edu.py/contacto:/home/ctnas
+@
+
+
+1.4
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@a1 1
+fedegonza:x:3214:3144::/home/ctnas/mail/ctnasuncion.edu.py/fedegonza:/home/ctnas
+@
+
+
+1.3
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d3 1
+@
+
+
+1.2
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d2 1
+@
+
+
+1.1
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d1 1
+@

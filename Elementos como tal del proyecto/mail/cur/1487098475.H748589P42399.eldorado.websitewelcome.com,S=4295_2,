@@ -1,0 +1,103 @@
+Return-path: <>
+Envelope-to: ctnas@eldorado.websitewelcome.com
+Delivery-date: Tue, 14 Feb 2017 12:54:35 -0600
+Received: from gateway23.websitewelcome.com ([192.185.50.161]:39081)
+	by eldorado.websitewelcome.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.87)
+	id 1cdiFH-000B1h-Cy
+	for ctnas@eldorado.websitewelcome.com; Tue, 14 Feb 2017 12:54:35 -0600
+Received: by gateway23.websitewelcome.com (Postfix)
+	id 3639655966; Tue, 14 Feb 2017 12:54:35 -0600 (CST)
+Date: Tue, 14 Feb 2017 12:54:35 -0600 (CST)
+From: MAILER-DAEMON@gateway23.websitewelcome.com (Mail Delivery System)
+Subject: Undelivered Mail Returned to Sender
+To: ctnas@eldorado.websitewelcome.com
+Auto-Submitted: auto-replied
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="3E87120145.1487098475/gateway23.websitewelcome.com"
+Message-Id: <20170214185435.3639655966@gateway23.websitewelcome.com>
+
+This is a MIME-encapsulated message.
+
+--3E87120145.1487098475/gateway23.websitewelcome.com
+Content-Description: Notification
+Content-Type: text/plain; charset=us-ascii
+
+This is the mail system at host gateway23.websitewelcome.com.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+<myemail@email.com>: host mx00.mail.com[74.208.5.20] said: 550 Requested action
+    not taken: mailbox unavailable (in reply to RCPT TO command)
+
+--3E87120145.1487098475/gateway23.websitewelcome.com
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; gateway23.websitewelcome.com
+X-Postfix-Queue-ID: 3E87120145
+X-Postfix-Sender: rfc822; ctnas@eldorado.websitewelcome.com
+Arrival-Date: Tue, 14 Feb 2017 12:54:34 -0600 (CST)
+
+Final-Recipient: rfc822; myemail@email.com
+Original-Recipient: rfc822;myemail@email.com
+Action: failed
+Status: 5.0.0
+Remote-MTA: dns; mx00.mail.com
+Diagnostic-Code: smtp; 550 Requested action not taken: mailbox unavailable
+
+--3E87120145.1487098475/gateway23.websitewelcome.com
+Content-Description: Undelivered Message
+Content-Type: message/rfc822
+
+Return-Path: <ctnas@eldorado.websitewelcome.com>
+Received: from cm3.websitewelcome.com (unknown [108.167.139.23])
+	by gateway23.websitewelcome.com (Postfix) with ESMTP id 3E87120145
+	for <myemail@email.com>; Tue, 14 Feb 2017 12:54:34 -0600 (CST)
+Received: from eldorado.websitewelcome.com ([192.185.179.111])
+	by cm3.websitewelcome.com with 
+	id kiuY1u00F2Qc9Hs01iualF; Tue, 14 Feb 2017 12:54:34 -0600
+Received: from ctnas by eldorado.websitewelcome.com with local (Exim 4.87)
+	(envelope-from <ctnas@eldorado.websitewelcome.com>)
+	id 1cdiFC-000Azd-E9
+	for myemail@email.com; Tue, 14 Feb 2017 12:54:30 -0600
+To: myemail@email.com
+Subject: Examen de ingreso
+X-PHP-Script: www.ctnasuncion.edu.py/php/contact-me.php for 170.51.58.86
+MIME-Version: 1.0
+Content-type:text/html;charset=UTF-8
+From: My website
+Reply-To: celestemorel0902@gmail.com
+Message-Id: <E1cdiFC-000Azd-E9@eldorado.websitewelcome.com>
+Date: Tue, 14 Feb 2017 12:54:30 -0600
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - eldorado.websitewelcome.com
+X-AntiAbuse: Original Domain - email.com
+X-AntiAbuse: Originator/Caller UID/GID - [3214 499] / [47 12]
+X-AntiAbuse: Sender Address Domain - eldorado.websitewelcome.com
+X-BWhitelist: no
+X-Source-IP: 
+X-Exim-ID: 1cdiFC-000Azd-E9
+X-Source: 
+X-Source-Args: /usr/bin/php /home/ctnas/public_html/php/contact-me.php 
+X-Source-Dir: ctnasuncion.edu.py:/public_html/php
+X-Source-Sender: 
+X-Source-Auth: ctnas
+X-Email-Count: 1
+X-Source-Cap: Y3RuYXM7bWVtbWFnO2VsZG9yYWRvLndlYnNpdGV3ZWxjb21lLmNvbQ==
+
+Hey! You have received a new message from the visitor <strong>Monica Morel</strong><br/><br/>
+His message: <br/> <em>Buenas tardes quisiera saber a que hora se realizara el examen de pasado mañana y cuantas horas tiene el postulante para completar el examen</em><br/><br/>
+<strong>Feel free to contact Monica Morel via email at : celestemorel0902@gmail.com</strong>
+
+
+--3E87120145.1487098475/gateway23.websitewelcome.com--

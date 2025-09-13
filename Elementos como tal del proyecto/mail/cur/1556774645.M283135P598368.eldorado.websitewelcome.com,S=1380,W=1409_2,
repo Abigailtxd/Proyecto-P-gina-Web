@@ -1,0 +1,29 @@
+Return-Path: <ctnas@eldorado.websitewelcome.com>
+Delivered-To: ctnas@eldorado.websitewelcome.com
+Received: from eldorado.websitewelcome.com
+	by eldorado.websitewelcome.com with LMTP
+	id YGoHM/J+ylxgIQkA3+HKTQ
+	(envelope-from <ctnas@eldorado.websitewelcome.com>)
+	for <ctnas@eldorado.websitewelcome.com>; Thu, 02 May 2019 02:24:02 -0300
+Return-path: <ctnas@eldorado.websitewelcome.com>
+Envelope-to: ctnas@eldorado.websitewelcome.com
+Delivery-date: Thu, 02 May 2019 02:24:05 -0300
+Received: from ctnas by eldorado.websitewelcome.com with local (Exim 4.91)
+	(envelope-from <ctnas@eldorado.websitewelcome.com>)
+	id 1hM4CQ-002YGv-06
+	for ctnas@eldorado.websitewelcome.com; Thu, 02 May 2019 02:24:02 -0300
+From: ctnas@eldorado.websitewelcome.com (Cron Daemon)
+To: ctnas@eldorado.websitewelcome.com
+Subject: Cron <ctnas@eldorado> /usr/local/bin/perl /usr/local/cpanel/3rdparty/quickinstall/scripts/checkupdates.pl
+Content-Type: text/plain; charset=UTF-8
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/home/ctnas>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=ctnas>
+X-Cron-Env: <USER=ctnas>
+Message-Id: <E1hM4CQ-002YGv-06@eldorado.websitewelcome.com>
+Date: Thu, 02 May 2019 02:24:02 -0300
+
+Bareword found where operator expected at /usr/local/cpanel/Cpanel/URI/Escape/Fast.pm line 22, near "s/([^A-Za-z0-9\-_\.~])/$escapes{$1}/gr"

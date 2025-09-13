@@ -1,0 +1,33 @@
+Return-path: <ctnas@eldorado.websitewelcome.com>
+Envelope-to: ctnas@eldorado.websitewelcome.com
+Delivery-date: Fri, 13 Jan 2017 00:24:02 -0600
+Received: from ctnas by eldorado.websitewelcome.com with local (Exim 4.87)
+	(envelope-from <ctnas@eldorado.websitewelcome.com>)
+	id 1cRvHO-0005f8-KE
+	for ctnas@eldorado.websitewelcome.com; Fri, 13 Jan 2017 00:24:02 -0600
+From: ctnas@eldorado.websitewelcome.com (Cron Daemon)
+To: ctnas@eldorado.websitewelcome.com
+Subject: Cron <ctnas@eldorado> /usr/local/bin/perl /usr/local/cpanel/3rdparty/quickinstall/scripts/checkupdates.pl
+Content-Type: text/plain; charset=UTF-8
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/home/ctnas>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=ctnas>
+X-Cron-Env: <USER=ctnas>
+Message-Id: <E1cRvHO-0005f8-KE@eldorado.websitewelcome.com>
+Date: Fri, 13 Jan 2017 00:24:02 -0600
+
+Can't locate Umask/Local.pm in @INC (@INC contains: /usr/local/cpanel /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 . /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /usr/local/cpanel/Cpanel/Mkdir.pm line 10.
+BEGIN failed--compilation aborted at /usr/local/cpanel/Cpanel/Mkdir.pm line 10.
+Compilation failed in require at /usr/local/cpanel/Cpanel/CustInfo/Save.pm line 24.
+BEGIN failed--compilation aborted at /usr/local/cpanel/Cpanel/CustInfo/Save.pm line 24.
+Compilation failed in require at /usr/local/cpanel/Cpanel/ContactInfo/Sync.pm line 19.
+BEGIN failed--compilation aborted at /usr/local/cpanel/Cpanel/ContactInfo/Sync.pm line 19.
+Compilation failed in require at /usr/local/cpanel/Cpanel/ContactInfo.pm line 16.
+BEGIN failed--compilation aborted at /usr/local/cpanel/Cpanel/ContactInfo.pm line 16.
+Compilation failed in require at /usr/local/cpanel/Cpanel/QuickInstall.pm line 25.
+BEGIN failed--compilation aborted at /usr/local/cpanel/Cpanel/QuickInstall.pm line 25.
+Compilation failed in require at /usr/local/cpanel/3rdparty/quickinstall/scripts/checkupdates.pl line 8.
+BEGIN failed--compilation aborted at /usr/local/cpanel/3rdparty/quickinstall/scripts/checkupdates.pl line 8.

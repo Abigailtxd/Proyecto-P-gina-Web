@@ -1,0 +1,159 @@
+Return-Path: <davidlee1426@gmail.com>
+Delivered-To: informatica@ctnasuncion.edu.py
+Received: from eldorado.websitewelcome.com
+	by eldorado.websitewelcome.com with LMTP
+	id 4G8zOUQ7a2G8RQEA3+HKTQ
+	(envelope-from <davidlee1426@gmail.com>)
+	for <informatica@ctnasuncion.edu.py>; Sat, 16 Oct 2021 15:51:16 -0500
+Return-path: <davidlee1426@gmail.com>
+Envelope-to: informatica@ctnasuncion.edu.py
+Delivery-date: Sat, 16 Oct 2021 15:51:16 -0500
+Received: from mail-lj1-f195.google.com ([209.85.208.195]:33678)
+	by eldorado.websitewelcome.com with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.94.2)
+	(envelope-from <davidlee1426@gmail.com>)
+	id 1mbqeC-000Lpi-NP
+	for informatica@ctnasuncion.edu.py; Sat, 16 Oct 2021 15:51:16 -0500
+Received: by mail-lj1-f195.google.com with SMTP id d13so725861ljg.0
+        for <informatica@ctnasuncion.edu.py>; Sat, 16 Oct 2021 13:51:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=mime-version:reply-to:from:date:message-id:subject:to;
+        bh=dwpetW++pHUwixYIMLNgKc5gd9RCJ3X/oN5TlWAI0O8=;
+        b=JA8CV79nClcxfohYq3zqMWIJEWI4VCkgmun3AMxf7nqmrpSFtvT01b5ZAV7ecSW3SH
+         4ZZFjDSBL5U9gPcj81IessUt+CzFpoe2sR0Y5LbEY3URaKgODfwXcQuuySinaNa+6gTr
+         0TeA2LOxYj8R6dUayaW2lfVyk1qHzdqY/5mDzp7TsCbbSQoVDzzu+Epc2B/D4q16Jw+Y
+         /ITw5f3iDmr2NNHUTyQPKAH1LNiSl9JRLo2W0Aw8X7u2pEE36ndhOZ0BXtVJqPZFqb0+
+         HPpp7wLo3FhrKMkF12oxKw8zhh7spC7E2EgtF39sF1NV6Af8I+AY/J3AGavcqSw/fMsr
+         jjpA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:reply-to:from:date:message-id
+         :subject:to;
+        bh=dwpetW++pHUwixYIMLNgKc5gd9RCJ3X/oN5TlWAI0O8=;
+        b=yzpZ12wuZZ1maDsYvKGdVDlonNFx5OXxWW5wQF6bxgBdyIeeSGgGY2dgEVXkm/SYEP
+         pZXgR/logAp47qVh6CkqGRx9kGphe1w+Ol5JWFiBIwn3bPYUkDOUS87hvBJBDzgDVZ9M
+         /I0st1n/FQkuexmHaiGNYe0Hi1D4R7X1Qqk3SCj166N+KHacIEI5s4mNVUaZV9076Hje
+         W6Luihgd8cscGSR8SoCgQwKp4vIlzDeiDufyQLxN+HOwQrOWKjVWDTiCFYjJyEZOaxUG
+         FRsUGwbH8465RBNuo10dp9KtImatzL/WP5A4SGuF9wid31Q66qemNxEf9kOM4DS8SHHK
+         C1vg==
+X-Gm-Message-State: AOAM53389CQ/M44UVFq4qk0L2tFuA0ku0xr24WAvqAuc+sdnC2Ii8rgn
+	KagrkgSHRnkg9czaro4KbXpQq7/qMCL6VQry/To=
+X-Google-Smtp-Source: ABdhPJysbYWQMGG37SgSS/ciByleFoRfRncy/kxwdi/mJBS77ycfYsFbUwpJoGKPeMXpVPooQSdmZ0Jh1phdhPOaem4=
+X-Received: by 2002:a05:651c:a06:: with SMTP id k6mr21740667ljq.237.1634417465037;
+ Sat, 16 Oct 2021 13:51:05 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To: mr.davidjimbrown7@gmail.com
+From: "Mr. David Jim Brown" <davidlee1426@gmail.com>
+Date: Sat, 16 Oct 2021 13:50:40 -0700
+Message-ID: <CAHVyHKATRTJfxYOKfhp=C5nWi8oYMjEayrbo_0JxMg8RJxYzEw@mail.gmail.com>
+Subject: David Jim Brown: INSPECTION UNIT
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="0000000000006b16ba05ce7e7860"
+Bcc: informatica@ctnasuncion.edu.py
+
+--0000000000006b16ba05ce7e7860
+Content-Type: text/plain; charset="UTF-8"
+
+PLEASE READ CAREFULLY AND REPLY URGENTLY
+
+Dear owner,
+
+I am Mr. David Jim Brown, Head Officer-in-Charge, Administrative Service
+Inspection United Nations Inspection Agency in
+Harts-field-Jackson International Airport Atlanta, Georgia. During our
+investigation, I discovered an abandoned shipment
+through a Diplomat from United Kingdom which was transferred from JF
+Kennedy Airport to our facility here in Atlanta, and
+when scanned it revealed an undisclosed scam
+
+The consignment was abandoned because the Content was not properly declared
+by the consignee as money rather it was declared
+as personal effect/classified document to either avoid diversion by the
+Shipping Agent or confiscation by the relevant authorities.
+
+The diplomat's inability to pay for Non Inspection fees among other things
+are the reason why the consignment is delayed and abandoned.
+By my assessment, each of the boxes contains about $4M or more.They are
+still left in the airport storage facility till today.
+The Consignments like I said are two metal trunk boxes weighing about 65kg
+each (Internal dimension: W61 x H156 x D73 (cm) effective capacity:
+680 L) Approximately. The details of the consignment including your name
+and email on the official document from the United Nations' office
+in London where the shipment was tagged as personal effects/classified
+document is still available with us. As it stands now, you have to
+reconfirm your full name, Phone Number, and full address so I can
+cross-check and see if it corresponds with the one on the official
+documents.
+It is now left to you to decide if you still need the consignment or allow
+us repatriate it back to UK
+(place of origin) as we were instructed.
+
+As I did say again, the shipper abandoned it and ran away most importantly
+because he gave a false declaration, he could not pay for the
+yellow tag, he could not secure a valid non inspection document(s), etc. I
+am ready to assist you in any way I can for you to get back
+These packages provided you will also give me something out of it
+(financial gratification). You can either come in person, or you engage
+the services of a secure shipping/delivery Company/agent that will provide
+the necessary security that is required to deliver the package to
+your doorstep or the destination of your choice. I need all the guarantees
+that I can get from you before I can get involved in this project.
+
+Reply me through this:Email:( *officeatyourservice2@gmail.com
+<officeatyourservice2@gmail.com> *) for the delivery details
+
+Best Regards,
+Mr. David Jim Brown
+Head Officer-in-Charge
+Email :( *officeatyourservice2@gmail.com <officeatyourservice2@gmail.com> *)
+
+--0000000000006b16ba05ce7e7860
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr"><div>PLEASE READ CAREFULLY AND REPLY URGE=
+NTLY</div><div><br></div><div>Dear owner,</div><div><br></div><div>I am Mr.=
+ David Jim Brown, Head Officer-in-Charge, Administrative Service Inspection=
+ United Nations Inspection Agency in</div><div>Harts-field-Jackson Internat=
+ional Airport Atlanta, Georgia. During our investigation, I discovered an a=
+bandoned shipment</div><div>through a Diplomat from United Kingdom which wa=
+s transferred from JF Kennedy Airport to our facility here in Atlanta, and<=
+/div><div>when scanned it revealed an undisclosed scam</div><div><br></div>=
+<div>The consignment was abandoned because the Content was not properly dec=
+lared by the consignee as money rather it was declared</div><div>as persona=
+l effect/classified document to either avoid diversion by the Shipping Agen=
+t or confiscation by the relevant authorities.</div><div>=C2=A0</div><div>T=
+he diplomat&#39;s inability to pay for Non Inspection fees among other thin=
+gs are the reason why the consignment is delayed and abandoned.</div><div>B=
+y my assessment, each of the boxes contains about $4M or more.They are stil=
+l left in the airport storage facility till today.</div><div>The Consignmen=
+ts like I said are two metal trunk boxes weighing about 65kg each (Internal=
+ dimension: W61 x H156 x D73 (cm) effective capacity:</div><div>680 L) Appr=
+oximately. The details of the consignment including your name and email on =
+the official document from the United Nations&#39; office</div><div>in Lond=
+on where the shipment was tagged as personal effects/classified document is=
+ still available with us. As it stands now, you have to</div><div>reconfirm=
+ your full name, Phone Number, and full address so I can cross-check and se=
+e if it corresponds with the one on the official documents.</div><div>It is=
+ now left to you to decide if you still need the consignment or allow us re=
+patriate it back to UK</div><div>(place of origin) as we were instructed.</=
+div><div><br></div><div>As I did say again, the shipper abandoned it and ra=
+n away most importantly because he gave a false declaration, he could not p=
+ay for the</div><div>yellow tag, he could not secure a valid non inspection=
+ document(s), etc. I am ready to assist you in any way I can for you to get=
+ back</div><div>These packages provided you will also give me something out=
+ of it (financial gratification). You can either come in person, or you eng=
+age</div><div>the services of a secure shipping/delivery Company/agent that=
+ will provide the necessary security that is required to deliver the packag=
+e to</div><div>your doorstep or the destination of your choice. I need all =
+the guarantees that I can get from you before I can get involved in this pr=
+oject.</div><div><br></div><div>Reply me through this:Email:(=C2=A0<b><i><a=
+ href=3D"mailto:officeatyourservice2@gmail.com">officeatyourservice2@gmail.=
+com</a>=C2=A0</i></b>) for the delivery details</div><div><br></div><div>Be=
+st Regards,</div><div>Mr. David Jim Brown</div><div>Head Officer-in-Charge<=
+/div><div>Email :(=C2=A0<b><i><a href=3D"mailto:officeatyourservice2@gmail.=
+com">officeatyourservice2@gmail.com</a>=C2=A0</i></b>)</div><div><br></div>=
+</div></div>
+
+--0000000000006b16ba05ce7e7860--

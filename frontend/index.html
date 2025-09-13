@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editor de Publicaciones</title>
+  <style>
+    body { font-family: Arial; background: #eee; padding: 20px; }
+    .publicacion { background: white; padding: 10px; border-radius: 10px; margin-bottom: 15px; position: relative; }
+    .publicacion textarea { width: 100%; }
+    .publicacion select, .publicacion input[type="number"] { margin-right: 10px; }
+    .botones { margin-top: 10px; }
+    .botones button { margin-right: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>Nueva Publicación</h2>
+  <textarea id="texto" rows="3" placeholder="Escribe algo..."></textarea><br>
+  <label>Fuente:
+    <select id="fuente">
+      <option value="Arial">Arial</option>
+      <option value="Courier New">Courier</option>
+      <option value="Times New Roman">Times</option>
+    </select>
+  </label>
+  <label>Título:
+  <input type="text" id="titulo" placeholder="Título de la noticia">
+</label><br>
+<label>Tipo:
+  <select id="tipo">
+    <option value="principal">Principal</option>
+    <option value="secundaria" selected>Secundaria</option>
+  </select>
+</label><br>
+ <label>URL de Imagen:
+  <input type="text" id="imagen_url" placeholder="https://...">
+</label><br><br>
+  <button onclick="publicar()">Publicar</button>
+
+  <h2>Publicaciones</h2>
+  <div id="publicaciones"></div>
+
+<script>
+  let publicaciones = [];
+
+async function cargarNoticias() {
+  try {
+    const res = await fetch("http://localhost:3000/api/publicaciones");
+    const publicaciones = await res.json();
+
+    const principal = publicaciones.find(pub => pub.tipo === "principal");
+    const secundarias = publicaciones.filter(pub => pub.tipo === "secundaria");
+
+    const contenedor = document.getElementById("contenedor-noticias");
+    contenedor.innerHTML = "";
+
+    // Noticia principal
+    if (principal) {
+      contenedor.innerHTML += `
+        <div class="col-md-12">
+          <div class="card" style="font-family:${principal.fuente};">
+            <img src="${principal.imagen_url}" class="img-responsive" alt="Noticia principal">
+            <div class="caption">
+              <h2><b>${principal.titulo}</b></h2>
+              <p><small><i class="fa fa-calendar"></i> ${new Date(principal.fecha_publicacion).toLocaleDateString()}</small></p>
+              <p>${principal.descripcion}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Noticias secundarias
+    secundarias.forEach(pub => {
+      contenedor.innerHTML += `
+        <div class="col-md-4">
+          <div class="thumbnail" style="font-family:${pub.fuente};">
+            <img src="${pub.imagen_url}" class="img-responsive" alt="Noticia">
+            <div class="caption">
+              <h4><b>${pub.titulo}</b></h4>
+              <p><small><i class="fa fa-calendar"></i> ${new Date(pub.fecha_publicacion).toLocaleDateString()}</small></p>
+              <p>${pub.descripcion}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  } catch (error) {
+    console.error("Error al cargar noticias:", error);
+  }
+}
+async function obtenerPublicaciones() {
+  const res = await fetch("http://localhost:3000/api/publicaciones");
+  publicaciones = await res.json();
+  renderizar();
+}
+  function renderizar() {
+  const cont = document.getElementById("publicaciones");
+  cont.innerHTML = "";
+  publicaciones.forEach(p => {
+    const div = document.createElement("div");
+    div.className = "publicacion";
+
+    const titulo = document.createElement("h4");
+    titulo.textContent = `[${p.tipo}] ${p.titulo}`;
+    div.appendChild(titulo);
+
+    const area = document.createElement("textarea");
+    area.value = p.descripcion;
+    area.style.fontFamily = p.fuente || "Arial";
+    area.onchange = () => actualizarPublicacion(p.id, { descripcion: area.value });
+    div.appendChild(area);
+
+    if (p.imagen_url) {
+      const img = document.createElement("img");
+      img.src = p.imagen_url;
+      img.style.maxWidth = "200px";
+      img.style.display = "block";
+      img.style.marginTop = "10px";
+      div.appendChild(img);
+    }
+
+    // Select para fuente
+    const selectFuente = document.createElement("select");
+    ["Arial","Courier New","Times New Roman"].forEach(f => {
+      const opt = document.createElement("option");
+      opt.value = f;
+      opt.textContent = f;
+      if (p.fuente === f) opt.selected = true;
+      selectFuente.appendChild(opt);
+    });
+    selectFuente.onchange = () => actualizarPublicacion(p.id, { fuente: selectFuente.value });
+    div.appendChild(selectFuente);
+
+    const btnEliminar = document.createElement("button");
+    btnEliminar.textContent = "Eliminar";
+    btnEliminar.onclick = () => eliminarPublicacion(p.id);
+    div.appendChild(btnEliminar);
+
+    cont.appendChild(div);
+  });
+}
+
+async function publicar() {
+  const titulo = document.getElementById("titulo").value;
+  const texto = document.getElementById("texto").value;
+  const fuente = document.getElementById("fuente").value;
+  const imagen_url = document.getElementById("imagen_url").value;
+  const tipo = document.getElementById("tipo").value;
+
+  if (!titulo && !texto && !imagen_url) return;
+
+  const nuevaPub = { titulo, descripcion: texto, fuente, imagen_url: imagen_url || null, tipo };
+
+  const res = await fetch("http://localhost:3000/api/publicaciones", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(nuevaPub)
+  });
+
+  if (res.ok) {
+  await obtenerPublicaciones();
+  limpiarFormulario();
+} else alert("Error al publicar");
+}
+
+function limpiarFormulario() {
+  document.getElementById("titulo").value = "";
+  document.getElementById("texto").value = "";
+  document.getElementById("imagen_url").value = "";
+  document.getElementById("fuente").value = "Arial";
+  document.getElementById("tipo").value = "secundaria";
+}
+  async function actualizarPublicacion(id, cambios) {
+    try {
+      await fetch(`http://localhost:3000/api/publicaciones/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(cambios)
+      });
+      await obtenerPublicaciones();
+    } catch {
+      alert("Error al actualizar");
+    }
+  }
+
+  async function eliminarPublicacion(id) {
+    if (!confirm("¿Eliminar publicación?")) return;
+    try {
+      await fetch(`http://localhost:3000/api/publicaciones/${id}`, { method: "DELETE" });
+      await obtenerPublicaciones();
+    } catch {
+      alert("Error al eliminar");
+    }
+  }
+  obtenerPublicaciones();
+</script>
+</body>
+</html>

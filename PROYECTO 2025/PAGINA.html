@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Prueba publicaciones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    #formulario {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      margin-bottom: 20px;
+    }
+    #publicaciones {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .publicacion {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #ccc;
+      position: relative;
+    }
+    .eliminar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    img {
+      max-width: 200px;
+      display: block;
+      margin-top: 10px;
+    }
+    .archivo {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Prueba publicaciones</h1>
+
+  <div id="formulario">
+    <textarea id="contenido" rows="4" style="width:100%;" placeholder="texto"></textarea><br>
+    <input type="file" id="archivo" accept=".png,.pdf"><br><br>
+    <button onclick="agregarPublicacion()">Publicar</button>
+  </div>
+
+  <div id="publicaciones"></div>
+
+  <script>
+    const publicaciones = JSON.parse(localStorage.getItem("publicaciones") || "[]");
+
+    function mostrarPublicaciones() {
+      const contenedor = document.getElementById("publicaciones");
+      contenedor.innerHTML = "";
+      publicaciones.forEach((pub, index) => {
+        const div = document.createElement("div");
+        div.className = "publicacion";
+
+        // Texto
+        const texto = document.createElement("p");
+        texto.textContent = pub.texto;
+        div.appendChild(texto);
+
+        // Archivo
+        if (pub.tipo === "image") {
+          const img = document.createElement("img");
+          img.src = pub.archivo;
+          div.appendChild(img);
+        } else if (pub.tipo === "pdf") {
+          const link = document.createElement("a");
+          link.href = pub.archivo;
+          link.textContent = "Ver PDF";
+          link.target = "_blank";
+          link.className = "archivo";
+          div.appendChild(link);
+        }
+
+        // Botón eliminar
+        const btn = document.createElement("button");
+        btn.textContent = "Eliminar";
+        btn.className = "eliminar";
+        btn.onclick = () => eliminarPublicacion(index);
+        div.appendChild(btn);
+
+        contenedor.appendChild(div);
+      });
+    }
+
+    function agregarPublicacion() {
+      const texto = document.getElementById("contenido").value.trim();
+      const archivoInput = document.getElementById("archivo");
+      const archivo = archivoInput.files[0];
+
+      if (!texto && !archivo) return;
+
+      if (archivo) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          let tipo = "";
+          if (archivo.type === "image/png") tipo = "image";
+          else if (archivo.type === "application/pdf") tipo = "pdf";
+          else return alert("Solo se permiten PNG y PDF");
+
+          publicaciones.unshift({
+            texto,
+            archivo: e.target.result,
+            tipo
+          });
+
+          guardarYMostrar();
+        };
+        reader.readAsDataURL(archivo);
+      } else {
+        publicaciones.unshift({ texto, archivo: null, tipo: null });
+        guardarYMostrar();
+      }
+    }
+
+    function eliminarPublicacion(index) {
+      if (confirm("¿Seguro que quieres eliminar esta publicación?")) {
+        publicaciones.splice(index, 1);
+        guardarYMostrar();
+      }
+    }
+
+    function guardarYMostrar() {
+      localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
+      document.getElementById("contenido").value = "";
+      document.getElementById("archivo").value = "";
+      mostrarPublicaciones();
+    }
+
+    mostrarPublicaciones();
+  </script>
+</body>
+</html>
+

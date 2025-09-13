@@ -1,0 +1,1 @@
+[02-Apr-2021 20:59:07 America/Chicago] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'ctnas_fran'@'localhost' to database 'ctnas_bd' in /home2/ctnas/public_html/cone.php on line 2

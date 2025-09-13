@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Vocacional Técnico</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f0f1f5;margin:0;padding:0;display:flex;justify-content:center;align-items:center;min-height:100vh;}
+.card{background:white;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,0.2);width:90%;max-width:800px;overflow:hidden;}
+.header{padding:24px;border-bottom:1px solid #eee;}
+.header h1{margin:0;font-size:24px;}
+.header p{color:#666;margin:6px 0 0;font-size:14px;}
+.progress-wrap{padding:0 24px;display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.progressbar{flex:1;height:10px;background:#eee;border-radius:999px;overflow:hidden;}
+.progressbar>i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#111827,#374151);transition:width .25s;}
+.progress-text{font-size:12px;color:#666;white-space:nowrap;}
+.stage{padding:24px;display:grid;gap:16px;}
+.q-text{font-size:18px;font-weight:600;}
+.answers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.btn{padding:12px 16px;border-radius:12px;border:1px solid #ccc;font-weight:600;cursor:pointer;transition:transform .05s;}
+.btn:hover{transform:translateY(-1px);}
+.btn:active{transform:translateY(0);}
+.btn-yes{border-color:#16a34a;}
+.btn-maybe{border-color:#ca8a04;}
+.btn-no{border-color:#dc2626;}
+.result{padding:24px;display:grid;gap:16px;}
+.bar-wrap{display:flex;align-items:center;gap:12px;}
+.bar-label{width:160px;font-weight:700;color:#111;}
+.bar{flex:1;height:12px;background:#eee;border-radius:999px;overflow:hidden;}
+.bar>i{height:100%;width:0%;background:#111827;transition:width .6s;}
+.bar-pct{width:50px;text-align:right;font-weight:700;color:#111;}
+</style>
+</head>
+<body>
+<div class="card" id="app"></div>
+<script>
+// ----------------------------
+// Datos del test
+// ----------------------------
+const AREAS = [
+  {key:'civiles',icon:'🏗️',name:'Construcciones Civiles',questions:[
+'¿Te interesa planificar y supervisar obras desde el diseño hasta su finalización?',
+'¿Te sientes cómodo trabajando con planos arquitectónicos y estructurales?',
+'¿Podrías adaptarte a supervisar equipos en obras al aire libre, incluso con condiciones climáticas variables?',
+'¿Te atrae calcular materiales y costos para proyectos de construcción?',
+'¿Te gusta resolver problemas prácticos relacionados con la resistencia y estabilidad de estructuras?',
+'¿Te interesaría aprender sobre normas de seguridad e higiene específicas para obras civiles?',
+'¿Te motiva coordinar a distintos profesionales (arquitectos, ingenieros, técnicos) para cumplir un plazo de obra?']},
+  {key:'electricidad',icon:'⚡',name:'Electricidad',questions:[
+'¿Te atrae instalar y reparar sistemas eléctricos domiciliarios, comerciales o industriales?',
+'¿Te interesa comprender a fondo el funcionamiento de circuitos eléctricos?',
+'¿Trabajarías con comodidad en entornos donde se manipula tensión y corriente bajo protocolos de seguridad?',
+'¿Te motiva diagnosticar fallas eléctricas y proponer soluciones rápidas?',
+'¿Podrías mantenerte concentrado en tareas que requieren alto cuidado y precisión para evitar accidentes?',
+'¿Te atrae calcular la capacidad de cables, transformadores y protecciones?',
+'¿Te interesa mantenerte actualizado sobre nuevas tecnologías de energía y eficiencia eléctrica?']},
+  {key:'electronica',icon:'🔌',name:'Electrónica',questions:[
+'¿Te atrae armar y reparar placas electrónicas y dispositivos electrónicos pequeños?',
+'¿Disfrutas interpretar esquemas y diagramas electrónicos complejos?',
+'¿Te motiva trabajar en espacios cerrados y controlados, con herramientas de precisión?',
+'¿Podrías dedicar tiempo a soldar, medir y calibrar componentes delicados?',
+'¿Te interesa programar y configurar sistemas electrónicos embebidos (microcontroladores, sensores)?',
+'¿Te gusta investigar nuevas aplicaciones de la electrónica en la industria?',
+'¿Podrías seguir procedimientos técnicos detallados durante varias horas seguidas?']},
+  {key:'electromecanica',icon:'⚙️',name:'Electromecánica',questions:[
+'¿Te interesa trabajar en la instalación y mantenimiento de sistemas que combinan electricidad y mecánica?',
+'¿Te atrae comprender el funcionamiento de maquinaria industrial automatizada?',
+'¿Podrías realizar tareas de diagnóstico tanto eléctrico como mecánico?',
+'¿Te motiva resolver problemas técnicos que requieren conocimientos interdisciplinarios?',
+'¿Te gustaría trabajar en fábricas o talleres con equipos de gran porte?',
+'¿Podrías adaptarte a trabajos que implican esfuerzo físico moderado y precisión técnica?',
+'¿Te interesa participar en proyectos de mejora y optimización de procesos industriales?']},
+  {key:'informatica',icon:'💻',name:'Informática',questions:[
+'¿Realizas trabajos de análisis y lógica rápidamente o con eficiencia?',
+'¿Te motiva programar soluciones a problemas utilizando distintos lenguajes de programación?',
+'¿Te gusta trabajar con bases de datos y sistemas de información?',
+'¿Podrías pasar varias horas concentrado en frente de una computadora para completar un proyecto?',
+'¿Te interesa la ciberseguridad y el resguardo de datos?',
+'¿Te atrae diseñar interfaces o mejorar la experiencia de usuario en aplicaciones?',
+'¿Podrías aprender constantemente nuevas herramientas y lenguajes por tu cuenta?']},
+  {key:'mecanica',icon:'🔧',name:'Mecánica General',questions:[
+'¿Te gusta trabajar con herramientas manuales y maquinaria de taller?',
+'¿Te interesa fabricar o reparar piezas metálicas mediante procesos como torneado o fresado?',
+'¿Podrías interpretar planos mecánicos y medir piezas con instrumentos de precisión?',
+'¿Te atrae comprender cómo funcionan sistemas mecánicos complejos?',
+'¿Te motiva trabajar en la mejora de la eficiencia de máquinas y herramientas?',
+'¿Podrías mantenerte enfocado en tareas repetitivas que requieren exactitud?',
+'¿Te interesaría aprender soldadura y técnicas de unión de metales?']},
+  {key:'automotriz',icon:'🚗',name:'Mecánica Automotriz',questions:[
+'¿Te gusta diagnosticar y reparar fallas en automóviles?',
+'¿Te interesa comprender el funcionamiento de motores de combustión interna y sistemas híbridos o eléctricos?',
+'¿Podrías trabajar en un taller rodeado de ruidos y aceites?',
+'¿Te atrae aprender sobre sistemas de transmisión, frenos y suspensión?',
+'¿Te motiva buscar soluciones rápidas para que un vehículo vuelva a funcionar?',
+'¿Podrías adaptarte a trabajar tanto con herramientas mecánicas como con sistemas electrónicos de diagnóstico?',
+'¿Te interesaría estar al día con las innovaciones en la industria automotriz?']},
+  {key:'quimica',icon:'⚗️',name:'Química Industrial',questions:[
+'¿Te atrae analizar y transformar materiales mediante procesos químicos?',
+'¿Te interesa trabajar en laboratorios con normas de seguridad estrictas?',
+'¿Podrías seguir protocolos experimentales con precisión y orden?',
+'¿Te motiva aprender sobre control de calidad y tratamiento de residuos industriales?',
+'¿Te atrae trabajar en industrias alimenticias, farmacéuticas o petroquímicas?',
+'¿Te interesa medir y controlar variables como temperatura, presión y concentración en un proceso?',
+'¿Podrías registrar y reportar resultados técnicos de forma ordenada y rigurosa?']}
+];
+
+// aplanamos preguntas para mostrar sin área al usuario
+const ALL = AREAS.flatMap(a => a.questions.map((q,i)=>({text:q,area:a.key,index:i}))); 
+const TOTAL = ALL.length;
+let current = -1;
+const answers = Array(TOTAL).fill(null);
+const app = document.getElementById('app');
+
+function render(){
+  if(current===-1){
+    app.innerHTML=`<div class="header"><h1>Test Vocacional Técnico</h1><p>Este test está pensado para orientarte y mostrarte las áreas técnicas que más coinciden con tus respuestas. No define tu futuro, solo te da una idea según tus intereses y habilidades.</p></div>
+    <div class="stage"><button class="btn link" onclick="next()">Comenzar</button></div>`;
+  }else if(current<TOTAL){
+    const q=ALL[current];
+    app.innerHTML=`<div class="header"><h1>Pregunta ${current+1} de ${TOTAL}</h1><div class="progress-wrap"><div class="progressbar"><i style="width:${(current/TOTAL*100)}%"></i></div><div class="progress-text">${current+1} / ${TOTAL}</div></div></div>
+    <div class="stage"><div class="q-text">${q.text}</div>
+    <div class="answers">
+      <button class="btn btn-yes" onclick="answer(2)">Sí</button>
+      <button class="btn btn-maybe" onclick="answer(1)">Depende</button>
+      <button class="btn btn-no" onclick="answer(0)">No</button>
+    </div></div>`;
+  }else renderResults();
+}
+function next(){current++;render();}
+function answer(v){answers[current]=v;next();}
+
+function renderResults(){
+  const byArea=Object.fromEntries(AREAS.map(a=>[a.key,{name:a.name,icon:a.icon,score:0,max:14}]));
+  ALL.forEach((q,i)=>{byArea[q.area].score+=answers[i];});
+  for(let k in byArea)byArea[k].pct=(byArea[k].score/byArea[k].max*100);
+  const topArea=Object.values(byArea).sort((a,b)=>b.pct-a.pct)[0];
+  app.innerHTML=`<div class="header"><h1>Resultados</h1><p>Área más compatible: ${topArea.icon} ${topArea.name}</p></div>
+  <div class="result">
+  ${Object.values(byArea).map(a=>`<div class="bar-wrap"><div class="bar-label">${a.icon} ${a.name}</div><div class="bar"><i style="width:${a.pct}%"></i></div><div class="bar-pct">${Math.round(a.pct)}%</div></div>`).join('')}
+  <button class="btn link" onclick="location.reload()">Volver a intentar</button></div>`;
+}
+render();
+</script>
+</body>
+</html>

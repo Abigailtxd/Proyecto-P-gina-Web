@@ -1,0 +1,24 @@
+head	1.1;
+access;
+symbols;
+locks
+	ctnas:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	2016.12.03.18.24.49;	author ctnas;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@@

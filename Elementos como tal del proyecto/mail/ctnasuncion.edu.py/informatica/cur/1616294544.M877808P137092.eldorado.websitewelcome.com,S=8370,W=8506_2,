@@ -1,0 +1,136 @@
+Return-Path: <informatica=ctnasuncion.edu.py@b.wordpress.com>
+Delivered-To: informatica@ctnasuncion.edu.py
+Received: from eldorado.websitewelcome.com
+	by eldorado.websitewelcome.com with LMTP
+	id +Eg6NJCyVmCEFwIA3+HKTQ
+	(envelope-from <informatica=ctnasuncion.edu.py@b.wordpress.com>)
+	for <informatica@ctnasuncion.edu.py>; Sat, 20 Mar 2021 21:42:24 -0500
+Return-path: <informatica=ctnasuncion.edu.py@b.wordpress.com>
+Envelope-to: informatica@ctnasuncion.edu.py
+Delivery-date: Sat, 20 Mar 2021 21:42:24 -0500
+Received: from smtp2.dca.wordpress.com ([192.0.96.41]:5734)
+	by eldorado.websitewelcome.com with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.93)
+	(envelope-from <informatica=ctnasuncion.edu.py@b.wordpress.com>)
+	id 1lNo2q-000Zsh-Qg
+	for informatica@ctnasuncion.edu.py; Sat, 20 Mar 2021 21:42:24 -0500
+Received: from wordpress.com (unknown [192.0.91.112])
+	by smtp2.dca.wordpress.com (Postfix) with ESMTP id 4F32396qx8zKnKp
+	for <informatica@ctnasuncion.edu.py>; Sun, 21 Mar 2021 02:42:13 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=wordpress.com;
+	s=automattic1; t=1616294534;
+	bh=Xat4D1zj79IicMX7I2qCXri6JmTm0xvdS2GYJ8RhWps=;
+	h=Date:To:From:Subject:From;
+	b=J8mlXIcgMo2BQ0njskx19vYteFVnJg+JZWjfVKWgqM9oLdUpCaBc/Gv7MgrRysHRS
+	 CLhUfKFH9/6AbwnU4hKry68Zy2lSMitOVopsL4KYwQz0RHa6ljA+6P/rL1Cbjtal32
+	 GWN5o1I11DCCOZV4lrTJgz6iYQkHstUZ1lmvgIYML8KsmgTF+P2UH+X9HKrjfSWtjQ
+	 bsXZWrh6u9dPxfzgiY/Eg0y4oXCbKCbrAhukR15Ab05ABSv3TWOX5CFiQSlAMtMHlp
+	 zMU7EAgza7749Tva8uTAu6A+9+k2z7yMKegj/T+SkSf7a5mazczlhGaMNjT/UEa/Yx
+	 u+noa4wGoBKMA==
+Date: Sun, 21 Mar 2021 02:42:13 +0000
+To: informatica@ctnasuncion.edu.py
+From: Blog CTN <donotreply@wordpress.com>
+Subject: [Blog CTN] aarmoa75aaa@gmail.com is now following your blog
+Message-ID: <KJnBx9QYlzJ5xEWaqtZ7udZPX4ovAP9sLJpm8xWNRY@wordpress.com>
+X-Automattic-Campaign-ID: bluestripe:subscribe-blog
+X-Automattic-Destination: aW5mb3JtYXRpY2FAY3RuYXN1bmNpb24uZWR1LnB5
+X-Automattic-Tracking: 0:2:p20RmfjoSQhYh3gHzQqhQQ==.uhoo3JUeOquLG4plPoAr23wX/g3JYP70ssNlNtwpnDGxOHKLHdfoYyMlFphDzmSVx2n3rjzTSSBx4yIiWA83gg==:155107491:0:0
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_KJnBx9QYlzJ5xEWaqtZ7udZPX4ovAP9sLJpm8xWNRY"
+Content-Transfer-Encoding: 8bit
+
+This is a multi-part message in MIME format.
+
+--b1_KJnBx9QYlzJ5xEWaqtZ7udZPX4ovAP9sLJpm8xWNRY
+Content-Type: text/plain; charset=us-ascii
+
+Howdy,
+
+aarmoa75aaa@gmail.com just followed Blog CTN.
+
+Blog URL: http://ctnasuncion.edu.py/blogctn
+
+
+Their email address is 
+
+If you don't want to be notified of new followers any more:
+https://ctnasuncion.edu.py/blogctn/wp-admin/options-discussion.php?sn=s
+
+--b1_KJnBx9QYlzJ5xEWaqtZ7udZPX4ovAP9sLJpm8xWNRY
+Content-Type: text/html; charset=us-ascii
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css" media="all">
+			a:hover {	color: red;	}
+			a {
+				text-decoration: none;
+				color: #0088cc;
+			}
+
+			a.primaryactionlink:link, a.primaryactionlink:visited { background-color: #2585B2; color: #fff; }
+			a.primaryactionlink:hover, a.primaryactionlink:active { background-color: #11729E !important; color: #fff !important; }
+
+			/*
+				@media only screen and (max-device-width: 480px) {
+					 .post { min-width: 700px !important; }
+				}
+			*/
+		</style><title>WordPress.com</title><!--[if gte mso 12]>
+		<style type="text/css" media="all">
+		body {
+		font-family: arial;
+		font-size: 0.8em;
+		}
+		.post, .comment {
+		background-color: white !important;
+		line-height: 1.4em !important;
+		}
+		</style>
+		<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body class="subscription-body-tag ltr" style="margin: 0; padding: 0; width: 100% !important;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#DDDDDD" style="width: 100%; background: #DDDDDD;"><tr><td>
+					
+					<table border="0" cellspacing="0" cellpadding="0" align="center" class="subscribe-body" width="550" style="width: 100%; padding: 10px;"><tr><td>
+
+								<div style="direction:ltr; max-width: 600px; margin: 0 auto;">
+
+									<table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" class="subscribe-wrapper" style="width: 100%; background-color: #fff; text-align: left; margin: 0 auto; max-width: 1024px; min-width: 320px;"><tr><td>
+
+												<table width="100%" border="0" cellspacing="0" cellpadding="0" height="8" background="https://s0.wp.com/i/emails/stripes.gif" class="subscribe-header-wrap" style="width: 100%; background-image: url( 'https://s0.wp.com/i/emails/stripes.gif'); background-repeat: repeat-x; background-color: #43A4D0; height: 8px;"><tr><td></td>
+													</tr></table><table width="100%" border="0" cellspacing="0" cellpadding="0" class="subscribe-header" style="width: 100%; background-color: #EFEFEF; padding: 0; border-bottom: 1px solid #DDD;"><tr><td>
+					<h2 style='padding: 0; margin: 5px 20px; font-size: 16px; line-height: 1.4em; font-weight: normal; color: #464646; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;' class="subscribe-title"><strong>aarmoa75aaa@gmail.com</strong> is now following <strong>Blog CTN</strong></h2>
+				</td>
+	
+				<td style="vertical-align: middle;" height="32" width="32" valign="middle" align="right">
+
+											<a style="text-decoration: underline; color: #2585B2;" href="http://ctnasuncion.edu.py/blogctn">
+					
+											<img border="0" class="head-avatar" src="https://s0.wp.com/i/emails/blavatar.png" alt="" height="32" width="32" style="margin: 5px 20px 5px 0; vertical-align: middle; vertical-align: middle;"></a>
+					
+				</td>
+			</tr></table><table style="width: 100%;" width="100%" border="0" cellspacing="0" cellpadding="20" bgcolor="#ffffff"><tr><td>
+				<table style="width: 100%;" border="0" cellspacing="0" cellpadding="0"><tr><td valign="top">
+						
+													<p style='direction:ltr; font-size: 14px; line-height: 1.4em; color: #444444; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0 0 1em 0; margin: 0 0 10px 0;'>
+								aarmoa75aaa@gmail.com just started following you at http://ctnasuncion.edu.py/blogctn. They will receive an email every time you publish a post. Congratulations.							</p>
+							
+							
+						</td>
+					</tr></table></td>
+		</tr></table><!-- top posts --><table border="0" cellspacing="0" width="550" cellpadding="20" bgcolor="#efefef" class="subscribe-wrapper-sub" style="width: 100%; background-color: #efefef; text-align: left; border-top: 1px solid #dddddd;"><tr><td class="subscribe-content" style='border-top: 1px solid #f3f3f3; color: #888; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; background: #efefef; margin: 0; padding: 10px 20px 0;'>
+				<p style='direction:ltr; font-size: 14px; line-height: 1.4em; color: #444444; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0 0 1em 0;'>
+											<strong>Want less email?</strong> Modify your <a style="text-decoration: underline; color: #2585B2;" href="https://ctnasuncion.edu.py/blogctn/wp-admin/options-discussion.php?sn=s">Discussion Settings</a>.									</p>
+
+				
+			</td>
+		</tr></table></td>
+										</tr></table><table width="100%" border="0" cellspacing="0" cellpadding="0" height="3" background="https://s0.wp.com/i/emails/stripes.gif" class="subscribe-footer-wrap" style="width: 100%; background-image: url( 'https://s0.wp.com/i/emails/stripes.gif'); background-repeat: repeat-x; background-color: #43A4D0; height: 3px;"><tr><td></td>
+										</tr></table></div>
+
+							</td>
+						</tr></table></td>
+			</tr></table><img src="http://public-api.wordpress.com/note-read/?user_id=148784728&amp;note_name=follow-155107491&amp;signature=4398fa0e0c23324f145b11ca8937cfbd" width="1" height="1" border="0" style="width: 1px; height: 1px; border: 0;"><img border="0" src="http://pixel.wp.com/t.gif?_ui=7ab550a289951a05cd9f28adeccbf7ff&amp;_ut=anon&amp;email_domain=ctnasuncion.edu.py&amp;blog_id=155107491&amp;date_sent=2021-03-21&amp;email_id=3892977645e7ebaf31668b29edf926e2&amp;email_name=subscribe-blog&amp;_en=wpcom_email_open&amp;browser_type=php-agent&amp;_aua=wpcom-tracks-client-v0.3&amp;blog_tz=0&amp;blog_lang=0&amp;_ts=1616294533775"></body></html>
+
+
+--b1_KJnBx9QYlzJ5xEWaqtZ7udZPX4ovAP9sLJpm8xWNRY--
+

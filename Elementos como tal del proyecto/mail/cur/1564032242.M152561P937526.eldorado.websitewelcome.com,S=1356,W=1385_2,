@@ -1,0 +1,29 @@
+Return-Path: <ctnas@eldorado.websitewelcome.com>
+Delivered-To: ctnas@eldorado.websitewelcome.com
+Received: from eldorado.websitewelcome.com
+	by eldorado.websitewelcome.com with LMTP
+	id AJ4JCPI8OV02Tg4A3+HKTQ
+	(envelope-from <ctnas@eldorado.websitewelcome.com>)
+	for <ctnas@eldorado.websitewelcome.com>; Thu, 25 Jul 2019 00:24:02 -0500
+Return-path: <ctnas@eldorado.websitewelcome.com>
+Envelope-to: ctnas@eldorado.websitewelcome.com
+Delivery-date: Thu, 25 Jul 2019 00:24:02 -0500
+Received: from ctnas by eldorado.websitewelcome.com with local (Exim 4.92)
+	(envelope-from <ctnas@eldorado.websitewelcome.com>)
+	id 1hqWEU-003z6W-2E
+	for ctnas@eldorado.websitewelcome.com; Thu, 25 Jul 2019 00:24:02 -0500
+From: ctnas@eldorado.websitewelcome.com (Cron Daemon)
+To: ctnas@eldorado.websitewelcome.com
+Subject: Cron <ctnas@eldorado> /usr/local/bin/perl /usr/local/cpanel/3rdparty/quickinstall/scripts/checkupdates.pl
+Content-Type: text/plain; charset=UTF-8
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/home2/ctnas>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=ctnas>
+X-Cron-Env: <USER=ctnas>
+Message-Id: <E1hqWEU-003z6W-2E@eldorado.websitewelcome.com>
+Date: Thu, 25 Jul 2019 00:24:02 -0500
+
+Can't open perl script "/usr/local/cpanel/3rdparty/quickinstall/scripts/checkupdates.pl": No such file or directory

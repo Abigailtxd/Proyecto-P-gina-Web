@@ -1,0 +1,78 @@
+Return-Path: <officefilezone@gmail.com>
+Delivered-To: informatica@ctnasuncion.edu.py
+Received: from eldorado.websitewelcome.com
+	by eldorado.websitewelcome.com with LMTP
+	id SHuMGY+7I2G/SAoA3+HKTQ
+	(envelope-from <officefilezone@gmail.com>)
+	for <informatica@ctnasuncion.edu.py>; Mon, 23 Aug 2021 10:15:27 -0500
+Return-path: <officefilezone@gmail.com>
+Envelope-to: informatica@ctnasuncion.edu.py
+Delivery-date: Mon, 23 Aug 2021 10:15:27 -0500
+Received: from mail-io1-f65.google.com ([209.85.166.65]:37720)
+	by eldorado.websitewelcome.com with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.94.2)
+	(envelope-from <officefilezone@gmail.com>)
+	id 1mIBfb-002pl5-Ah
+	for informatica@ctnasuncion.edu.py; Mon, 23 Aug 2021 10:15:27 -0500
+Received: by mail-io1-f65.google.com with SMTP id b7so22231624iob.4
+        for <informatica@ctnasuncion.edu.py>; Mon, 23 Aug 2021 08:15:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:reply-to:from:date:message-id:subject:to;
+        bh=1oUOldFzdbTQ8WCSR3xp8H+ROF5VIuynVuNBShg2GO0=;
+        b=IpVwvhA5arpqPpbSwBcIOk0WasG2Z1ikSBVxyzMMNsrgZGZXH6p6W6JaiUP6g0xU2B
+         gy+OI2XF2ulDBITnykhcUpx+E9S4NJvQQhDULxro4KBJxEyZonCEksiQFYc48Eo6ZteM
+         rjKpr8L71uydLT76lj2Nxulq4BkNAf9f4OOF0fIHvz4N/xKsONeEqZwV9xYEKc+RcAvS
+         k0kFAP+/2GR8D7lVKzEn6M96X4Q34zejAPDZ3b5GXQn/sMVoEuYxmq721cOpjn0jrIIU
+         asPjEEaVR9wSClUMZKZUlLUxjL9KaHOpEl4UHrR5QEresh+agq1UVb8cMfRQYo5S5S8m
+         0wuQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:reply-to:from:date:message-id
+         :subject:to;
+        bh=1oUOldFzdbTQ8WCSR3xp8H+ROF5VIuynVuNBShg2GO0=;
+        b=YM/HHYMXudFLK9GHXnpSZqwEnUUi5cMdU67l31vFroaVEx5Gxi9KBvRGkKnYHTcKxe
+         rH/nfihiiJTW12vpivQzuCFHluw4eyU8SLl83vzS/ovuKgJCibOl3jL7vgtBAMaM6EAV
+         ojORbHUny7FXhGlC1wGPIETLZa4qq1M3hS5g3UCs/2CvTsLfKv+gIENroaU2Jj9XtrOu
+         UyXzbq+VYSyTPd7Do3z3iKxcUWUsMGqI8MpbisbatQmyKh9U4TA6gIkiB8oh2VNpFEk7
+         q38o/0LfzkznFwJmVZhM6ubBuMqWXUrbYlTRuj3DSb8zfQmgItLrO5Sgi1fVLR16wdnL
+         Ib8g==
+X-Gm-Message-State: AOAM533mDxbaTDPu3+cwLXiv/TdMxVGzUEachJgsyv8v3G1106OxfzoW
+	yuZqvFWS4JZcdwS3t3HFM53Cx3VI1Y8b9wo4+Js=
+X-Google-Smtp-Source: ABdhPJwa12TAglcgEWzbJiFRBndcyyCKIbebfYYXD0pPttSpwO6nPSBeOooj7fcqNaljSBir83BJcD/KuYcIjpfxsZ0=
+X-Received: by 2002:a5d:8b04:: with SMTP id k4mr18675562ion.58.1629731716570;
+ Mon, 23 Aug 2021 08:15:16 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a4f:a456:0:0:0:0:0 with HTTP; Mon, 23 Aug 2021 08:15:15
+ -0700 (PDT)
+Reply-To: m.office69@yahoo.com
+From: Rosemay Mark <officefilezone@gmail.com>
+Date: Mon, 23 Aug 2021 16:15:15 +0100
+Message-ID: <CAEynGU-8S=Q42r7QrdRfGotMfQAEExZEoMWgoCMezgmj21Ykcw@mail.gmail.com>
+Subject: Dear Beneficiary,
+To: undisclosed-recipients:;
+Content-Type: text/plain; charset="UTF-8"
+Bcc: informatica@ctnasuncion.edu.py
+
+Dear  Beneficiary,
+
+I hereby acknowledge the receipt from Minister of Finance for a
+probate approval for the delivery of your ATM card package worth sum
+of US$2.5 Million US Dollars.  As you are probably aware there are
+procedures necessary for obtaining probate approval for transfer of
+the estate be it funds as a scam victim.
+
+Mr. Mike Adams Courier Officer  who is in charge of your delivery of
+your ATM card deposited in his care by the Minister of Finance and
+sign by Royal Heritage Chambers Benin Republic.Please note that all
+necessary arrangements for the smooth delivery of your ATM has been
+finalized. We will discuss more in detail when we receive your
+response. Please in your response include your telephone number for
+easy communication between us.
+
+Contact Courier Officer
+Dir incharge Mr. Mike Adams
+Phone +22998198279
+
+Regards,
+Rosemay Mark

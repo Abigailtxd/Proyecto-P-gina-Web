@@ -1,0 +1,351 @@
+Return-Path: <informatica=ctnasuncion.edu.py@b.wordpress.com>
+Delivered-To: informatica@ctnasuncion.edu.py
+Received: from eldorado.websitewelcome.com
+	by eldorado.websitewelcome.com with LMTP
+	id uLBvHVkNQmDHUwsA3+HKTQ
+	(envelope-from <informatica=ctnasuncion.edu.py@b.wordpress.com>)
+	for <informatica@ctnasuncion.edu.py>; Fri, 05 Mar 2021 04:52:09 -0600
+Return-path: <informatica=ctnasuncion.edu.py@b.wordpress.com>
+Envelope-to: informatica@ctnasuncion.edu.py
+Delivery-date: Fri, 05 Mar 2021 04:52:09 -0600
+Received: from smtp3-3.bur.wordpress.com ([192.0.123.42]:39093)
+	by eldorado.websitewelcome.com with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.93)
+	(envelope-from <informatica=ctnasuncion.edu.py@b.wordpress.com>)
+	id 1lI841-0037qk-Cy
+	for informatica@ctnasuncion.edu.py; Fri, 05 Mar 2021 04:52:09 -0600
+Received: from wordpress.com (unknown [192.0.113.147])
+	by smtp3.bur.wordpress.com (Postfix) with ESMTP id 4DsPgf4CK8znVpM
+	for <informatica@ctnasuncion.edu.py>; Fri,  5 Mar 2021 10:51:58 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=wordpress.com;
+	s=automattic1; t=1614941518;
+	bh=TFw6NsjWO7Um7pKyyR5O3Rp4Dd+IYqsJy3KsR3A0omw=;
+	h=Date:To:From:Subject:List-Help:List-Unsubscribe:List-Subscribe:
+	 List-Archive:From;
+	b=O52idTAG60Ac7KbHlddsZ1pWH0H9QG+OSOp3XmfswmQ8CATxeAiULwdKNYRLxJbWb
+	 O2XYM8FtdXgCwb7gMvGxxCbaufhSX5d5yUwOIcPEIGB2Xh0DnfdU4ITr+eetjZbvLB
+	 SyboQIRcbqkvgdg2D4VyTeP+/7MJXTtSETIxUYMiSiBTilxRPQEPcBjAiNx0bhONEw
+	 3L2J/+Ou5Rqc6Ird5mil0liDvn8iPfCLAy5jRoBS4QzQtXYmOuOBUGk/9+RQbvp72U
+	 +Mhso9GG+JKfiJVgMaxck0r1cgjGRFfg8KM+NwzifMiMJz5og+ilh0rmrVoe1VXlaa
+	 78RZXDcINwsjg==
+Date: Fri, 5 Mar 2021 10:51:58 +0000
+To: informatica@ctnasuncion.edu.py
+From: Blog CTN <donotreply@wordpress.com>
+Subject: =?UTF-8?B?W05ldyBwb3N0XSBMSVNUQSBQUkVMSU1JTkFSIENUTiBBRE1JU0nDk04gMjAyMQ==?=
+Message-ID: <155107491.290.0@wordpress.com>
+List-Help: <https://en.support.wordpress.com/following/>
+List-Unsubscribe: <https://subscribe.wordpress.com/?key=e40c9dcede46a7d5e38806b2080d189f&amp;email=informatica%40ctnasuncion.edu.py&amp;b=-n5gKJYBSm8suiBjGiHEYW8iUeYMCVu45u8RQnpN10fXgdit6TMg4lYBG1Kw7jwq9mf-nWTNgU-jw66dEgwluar50BSzUzIFmVAgylrQtW5-j44%3D>
+List-Subscribe: <http://ctnasuncion.edu.py/blogctn>
+List-Archive: <http://ctnasuncion.edu.py/blogctn>
+Precedence: bulk
+X-Automattic-Destination: aW5mb3JtYXRpY2FAY3RuYXN1bmNpb24uZWR1LnB5
+X-Automattic-Tracking: 0:2:ZvyhZa+rltviogEG228SEA==.5VvNihMMCgZXSsCQEFzAnMPZJNOFSYaBVNgW5jLubVjYdAkrq1xo0Funudoelk8V:155107491:290:148784728
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_vf97fd6jQbhYIJIVnDWbRqtuhFXrWoYnmK4vVXIdwuY"
+Content-Transfer-Encoding: 8bit
+
+This is a multi-part message in MIME format.
+
+--b1_vf97fd6jQbhYIJIVnDWbRqtuhFXrWoYnmK4vVXIdwuY
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Post   : LISTA PRELIMINAR CTN ADMISIÓN 2021
+URL    : http://ctnasuncion.edu.py/blogctn/index.php/2021/03/05/lista-preliminar-ctn-admision-2021/
+Posted : March 5, 2021 at 10:51 am
+Author : admin
+
+LISTA PRELIMINAR CONSTRUCCIONES CIVILES 2021. ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-CONSTRUCCIONES-CIVILES-2021.-1.xlsx ) Descargar ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-CONSTRUCCIONES-CIVILES-2021.-1.xlsx )
+
+LISTA PRELIMINAR ELECTRICIDAD 2021 ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTRICIDAD-2021-1.xlsx ) Descargar ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTRICIDAD-2021-1.xlsx )
+
+LISTA PRELIMINAR ELECTROMECANICA 2021 ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTROMECANICA-2021-1.xlsx ) Descargar ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTROMECANICA-2021-1.xlsx )
+
+LISTA PRELIMINAR ELECTRONICA 2021 ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTRONICA-2021-1.xlsx ) Descargar ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTRONICA-2021-1.xlsx )
+
+LISTA PRELIMINAR INFORMATICA 2021 ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-INFORMATICA-2021-1.xlsx ) Descargar ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-INFORMATICA-2021-1.xlsx )
+
+LISTA PRELIMINAR MECANICA AUTOMOTRIZ 2021 ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-MECANICA-AUTOMOTRIZ-2021-1.xlsx ) Descargar ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-MECANICA-AUTOMOTRIZ-2021-1.xlsx )
+
+LISTA PRELIMINAR MECANICA GENERAL 2021 ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-MECANICA-GENERAL-2021-1.xlsx ) Descargar ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-MECANICA-GENERAL-2021-1.xlsx )
+
+LISTA PRELIMINAR QUIMICA INDUSTRIAL 2021 ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-QUIMICA-INDUSTRIAL-2021-1.xlsx ) Descargar ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-QUIMICA-INDUSTRIAL-2021-1.xlsx )
+
+Add a comment to this post: http://ctnasuncion.edu.py/blogctn/index.php/2021/03/05/lista-preliminar-ctn-admision-2021/#respond
+
+-- 
+
+
+Manage Subscriptions
+https://subscribe.wordpress.com/?key=e40c9dcede46a7d5e38806b2080d189f&email=informatica%40ctnasuncion.edu.py
+
+Unsubscribe:
+https://subscribe.wordpress.com/?key=e40c9dcede46a7d5e38806b2080d189f&email=informatica%40ctnasuncion.edu.py&b=-n5gKJYBSm8suiBjGiHEYW8iUeYMCVu45u8RQnpN10fXgdit6TMg4lYBG1Kw7jwq9mf-nWTNgU-jw66dEgwluar50BSzUzIFmVAgylrQtW5-j44%3D
+
+--b1_vf97fd6jQbhYIJIVnDWbRqtuhFXrWoYnmK4vVXIdwuY
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A<html xmlns=3D"http://www.=
+w3.org/1999/xhtml"><head><style type=3D"text/css" media=3D"all">=0A=09a:hov=
+er {=09color: red;=09}=0A=09a {=0A=09=09text-decoration: underline;=0A=09=
+=09color: #0088cc;=0A=09}=0A=0A=09a.primaryactionlink:link, a.primaryaction=
+link:visited { background-color: #2585B2; color: #fff; }=0A=09a.primaryacti=
+onlink:hover, a.primaryactionlink:active { background-color: #11729E !impor=
+tant; color: #fff !important; }=0A=0A/*=0A =09@media only screen and (max-d=
+evice-width: 480px) {=0A=09=09 .post { min-width: 700px !important; }=0A=09=
+}=0A*/=0A=09</style><title>WordPress.com</title><!--[if gte mso 12]>=0A=09<=
+style type=3D"text/css" media=3D"all">=0A=09body {=0A=09font-family: arial;=
+=0A=09font-size: 0.8em;=0A=09}=0A=09.post, .comment {=0A=09background-color=
+: white !important;=0A=09line-height: 1.4em !important;=0A=09}=0A=09</style=
+>=0A=09<![endif]--><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"></head><body class=3D"subscription-body-tag">=0A=0A<table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#DDDDDD" style=
+=3D"width: 100%; background: #DDDDDD;"><tr><td>=0A=09=09=09=09=09<span styl=
+e=3D"display:none !important">=0A=09=09=09=09admin posted: "=0ALISTA PRELIM=
+INAR CONSTRUCCIONES CIVILES 2021.Descargar=0A=0A=0A=0ALISTA PRELIMINAR ELEC=
+TRICIDAD 2021Descargar=0A=0A=0A=0ALISTA PRELIMINAR ELECTROMECANICA 2021Desc=
+argar=0A=0A=0A=0ALISTA PRELIMINAR ELECTRONICA 2021Descargar=0A=0A=0A=0ALIST=
+A PRELIMINAR INFORMATICA 2021Descargar=0A=0A=0A=0ALISTA P"=09=09=09</span>=
+=0A=09=09=09=09=09=09<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" align=3D"center" class=3D"subscribe-body" style=3D"width: 100%; padding: =
+10px"><tr><td>=0A=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"directio=
+n: ltr; max-width: 600px; margin: 0 auto; overflow: hidden;">=0A=09=09=09=
+=09=09=09=09<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=
+=3D"#ffffff" class=3D"subscribe-wrapper" style=3D"width: 100%; background-c=
+olor: #fff; text-align: left; max-width: 1024px; min-width: 320px; margin: =
+0 auto;"><tr><td>=0A=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" height=3D"8" background=3D"https://s0.wp.com=
+/i/emails/stripes.gif" class=3D"subscribe-header-wrap" style=3D"width: 100%=
+; background-image: url(https://s0.wp.com/i/emails/stripes.gif); background=
+-repeat: repeat-x; background-color: #43A4D0; height: 8px;"><tr><td></td>=
+=0A=09=09=09=09=09=09=09=09=09=09=09</tr></table><table border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" class=3D"subscribe-header" style=3D"width: 10=
+0%; color: #08c; font-size: 1.6em; background-color: #EFEFEF; border-bottom=
+: 1px solid #DDD; margin: 0; padding: 0;"><tr><td>=0A=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<h2 class=3D"subscribe-title" style=3D'margin: .4em 0 .3e=
+m; font-size: 1.8em; font-size: 16px!important; line-height: 1; font-weight=
+: 400; color: #464646; font-family: "Helvetica Neue", Helvetica, Arial, san=
+s-serif; margin: 5px 20px!important; padding: 0;'>=0A=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09New post on <strong>Blog CTN</strong>=09=09=09=09=09=
+=09=09=09=09=09=09=09=09</h2>=0A=09=09=09=09=09=09=09=09=09=09=09=09</td>=
+=0A=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"text-align: right;">=0A=
+=09=09=09=09=09=09=09=09=09=09=09=09=09<img border=3D"0" class=3D"head-avat=
+ar" src=3D"https://i0.wp.com/ctnasuncion.edu.py/blogctn/wp-content/uploads/=
+2018/11/cropped-logo2-1.png?resize=3D32%2C32" alt=3D"" width=3D"32" height=
+=3D"32" style=3D"vertical-align: middle; margin: 5px 20px 5px 0; vertical-a=
+lign: middle;"></td>=0A=09=09=09=09=09=09=09=09=09=09=09</tr></table><table=
+ style=3D"width: 100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"20" bg=
+color=3D"#ffffff"><tr><td>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09<table =
+style=3D"width: 100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr>=
+<td valign=3D"top" class=3D"the-post">=0A=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table st=
+yle=3D"width: 100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><t=
+d style=3D"width: 60px !important; white-space: nowrap; vertical-align: top=
+;">=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=
+=3D"http://ctnasuncion.edu.py/blogctn/?author=3D1" style=3D"color: #2585B2;=
+ display: block; margin-right: 10px;"><img border=3D"0" alt=3D"" src=3D"htt=
+p://0.gravatar.com/avatar/6d26304b015f3a7c097013f9aa4bcc57?s=3D50&amp;d=3Dh=
+ttp%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%=
+3D50&amp;r=3DG" class=3D"avatar avatar-50" height=3D"50" width=3D"50"></a>=
+=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>=0A=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h2 class=3D"post-title" style=
+=3D"margin: .4em 0 .3em; font-size: 1.8em; font-size: 1.6em; color: #555; m=
+argin: 0; font-size: 20px;"><a href=3D"http://ctnasuncion.edu.py/blogctn/in=
+dex.php/2021/03/05/lista-preliminar-ctn-admision-2021/" style=3D"color: #25=
+85B2; text-decoration: none;">LISTA PRELIMINAR CTN ADMISI=C3=93N=C2=A02021<=
+/a></h2>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<spa=
+n style=3D"color: #888;">by <a href=3D"http://ctnasuncion.edu.py/blogctn/?a=
+uthor=3D1" style=3D"color: #2585B2; color: #888 !important;">admin</a> </sp=
+an>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>=0A=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr></table><div class=
+=3D"post-content" style=3D"direction: ltr; margin-top: 1em; max-width: 560p=
+x;">=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09<div class=3D"wp-block-file" style=
+=3D"direction: ltr; margin-bottom: 1.5em;">=0A<a style=3D"color: #2585B2;" =
+href=3D"http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-=
+PRELIMINAR-CONSTRUCCIONES-CIVILES-2021.-1.xlsx">LISTA PRELIMINAR CONSTRUCCI=
+ONES CIVILES 2021.</a><a href=3D"http://ctnasuncion.edu.py/blogctn/wp-conte=
+nt/uploads/2021/03/LISTA-PRELIMINAR-CONSTRUCCIONES-CIVILES-2021.-1.xlsx" cl=
+ass=3D"wp-block-file__button" download style=3D"color: #2585B2; background:=
+ #32373c; border-radius: 2em; color: #fff; font-size: .8em; padding: .5em 1=
+em; margin-left: .75em; text-decoration: none;">Descargar</a>=0A</div>=0A<d=
+iv class=3D"wp-block-file" style=3D"direction: ltr; margin-bottom: 1.5em;">=
+=0A<a style=3D"color: #2585B2;" href=3D"http://ctnasuncion.edu.py/blogctn/w=
+p-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTRICIDAD-2021-1.xlsx">LISTA =
+PRELIMINAR ELECTRICIDAD 2021</a><a href=3D"http://ctnasuncion.edu.py/blogct=
+n/wp-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTRICIDAD-2021-1.xlsx" cla=
+ss=3D"wp-block-file__button" download style=3D"color: #2585B2; background: =
+#32373c; border-radius: 2em; color: #fff; font-size: .8em; padding: .5em 1e=
+m; margin-left: .75em; text-decoration: none;">Descargar</a>=0A</div>=0A<di=
+v class=3D"wp-block-file" style=3D"direction: ltr; margin-bottom: 1.5em;">=
+=0A<a style=3D"color: #2585B2;" href=3D"http://ctnasuncion.edu.py/blogctn/w=
+p-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTROMECANICA-2021-1.xlsx">LIS=
+TA PRELIMINAR ELECTROMECANICA 2021</a><a href=3D"http://ctnasuncion.edu.py/=
+blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTROMECANICA-2021-1.=
+xlsx" class=3D"wp-block-file__button" download style=3D"color: #2585B2; bac=
+kground: #32373c; border-radius: 2em; color: #fff; font-size: .8em; padding=
+: .5em 1em; margin-left: .75em; text-decoration: none;">Descargar</a>=0A</d=
+iv>=0A<div class=3D"wp-block-file" style=3D"direction: ltr; margin-bottom: =
+1.5em;">=0A<a style=3D"color: #2585B2;" href=3D"http://ctnasuncion.edu.py/b=
+logctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTRONICA-2021-1.xlsx"=
+>LISTA PRELIMINAR ELECTRONICA 2021</a><a href=3D"http://ctnasuncion.edu.py/=
+blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-ELECTRONICA-2021-1.xlsx=
+" class=3D"wp-block-file__button" download style=3D"color: #2585B2; backgro=
+und: #32373c; border-radius: 2em; color: #fff; font-size: .8em; padding: .5=
+em 1em; margin-left: .75em; text-decoration: none;">Descargar</a>=0A</div>=
+=0A<div class=3D"wp-block-file" style=3D"direction: ltr; margin-bottom: 1.5=
+em;">=0A<a style=3D"color: #2585B2;" href=3D"http://ctnasuncion.edu.py/blog=
+ctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-INFORMATICA-2021-1.xlsx">LI=
+STA PRELIMINAR INFORMATICA 2021</a><a href=3D"http://ctnasuncion.edu.py/blo=
+gctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-INFORMATICA-2021-1.xlsx" c=
+lass=3D"wp-block-file__button" download style=3D"color: #2585B2; background=
+: #32373c; border-radius: 2em; color: #fff; font-size: .8em; padding: .5em =
+1em; margin-left: .75em; text-decoration: none;">Descargar</a>=0A</div>=0A<=
+div class=3D"wp-block-file" style=3D"direction: ltr; margin-bottom: 1.5em;"=
+>=0A<a style=3D"color: #2585B2;" href=3D"http://ctnasuncion.edu.py/blogctn/=
+wp-content/uploads/2021/03/LISTA-PRELIMINAR-MECANICA-AUTOMOTRIZ-2021-1.xlsx=
+">LISTA PRELIMINAR MECANICA AUTOMOTRIZ 2021</a><a href=3D"http://ctnasuncio=
+n.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-MECANICA-AUTOM=
+OTRIZ-2021-1.xlsx" class=3D"wp-block-file__button" download style=3D"color:=
+ #2585B2; background: #32373c; border-radius: 2em; color: #fff; font-size: =
+.8em; padding: .5em 1em; margin-left: .75em; text-decoration: none;">Descar=
+gar</a>=0A</div>=0A<div class=3D"wp-block-file" style=3D"direction: ltr; ma=
+rgin-bottom: 1.5em;">=0A<a style=3D"color: #2585B2;" href=3D"http://ctnasun=
+cion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-MECANICA-GE=
+NERAL-2021-1.xlsx">LISTA PRELIMINAR MECANICA GENERAL 2021</a><a href=3D"htt=
+p://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-=
+MECANICA-GENERAL-2021-1.xlsx" class=3D"wp-block-file__button" download styl=
+e=3D"color: #2585B2; background: #32373c; border-radius: 2em; color: #fff; =
+font-size: .8em; padding: .5em 1em; margin-left: .75em; text-decoration: no=
+ne;">Descargar</a>=0A</div>=0A<div class=3D"wp-block-file" style=3D"directi=
+on: ltr; margin-bottom: 1.5em;">=0A<a style=3D"color: #2585B2;" href=3D"htt=
+p://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LISTA-PRELIMINAR-=
+QUIMICA-INDUSTRIAL-2021-1.xlsx">LISTA PRELIMINAR QUIMICA INDUSTRIAL 2021</a=
+><a href=3D"http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/LI=
+STA-PRELIMINAR-QUIMICA-INDUSTRIAL-2021-1.xlsx" class=3D"wp-block-file__butt=
+on" download style=3D"color: #2585B2; background: #32373c; border-radius: 2=
+em; color: #fff; font-size: .8em; padding: .5em 1em; margin-left: .75em; te=
+xt-decoration: none;">Descargar</a>=0A</div>=0A<div style=3D"direction: ltr=
+; clear: both"></div>=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>=0A=0A=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<div class=3D"meta" style=3D"direction: ltr; color: #999; font-size: =
+.9em; margin-top: 4px; line-height: 160%; padding: 15px 0 15px; border-top:=
+ 1px solid #eee; border-bottom: 1px solid #eee; overflow: hidden">=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<strong><a style=3D"color: =
+#2585B2;" href=3D"http://ctnasuncion.edu.py/blogctn/?author=3D1">admin</a><=
+/strong> | March 5, 2021 at 10:51 am | URL: <a style=3D"color: #2585B2;" hr=
+ef=3D"https://wp.me/pauOxJ-4G">https://wp.me/pauOxJ-4G</a>=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09</div>=0A=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p class=3D"subscribe-action-link=
+s" style=3D'direction: ltr; font-size: 14px; line-height: 1.4em; color: #44=
+4; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0 0=
+ 1em; font-size: 14px; color: #666; padding: 0; width: auto; padding-top: 1=
+em; padding-bottom: 0em; margin-bottom: 0; margin-left: 0; padding-left: 0;=
+'>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p><table class=3D=
+"auto-width" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"widt=
+h: 100%; width: auto"><tr><td style=3D"width: 10px;"><a href=3D"http://ctna=
+suncion.edu.py/blogctn/index.php/2021/03/05/lista-preliminar-ctn-admision-2=
+021/#respond" style=3D"color: #2585B2; -moz-border-radius: 10em; -webkit-bo=
+rder-radius: 10em; border-radius: 10em; border: 1px solid #11729E; text-dec=
+oration: none; color: #fff; text-shadow: 0 1px 0 #11729E; background-color:=
+ #2585B2; padding: 5px 15px; font-size: 16px; line-height: 1.4em; font-fami=
+ly: Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: normal; marg=
+in-left: 0; white-space: nowrap;">Comment</a></td>=0A=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09<td>=C2=A0=C2=A0=C2=A0<a style=3D"color: #2585B2;" class=3D"=
+subscribe-action-link" href=3D"http://ctnasuncion.edu.py/blogctn/index.php/=
+2021/03/05/lista-preliminar-ctn-admision-2021/#comments">See all comments</=
+a></td>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09</tr></table></td>=0A=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09</tr></table></td>=0A=09=09=09=09=09=09=09=09=09=09=09</tr></ta=
+ble><table border=3D"0" cellspacing=3D"0" cellpadding=3D"20" bgcolor=3D"#ef=
+efef" class=3D"subscribe-wrapper-sub" style=3D"width: 100%; background-colo=
+r: #efefef; text-align: left; border-top: 1px solid #ddd;"><tr><td class=3D=
+"subscribe-content" style=3D'border-top: 1px solid #f3f3f3; color: #888; fo=
+nt-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px;=
+ background: #efefef;'>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=
+=3D'direction: ltr; font-size: 14px; line-height: 1.4em; color: #444; font-=
+family: "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0 0 1em; fo=
+nt-size: 12px; line-height: 1.4em; margin: 0px 0px 10px 0px;'>=0A=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09<a style=3D"color: #2585B2;" href=3D"https=
+://public-api.wordpress.com/bar/?stat=3Dgroovemails-events&amp;bin=3Dwpcom_=
+email_click&amp;redirect_to=3Dhttps%3A%2F%2Fsubscribe.wordpress.com%2F%3Fke=
+y%3De40c9dcede46a7d5e38806b2080d189f%26email%3Dinformatica%2540ctnasuncion.=
+edu.py%26b%3D-n5gKJYBSm8suiBjGiHEYW8iUeYMCVu45u8RQnpN10fXgdit6TMg4lYBG1Kw7j=
+wq9mf-nWTNgU-jw66dEgwluar50BSzUzIFmVAgylrQtW5-j44%253D&amp;sr=3D1&amp;signa=
+ture=3D3d79ea0baf052b241a0ee18e7f1dae90&amp;user=3D148784728&amp;_e=3DeyJlc=
+nJvciI6bnVsbCwiYmxvZ19pZCI6MTU1MTA3NDkxLCJibG9nX2xhbmciOiJlbiIsInNpdGVfaWRf=
+bGFiZWwiOiJqZXRwYWNrIiwiZW1haWxfbmFtZSI6ImVtYWlsX3N1YnNjcmlwdGlvbiIsIl91aSI=
+6MTQ4Nzg0NzI4LCJlbWFpbF9pZCI6IjRkYjExZGRlODFjOTMxYzExNTUwMTBkZjA4ODZhMDdmIi=
+wiZGF0ZV9zZW50IjoiMjAyMS0wMy0wNSIsImxvY2FsZSI6ImVuIiwiY3VycmVuY3kiOiJVU0QiL=
+CJjb3VudHJ5X2NvZGVfc2lnbnVwIjoiUFkiLCJkb21haW4iOiJjdG5hc3VuY2lvbi5lZHUucHki=
+LCJmcmVxdWVuY3kiOiIwIiwiZGlnZXN0IjoiMCIsImhhc19odG1sIjoiMSIsImFuY2hvcl90ZXh=
+0IjoiVW5zdWJzY3JpYmUiLCJfZHIiOm51bGwsIl9kbCI6IlwveG1scnBjLnBocD9zeW5jPTEmY2=
+9kZWM9ZGVmbGF0ZS1qc29uLWFycmF5JnRpbWVzdGFtcD0xNjE0OTQxNTE2LjA3JnF1ZXVlPXN5b=
+mMmaG9tZT1odHRwJTNBJTJGJTJGY3RuYXN1bmNpb24uZWR1LnB5JTJGYmxvZ2N0biZzaXRldXJs=
+PWh0dHAlM0ElMkYlMkZjdG5hc3VuY2lvbi5lZHUucHklMkZibG9nY3RuJmNkPTAuMDA0OCZwZD0=
+wLjAwNjMmaWRjPTEmdGltZW91dD0xNSZmb3I9amV0cGFjayZ3cGNvbV9ibG9nX2lkPTE1NTEwNz=
+Q5MSIsIl91dCI6IndwY29tOnVzZXJfaWQiLCJfdWwiOiJjdG5hc3VuY2lvbjIwMTgiLCJfZW4iO=
+iJ3cGNvbV9lbWFpbF9jbGljayIsIl90cyI6MTYxNDk0MTUxODU2MywiYnJvd3Nlcl90eXBlIjoi=
+cGhwLWFnZW50IiwiX2F1YSI6IndwY29tLXRyYWNrcy1jbGllbnQtdjAuMyIsImJsb2dfdHoiOjA=
+sInVzZXJfbGFuZyI6ImVuIn0&amp;_z=3Dz">Unsubscribe</a> to no longer receive p=
+osts from Blog CTN.<br>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09Change =
+your email settings at <a style=3D"color: #2585B2;" href=3D"https://public-=
+api.wordpress.com/bar/?stat=3Dgroovemails-events&amp;bin=3Dwpcom_email_clic=
+k&amp;redirect_to=3Dhttps%3A%2F%2Fsubscribe.wordpress.com%2F%3Fkey%3De40c9d=
+cede46a7d5e38806b2080d189f%26email%3Dinformatica%2540ctnasuncion.edu.py&amp=
+;sr=3D1&amp;signature=3D0e2994d3d0a34a0b601bc17b4afa36fd&amp;user=3D1487847=
+28&amp;_e=3DeyJlcnJvciI6bnVsbCwiYmxvZ19pZCI6MTU1MTA3NDkxLCJibG9nX2xhbmciOiJ=
+lbiIsInNpdGVfaWRfbGFiZWwiOiJqZXRwYWNrIiwiZW1haWxfbmFtZSI6ImVtYWlsX3N1YnNjcm=
+lwdGlvbiIsIl91aSI6MTQ4Nzg0NzI4LCJlbWFpbF9pZCI6IjRkYjExZGRlODFjOTMxYzExNTUwM=
+TBkZjA4ODZhMDdmIiwiZGF0ZV9zZW50IjoiMjAyMS0wMy0wNSIsImxvY2FsZSI6ImVuIiwiY3Vy=
+cmVuY3kiOiJVU0QiLCJjb3VudHJ5X2NvZGVfc2lnbnVwIjoiUFkiLCJkb21haW4iOiJjdG5hc3V=
+uY2lvbi5lZHUucHkiLCJmcmVxdWVuY3kiOiIwIiwiZGlnZXN0IjoiMCIsImhhc19odG1sIjoiMS=
+IsImFuY2hvcl90ZXh0IjoiTWFuYWdlIFN1YnNjcmlwdGlvbnMiLCJfZHIiOm51bGwsIl9kbCI6I=
+lwveG1scnBjLnBocD9zeW5jPTEmY29kZWM9ZGVmbGF0ZS1qc29uLWFycmF5JnRpbWVzdGFtcD0x=
+NjE0OTQxNTE2LjA3JnF1ZXVlPXN5bmMmaG9tZT1odHRwJTNBJTJGJTJGY3RuYXN1bmNpb24uZWR=
+1LnB5JTJGYmxvZ2N0biZzaXRldXJsPWh0dHAlM0ElMkYlMkZjdG5hc3VuY2lvbi5lZHUucHklMk=
+ZibG9nY3RuJmNkPTAuMDA0OCZwZD0wLjAwNjMmaWRjPTEmdGltZW91dD0xNSZmb3I9amV0cGFja=
+yZ3cGNvbV9ibG9nX2lkPTE1NTEwNzQ5MSIsIl91dCI6IndwY29tOnVzZXJfaWQiLCJfdWwiOiJj=
+dG5hc3VuY2lvbjIwMTgiLCJfZW4iOiJ3cGNvbV9lbWFpbF9jbGljayIsIl90cyI6MTYxNDk0MTU=
+xODU2NCwiYnJvd3Nlcl90eXBlIjoicGhwLWFnZW50IiwiX2F1YSI6IndwY29tLXRyYWNrcy1jbG=
+llbnQtdjAuMyIsImJsb2dfdHoiOjAsInVzZXJfbGFuZyI6ImVuIn0&amp;_z=3Dz">Manage Su=
+bscriptions</a>.=09=09=09=09=09=09=09=09=09=09=09=09=09</p>=0A=0A=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<p style=3D'direction: ltr; font-size: 14px; =
+line-height: 1.4em; color: #444; font-family: "Helvetica Neue", Helvetica, =
+Arial, sans-serif; margin: 0 0 1em; font-size: 12px; line-height: 1.4em; ma=
+rgin: 0px 0px 0px 0px;'>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09<stron=
+g>Trouble clicking?</strong> Copy and paste this URL into your browser: <br=
+><a style=3D"color: #2585B2;" href=3D"http://ctnasuncion.edu.py/blogctn/ind=
+ex.php/2021/03/05/lista-preliminar-ctn-admision-2021/">http://ctnasuncion.e=
+du.py/blogctn/index.php/2021/03/05/lista-preliminar-ctn-admision-2021/</a>=
+=0A=09=09=09=09=09=09=09=09=09=09=09=09=09</p>=0A=09=09=09=09=09=09=09=09=
+=09=09=09=09</td>=0A=09=09=09=09=09=09=09=09=09=09=09</tr></table></td>=0A=
+=09=09=09=09=09=09=09=09</tr></table><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" height=3D"3" background=3D"https://s0.wp.com/i/emails/str=
+ipes.gif" class=3D"subscribe-footer-wrap" style=3D"width: 100%; background-=
+image: url(https://s0.wp.com/i/emails/stripes.gif); background-repeat: repe=
+at-x; background-color: #43A4D0; height: 3px;"><tr><td></td>=0A=09=09=09=09=
+=09=09=09=09</tr></table></div>=0A=09=09=09=09=09</td>=0A=09=09=09=09</tr><=
+/table><br></td>=0A=09</tr></table><img alt=3D"" border=3D"0" src=3D"http:/=
+/pixel.wp.com/b.gif?blog=3D155107491&amp;post=3D290&amp;subd=3Dctnasuncion.=
+edu.py&amp;ref=3D&amp;email=3D1&amp;email_o=3Djetpack&amp;host=3Djetpack.wo=
+rdpress.com" width=3D"1" height=3D"1"><img alt=3D"" border=3D"0" src=3D"htt=
+p://pixel.wp.com/t.gif?email_name=3Demail_subscription&amp;blog_id=3D155107=
+491&amp;_ui=3D148784728&amp;email_id=3D4db11dde81c931c1155010df0886a07f&amp=
+;date_sent=3D2021-03-05&amp;locale=3Den&amp;currency=3DUSD&amp;country_code=
+_signup=3DPY&amp;domain=3Dctnasuncion.edu.py&amp;frequency=3D0&amp;digest=
+=3D0&amp;has_html=3D1&amp;_en=3Dwpcom_email_open&amp;browser_type=3Dphp-age=
+nt&amp;_aua=3Dwpcom-tracks-client-v0.3&amp;_ul=3Dctnasuncion2018&amp;_ut=3D=
+wpcom%3Auser_id&amp;blog_tz=3D0&amp;blog_lang=3D0&amp;user_lang=3Den&amp;_t=
+s=3D1614941518549" width=3D"1" height=3D"1"></body></html>=0A
+
+--b1_vf97fd6jQbhYIJIVnDWbRqtuhFXrWoYnmK4vVXIdwuY--
+

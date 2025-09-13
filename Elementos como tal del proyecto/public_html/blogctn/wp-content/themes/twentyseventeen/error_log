@@ -1,0 +1,16 @@
+[13-Sep-2021 19:37:43 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/ctnas/public_html/blogctn/wp-content/themes/twentyseventeen/404.php on line 13
+[14-Sep-2021 21:05:57 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/ctnas/public_html/blogctn/wp-content/themes/twentyseventeen/404.php on line 13
+[04-Nov-2021 20:02:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentyseventeen/index.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/ctnas/public_html/blogctn/wp-content/themes/twentyseventeen/index.php on line 18
+[21-Jul-2022 16:20:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentyseventeen/404.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/ctnas/public_html/blogctn/wp-content/themes/twentyseventeen/404.php on line 13

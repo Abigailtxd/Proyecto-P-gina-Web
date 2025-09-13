@@ -1,0 +1,277 @@
+Return-Path: <informatica=ctnasuncion.edu.py@b.wordpress.com>
+Delivered-To: informatica@ctnasuncion.edu.py
+Received: from eldorado.websitewelcome.com
+	by eldorado.websitewelcome.com with LMTP
+	id uF6OKPH3QGCXvgAA3+HKTQ
+	(envelope-from <informatica=ctnasuncion.edu.py@b.wordpress.com>)
+	for <informatica@ctnasuncion.edu.py>; Thu, 04 Mar 2021 09:08:33 -0600
+Return-path: <informatica=ctnasuncion.edu.py@b.wordpress.com>
+Envelope-to: informatica@ctnasuncion.edu.py
+Delivery-date: Thu, 04 Mar 2021 09:08:33 -0600
+Received: from smtp2-2.bur.wordpress.com ([192.0.123.37]:24123)
+	by eldorado.websitewelcome.com with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.93)
+	(envelope-from <informatica=ctnasuncion.edu.py@b.wordpress.com>)
+	id 1lHpab-000Mbo-In
+	for informatica@ctnasuncion.edu.py; Thu, 04 Mar 2021 09:08:33 -0600
+Received: from wordpress.com (unknown [192.0.113.83])
+	by smtp2.bur.wordpress.com (Postfix) with ESMTP id 4DrvPy74yrz2NX6M
+	for <informatica@ctnasuncion.edu.py>; Thu,  4 Mar 2021 15:08:22 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=wordpress.com;
+	s=automattic1; t=1614870503;
+	bh=37gJgouorr+CBzGjL1ExUT515wbxHkrMqRACZW7ENP4=;
+	h=Date:To:From:Subject:List-Help:List-Unsubscribe:List-Subscribe:
+	 List-Archive:From;
+	b=ZOcqxSMK9Xu/i6SlQcr0pq6cvDMXRxqlL9dYDYfMJx4k7oZjgBUwivZI+7rG/CbWt
+	 voJuDGmk8P/3+4axOxycVWBt5CEnf4hC2gyc5JIa/zR+uhIei1Gek48J/fYED97iG6
+	 WzIQgOQbAjFbYYJvwKKM1euv6+2+HwCXAWz3hnb/4sEsdP03DMmpPyqW8QzYpgWC/9
+	 L2uvb5mWmx/4sORqC+qY207gWiO1/3p32Ino4Hyjqk3cMpweSPBgIVWp0LoRUdRHKO
+	 FzwO1mHrVjgFNIrzSyZYSQwc0zVA75zRxlwcuM538afz2Mh8yGkdkYBxOagBKq6KN9
+	 d0bDV6Jg+qNiQ==
+Date: Thu, 4 Mar 2021 15:08:22 +0000
+To: informatica@ctnasuncion.edu.py
+From: Blog CTN <donotreply@wordpress.com>
+Subject: =?UTF-8?B?W05ldyBwb3N0XSBIT0pBIERFIFJFU1BVRVNUQVMgTUFURU3DgVRJQ0EgMDQvMDMvMjAyMQ==?=
+Message-ID: <155107491.267.0@wordpress.com>
+List-Help: <https://en.support.wordpress.com/following/>
+List-Unsubscribe: <https://subscribe.wordpress.com/?key=e40c9dcede46a7d5e38806b2080d189f&amp;email=informatica%40ctnasuncion.edu.py&amp;b=ObaQDZHNBprELiYKiyXUzl2rxhf2ZQhj-KM2tON4os7470mjugr3WyTVeoKiz4HSRfwJrdmsZu7BRqtdFe93FCcWdd8mT-q_QcZDoC3waHcGyu4%3D>
+List-Subscribe: <http://ctnasuncion.edu.py/blogctn>
+List-Archive: <http://ctnasuncion.edu.py/blogctn>
+Precedence: bulk
+X-Automattic-Destination: aW5mb3JtYXRpY2FAY3RuYXN1bmNpb24uZWR1LnB5
+X-Automattic-Tracking: 0:2:HDF/rFnNJ/nEfQFflvsitw==.cbAr5CVed4537B7d0Dbp2cYYlbDZ5EX/42d2ybQ6oU59yDxHTBjCdhG5fnmpd0fp:155107491:267:148784728
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_BfNRIbdlmySB8GwjuPl3upoVHoslgJJKCzZty4las"
+Content-Transfer-Encoding: 8bit
+
+This is a multi-part message in MIME format.
+
+--b1_BfNRIbdlmySB8GwjuPl3upoVHoslgJJKCzZty4las
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Post   : HOJA DE RESPUESTAS MATEMÁTICA 04/03/2021
+URL    : http://ctnasuncion.edu.py/blogctn/index.php/2021/03/04/hoja-de-respuestas-matematica-04-03-2021/
+Posted : March 4, 2021 at 3:08 pm
+Author : admin
+
+HOJA DE RESPUESTAS MATEMÁTICA ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/HOJA-DE-RESPUESTAS-MATEMATICA-.pdf ) Descargar ( http://ctnasuncion.edu.py/blogctn/wp-content/uploads/2021/03/HOJA-DE-RESPUESTAS-MATEMATICA-.pdf )
+
+Add a comment to this post: http://ctnasuncion.edu.py/blogctn/index.php/2021/03/04/hoja-de-respuestas-matematica-04-03-2021/#respond
+
+-- 
+
+
+Manage Subscriptions
+https://subscribe.wordpress.com/?key=e40c9dcede46a7d5e38806b2080d189f&email=informatica%40ctnasuncion.edu.py
+
+Unsubscribe:
+https://subscribe.wordpress.com/?key=e40c9dcede46a7d5e38806b2080d189f&email=informatica%40ctnasuncion.edu.py&b=ObaQDZHNBprELiYKiyXUzl2rxhf2ZQhj-KM2tON4os7470mjugr3WyTVeoKiz4HSRfwJrdmsZu7BRqtdFe93FCcWdd8mT-q_QcZDoC3waHcGyu4%3D
+
+--b1_BfNRIbdlmySB8GwjuPl3upoVHoslgJJKCzZty4las
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A<html xmlns=3D"http://www.=
+w3.org/1999/xhtml"><head><style type=3D"text/css" media=3D"all">=0A=09a:hov=
+er {=09color: red;=09}=0A=09a {=0A=09=09text-decoration: underline;=0A=09=
+=09color: #0088cc;=0A=09}=0A=0A=09a.primaryactionlink:link, a.primaryaction=
+link:visited { background-color: #2585B2; color: #fff; }=0A=09a.primaryacti=
+onlink:hover, a.primaryactionlink:active { background-color: #11729E !impor=
+tant; color: #fff !important; }=0A=0A/*=0A =09@media only screen and (max-d=
+evice-width: 480px) {=0A=09=09 .post { min-width: 700px !important; }=0A=09=
+}=0A*/=0A=09</style><title>WordPress.com</title><!--[if gte mso 12]>=0A=09<=
+style type=3D"text/css" media=3D"all">=0A=09body {=0A=09font-family: arial;=
+=0A=09font-size: 0.8em;=0A=09}=0A=09.post, .comment {=0A=09background-color=
+: white !important;=0A=09line-height: 1.4em !important;=0A=09}=0A=09</style=
+>=0A=09<![endif]--><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"></head><body class=3D"subscription-body-tag">=0A=0A<table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#DDDDDD" style=
+=3D"width: 100%; background: #DDDDDD;"><tr><td>=0A=09=09=09=09=09<span styl=
+e=3D"display:none !important">=0A=09=09=09=09admin posted: "=0AHOJA DE RESP=
+UESTAS MATEM=C3=81TICADescargar=0A"=09=09=09</span>=0A=09=09=09=09=09=09<ta=
+ble border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" class=
+=3D"subscribe-body" style=3D"width: 100%; padding: 10px"><tr><td>=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09<div style=3D"direction: ltr; max-width: 600p=
+x; margin: 0 auto; overflow: hidden;">=0A=09=09=09=09=09=09=09<table border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff" class=3D"sub=
+scribe-wrapper" style=3D"width: 100%; background-color: #fff; text-align: l=
+eft; max-width: 1024px; min-width: 320px; margin: 0 auto;"><tr><td>=0A=09=
+=09=09=09=09=09=09=09=09=09<table border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" height=3D"8" background=3D"https://s0.wp.com/i/emails/stripes.gif" =
+class=3D"subscribe-header-wrap" style=3D"width: 100%; background-image: url=
+(https://s0.wp.com/i/emails/stripes.gif); background-repeat: repeat-x; back=
+ground-color: #43A4D0; height: 8px;"><tr><td></td>=0A=09=09=09=09=09=09=09=
+=09=09=09=09</tr></table><table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"subscribe-header" style=3D"width: 100%; color: #08c; font-s=
+ize: 1.6em; background-color: #EFEFEF; border-bottom: 1px solid #DDD; margi=
+n: 0; padding: 0;"><tr><td>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09<h2 cl=
+ass=3D"subscribe-title" style=3D'margin: .4em 0 .3em; font-size: 1.8em; fon=
+t-size: 16px!important; line-height: 1; font-weight: 400; color: #464646; f=
+ont-family: "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 5px 20p=
+x!important; padding: 0;'>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09New =
+post on <strong>Blog CTN</strong>=09=09=09=09=09=09=09=09=09=09=09=09=09</h=
+2>=0A=09=09=09=09=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09=09=
+=09=09=09=09<td style=3D"text-align: right;">=0A=09=09=09=09=09=09=09=09=09=
+=09=09=09=09<img border=3D"0" class=3D"head-avatar" src=3D"https://i0.wp.co=
+m/ctnasuncion.edu.py/blogctn/wp-content/uploads/2018/11/cropped-logo2-1.png=
+?resize=3D32%2C32" alt=3D"" width=3D"32" height=3D"32" style=3D"vertical-al=
+ign: middle; margin: 5px 20px 5px 0; vertical-align: middle;"></td>=0A=09=
+=09=09=09=09=09=09=09=09=09=09</tr></table><table style=3D"width: 100%" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"20" bgcolor=3D"#ffffff"><tr><td>=
+=0A=09=09=09=09=09=09=09=09=09=09=09=09=09<table style=3D"width: 100%" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td valign=3D"top" class=
+=3D"the-post">=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table style=3D"width: 100%" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td style=3D"width: 60px !=
+important; white-space: nowrap; vertical-align: top;">=0A=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"http://ctnasuncion.edu=
+.py/blogctn/?author=3D1" style=3D"color: #2585B2; display: block; margin-ri=
+ght: 10px;"><img border=3D"0" alt=3D"" src=3D"http://0.gravatar.com/avatar/=
+6d26304b015f3a7c097013f9aa4bcc57?s=3D50&amp;d=3Dhttp%3A%2F%2F0.gravatar.com=
+%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=3DG" class=3D"a=
+vatar avatar-50" height=3D"50" width=3D"50"></a>=0A=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09<td>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<h2 class=3D"post-title" style=3D"margin: .4em 0 .3em; fo=
+nt-size: 1.8em; font-size: 1.6em; color: #555; margin: 0; font-size: 20px;"=
+><a href=3D"http://ctnasuncion.edu.py/blogctn/index.php/2021/03/04/hoja-de-=
+respuestas-matematica-04-03-2021/" style=3D"color: #2585B2; text-decoration=
+: none;">HOJA DE RESPUESTAS MATEM=C3=81TICA=C2=A004/03/2021</a></h2>=0A=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<span style=3D"col=
+or: #888;">by <a href=3D"http://ctnasuncion.edu.py/blogctn/?author=3D1" sty=
+le=3D"color: #2585B2; color: #888 !important;">admin</a> </span>=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tr></table><div class=3D"post-cont=
+ent" style=3D"direction: ltr; margin-top: 1em; max-width: 560px;">=0A=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09<div class=3D"wp-block-file" style=3D"direction: lt=
+r; margin-bottom: 1.5em;">=0A<a style=3D"color: #2585B2;" href=3D"http://ct=
+nasuncion.edu.py/blogctn/wp-content/uploads/2021/03/HOJA-DE-RESPUESTAS-MATE=
+MATICA-.pdf">HOJA DE RESPUESTAS MATEM=C3=81TICA</a><a href=3D"http://ctnasu=
+ncion.edu.py/blogctn/wp-content/uploads/2021/03/HOJA-DE-RESPUESTAS-MATEMATI=
+CA-.pdf" class=3D"wp-block-file__button" download style=3D"color: #2585B2; =
+background: #32373c; border-radius: 2em; color: #fff; font-size: .8em; padd=
+ing: .5em 1em; margin-left: .75em; text-decoration: none;">Descargar</a>=0A=
+</div>=0A<div style=3D"direction: ltr; clear: both"></div>=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09</div>=0A=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div class=3D"meta" style=3D"d=
+irection: ltr; color: #999; font-size: .9em; margin-top: 4px; line-height: =
+160%; padding: 15px 0 15px; border-top: 1px solid #eee; border-bottom: 1px =
+solid #eee; overflow: hidden">=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09<strong><a style=3D"color: #2585B2;" href=3D"http://ctnasuncion=
+.edu.py/blogctn/?author=3D1">admin</a></strong> | March 4, 2021 at 3:08 pm =
+| URL: <a style=3D"color: #2585B2;" href=3D"https://wp.me/pauOxJ-4j">https:=
+//wp.me/pauOxJ-4j</a>=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</d=
+iv>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=0A=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<p class=3D"subscribe-action-links" style=3D'direction: ltr; font-size: =
+14px; line-height: 1.4em; color: #444; font-family: "Helvetica Neue", Helve=
+tica, Arial, sans-serif; margin: 0 0 1em; font-size: 14px; color: #666; pad=
+ding: 0; width: auto; padding-top: 1em; padding-bottom: 0em; margin-bottom:=
+ 0; margin-left: 0; padding-left: 0;'>=0A=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09</p><table class=3D"auto-width" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"width: 100%; width: auto"><tr><td style=
+=3D"width: 10px;"><a href=3D"http://ctnasuncion.edu.py/blogctn/index.php/20=
+21/03/04/hoja-de-respuestas-matematica-04-03-2021/#respond" style=3D"color:=
+ #2585B2; -moz-border-radius: 10em; -webkit-border-radius: 10em; border-rad=
+ius: 10em; border: 1px solid #11729E; text-decoration: none; color: #fff; t=
+ext-shadow: 0 1px 0 #11729E; background-color: #2585B2; padding: 5px 15px; =
+font-size: 16px; line-height: 1.4em; font-family: Helvetica Neue, Helvetica=
+, Arial, sans-serif; font-weight: normal; margin-left: 0; white-space: nowr=
+ap;">Comment</a></td>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>=C2=A0=
+=C2=A0=C2=A0<a style=3D"color: #2585B2;" class=3D"subscribe-action-link" hr=
+ef=3D"http://ctnasuncion.edu.py/blogctn/index.php/2021/03/04/hoja-de-respue=
+stas-matematica-04-03-2021/#comments">See all comments</a></td>=0A=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</tr></table></td>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr></ta=
+ble></td>=0A=09=09=09=09=09=09=09=09=09=09=09</tr></table><table border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"20" bgcolor=3D"#efefef" class=3D"subscr=
+ibe-wrapper-sub" style=3D"width: 100%; background-color: #efefef; text-alig=
+n: left; border-top: 1px solid #ddd;"><tr><td class=3D"subscribe-content" s=
+tyle=3D'border-top: 1px solid #f3f3f3; color: #888; font-family: "Helvetica=
+ Neue", Helvetica, Arial, sans-serif; font-size: 14px; background: #efefef;=
+'>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D'direction: ltr; fon=
+t-size: 14px; line-height: 1.4em; color: #444; font-family: "Helvetica Neue=
+", Helvetica, Arial, sans-serif; margin: 0 0 1em; font-size: 12px; line-hei=
+ght: 1.4em; margin: 0px 0px 10px 0px;'>=0A=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09<a style=3D"color: #2585B2;" href=3D"https://public-api.wordpress.=
+com/bar/?stat=3Dgroovemails-events&amp;bin=3Dwpcom_email_click&amp;redirect=
+_to=3Dhttps%3A%2F%2Fsubscribe.wordpress.com%2F%3Fkey%3De40c9dcede46a7d5e388=
+06b2080d189f%26email%3Dinformatica%2540ctnasuncion.edu.py%26b%3DObaQDZHNBpr=
+ELiYKiyXUzl2rxhf2ZQhj-KM2tON4os7470mjugr3WyTVeoKiz4HSRfwJrdmsZu7BRqtdFe93FC=
+cWdd8mT-q_QcZDoC3waHcGyu4%253D&amp;sr=3D1&amp;signature=3D4f7e5586b425956c9=
+5576bf10a9f13ac&amp;user=3D148784728&amp;_e=3DeyJlcnJvciI6bnVsbCwiYmxvZ19pZ=
+CI6MTU1MTA3NDkxLCJibG9nX2xhbmciOiJlbiIsInNpdGVfaWRfbGFiZWwiOiJqZXRwYWNrIiwi=
+ZW1haWxfbmFtZSI6ImVtYWlsX3N1YnNjcmlwdGlvbiIsIl91aSI6MTQ4Nzg0NzI4LCJlbWFpbF9=
+pZCI6IjA1ZmZjNDQ2MDQ0NTAzMGZkMjBkNTZlNjEwNjc0NjIwIiwiZGF0ZV9zZW50IjoiMjAyMS=
+0wMy0wNCIsImxvY2FsZSI6ImVuIiwiY3VycmVuY3kiOiJVU0QiLCJjb3VudHJ5X2NvZGVfc2lnb=
+nVwIjoiUFkiLCJkb21haW4iOiJjdG5hc3VuY2lvbi5lZHUucHkiLCJmcmVxdWVuY3kiOiIwIiwi=
+ZGlnZXN0IjoiMCIsImhhc19odG1sIjoiMSIsImFuY2hvcl90ZXh0IjoiVW5zdWJzY3JpYmUiLCJ=
+fZHIiOm51bGwsIl9kbCI6IlwveG1scnBjLnBocD9zeW5jPTEmY29kZWM9ZGVmbGF0ZS1qc29uLW=
+FycmF5JnRpbWVzdGFtcD0xNjE0ODcwNTAxLjE2JnF1ZXVlPXN5bmMmaG9tZT1odHRwJTNBJTJGJ=
+TJGY3RuYXN1bmNpb24uZWR1LnB5JTJGYmxvZ2N0biZzaXRldXJsPWh0dHAlM0ElMkYlMkZjdG5h=
+c3VuY2lvbi5lZHUucHklMkZibG9nY3RuJmNkPTAuMDAyMyZwZD0wLjAwNDkmaWRjPTEmdGltZW9=
+1dD0xNSZmb3I9amV0cGFjayZ3cGNvbV9ibG9nX2lkPTE1NTEwNzQ5MSIsIl91dCI6IndwY29tOn=
+VzZXJfaWQiLCJfdWwiOiJjdG5hc3VuY2lvbjIwMTgiLCJfZW4iOiJ3cGNvbV9lbWFpbF9jbGlja=
+yIsIl90cyI6MTYxNDg3MDUwMjk4OSwiYnJvd3Nlcl90eXBlIjoicGhwLWFnZW50IiwiX2F1YSI6=
+IndwY29tLXRyYWNrcy1jbGllbnQtdjAuMyIsImJsb2dfdHoiOiIwIiwidXNlcl9sYW5nIjoiZW4=
+ifQ=3D&amp;_z=3Dz">Unsubscribe</a> to no longer receive posts from Blog CTN=
+.<br>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09Change your email setting=
+s at <a style=3D"color: #2585B2;" href=3D"https://public-api.wordpress.com/=
+bar/?stat=3Dgroovemails-events&amp;bin=3Dwpcom_email_click&amp;redirect_to=
+=3Dhttps%3A%2F%2Fsubscribe.wordpress.com%2F%3Fkey%3De40c9dcede46a7d5e38806b=
+2080d189f%26email%3Dinformatica%2540ctnasuncion.edu.py&amp;sr=3D1&amp;signa=
+ture=3D0e2994d3d0a34a0b601bc17b4afa36fd&amp;user=3D148784728&amp;_e=3DeyJlc=
+nJvciI6bnVsbCwiYmxvZ19pZCI6MTU1MTA3NDkxLCJibG9nX2xhbmciOiJlbiIsInNpdGVfaWRf=
+bGFiZWwiOiJqZXRwYWNrIiwiZW1haWxfbmFtZSI6ImVtYWlsX3N1YnNjcmlwdGlvbiIsIl91aSI=
+6MTQ4Nzg0NzI4LCJlbWFpbF9pZCI6IjA1ZmZjNDQ2MDQ0NTAzMGZkMjBkNTZlNjEwNjc0NjIwIi=
+wiZGF0ZV9zZW50IjoiMjAyMS0wMy0wNCIsImxvY2FsZSI6ImVuIiwiY3VycmVuY3kiOiJVU0QiL=
+CJjb3VudHJ5X2NvZGVfc2lnbnVwIjoiUFkiLCJkb21haW4iOiJjdG5hc3VuY2lvbi5lZHUucHki=
+LCJmcmVxdWVuY3kiOiIwIiwiZGlnZXN0IjoiMCIsImhhc19odG1sIjoiMSIsImFuY2hvcl90ZXh=
+0IjoiTWFuYWdlIFN1YnNjcmlwdGlvbnMiLCJfZHIiOm51bGwsIl9kbCI6IlwveG1scnBjLnBocD=
+9zeW5jPTEmY29kZWM9ZGVmbGF0ZS1qc29uLWFycmF5JnRpbWVzdGFtcD0xNjE0ODcwNTAxLjE2J=
+nF1ZXVlPXN5bmMmaG9tZT1odHRwJTNBJTJGJTJGY3RuYXN1bmNpb24uZWR1LnB5JTJGYmxvZ2N0=
+biZzaXRldXJsPWh0dHAlM0ElMkYlMkZjdG5hc3VuY2lvbi5lZHUucHklMkZibG9nY3RuJmNkPTA=
+uMDAyMyZwZD0wLjAwNDkmaWRjPTEmdGltZW91dD0xNSZmb3I9amV0cGFjayZ3cGNvbV9ibG9nX2=
+lkPTE1NTEwNzQ5MSIsIl91dCI6IndwY29tOnVzZXJfaWQiLCJfdWwiOiJjdG5hc3VuY2lvbjIwM=
+TgiLCJfZW4iOiJ3cGNvbV9lbWFpbF9jbGljayIsIl90cyI6MTYxNDg3MDUwMjk4OSwiYnJvd3Nl=
+cl90eXBlIjoicGhwLWFnZW50IiwiX2F1YSI6IndwY29tLXRyYWNrcy1jbGllbnQtdjAuMyIsImJ=
+sb2dfdHoiOiIwIiwidXNlcl9sYW5nIjoiZW4ifQ=3D&amp;_z=3Dz">Manage Subscriptions=
+</a>.=09=09=09=09=09=09=09=09=09=09=09=09=09</p>=0A=0A=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<p style=3D'direction: ltr; font-size: 14px; line-height:=
+ 1.4em; color: #444; font-family: "Helvetica Neue", Helvetica, Arial, sans-=
+serif; margin: 0 0 1em; font-size: 12px; line-height: 1.4em; margin: 0px 0p=
+x 0px 0px;'>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09<strong>Trouble cl=
+icking?</strong> Copy and paste this URL into your browser: <br><a style=3D=
+"color: #2585B2;" href=3D"http://ctnasuncion.edu.py/blogctn/index.php/2021/=
+03/04/hoja-de-respuestas-matematica-04-03-2021/">http://ctnasuncion.edu.py/=
+blogctn/index.php/2021/03/04/hoja-de-respuestas-matematica-04-03-2021/</a>=
+=0A=09=09=09=09=09=09=09=09=09=09=09=09=09</p>=0A=09=09=09=09=09=09=09=09=
+=09=09=09=09</td>=0A=09=09=09=09=09=09=09=09=09=09=09</tr></table></td>=0A=
+=09=09=09=09=09=09=09=09</tr></table><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" height=3D"3" background=3D"https://s0.wp.com/i/emails/str=
+ipes.gif" class=3D"subscribe-footer-wrap" style=3D"width: 100%; background-=
+image: url(https://s0.wp.com/i/emails/stripes.gif); background-repeat: repe=
+at-x; background-color: #43A4D0; height: 3px;"><tr><td></td>=0A=09=09=09=09=
+=09=09=09=09</tr></table></div>=0A=09=09=09=09=09</td>=0A=09=09=09=09</tr><=
+/table><br></td>=0A=09</tr></table><img alt=3D"" border=3D"0" src=3D"http:/=
+/pixel.wp.com/b.gif?blog=3D155107491&amp;post=3D267&amp;subd=3Dctnasuncion.=
+edu.py&amp;ref=3D&amp;email=3D1&amp;email_o=3Djetpack&amp;host=3Djetpack.wo=
+rdpress.com" width=3D"1" height=3D"1"><img alt=3D"" border=3D"0" src=3D"htt=
+p://pixel.wp.com/t.gif?email_name=3Demail_subscription&amp;blog_id=3D155107=
+491&amp;_ui=3D148784728&amp;email_id=3D05ffc4460445030fd20d56e610674620&amp=
+;date_sent=3D2021-03-04&amp;locale=3Den&amp;currency=3DUSD&amp;country_code=
+_signup=3DPY&amp;domain=3Dctnasuncion.edu.py&amp;frequency=3D0&amp;digest=
+=3D0&amp;has_html=3D1&amp;_en=3Dwpcom_email_open&amp;browser_type=3Dphp-age=
+nt&amp;_aua=3Dwpcom-tracks-client-v0.3&amp;_ul=3Dctnasuncion2018&amp;_ut=3D=
+wpcom%3Auser_id&amp;blog_tz=3D0&amp;blog_lang=3D0&amp;user_lang=3Den&amp;_t=
+s=3D1614870502980" width=3D"1" height=3D"1"></body></html>=0A
+
+--b1_BfNRIbdlmySB8GwjuPl3upoVHoslgJJKCzZty4las--
+

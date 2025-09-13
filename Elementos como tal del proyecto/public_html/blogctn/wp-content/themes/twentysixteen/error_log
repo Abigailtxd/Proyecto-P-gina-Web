@@ -1,0 +1,39 @@
+[26-Oct-2019 17:06:11 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[29-Oct-2019 08:24:39 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[29-Oct-2019 10:16:44 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[29-Oct-2019 12:20:19 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[29-Feb-2020 10:28:58 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[29-Feb-2020 18:38:12 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[01-Mar-2020 10:53:36 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[24-Mar-2020 09:50:51 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[24-Mar-2020 20:12:03 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[14-Apr-2020 07:55:06 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[14-Apr-2020 19:24:08 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[29-Apr-2020 16:58:31 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[04-Jun-2020 19:27:29 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[05-Jun-2020 08:00:57 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[05-Jun-2020 13:30:08 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[06-Jun-2020 01:21:31 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[24-Jun-2020 18:35:20 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[25-Jun-2020 08:06:57 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[09-Jul-2020 11:55:57 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/archive.php on line 19
+[10-Jul-2020 01:07:58 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/archive.php on line 19
+[01-Aug-2020 10:56:16 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[01-Aug-2020 13:03:37 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[15-Aug-2020 04:19:08 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/archive.php on line 19
+[22-Aug-2020 16:54:29 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[23-Aug-2020 02:59:53 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[12-Dec-2020 09:41:05 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[14-Dec-2020 11:25:42 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[29-Jun-2021 15:18:42 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[01-Jul-2021 00:47:50 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
+[21-Jul-2022 16:20:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home2/ctnas/public_html/blogctn/wp-content/themes/twentysixteen/404.php on line 10
