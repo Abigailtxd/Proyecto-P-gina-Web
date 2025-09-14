@@ -13,6 +13,32 @@ const db = new Pool({
   password: "ilyemily",
   port: 5432
 });
+const MAPA_ESPECIALIDADES = {
+  civiles: "Construcciones Civiles",
+  electricidad: "Electricidad",
+  electronica: "Electrónica",
+  electromecanica: "Electromecánica",
+  informatica: "Informática",
+  mecanica: "Mecánica Industrial",
+  automotriz: "Mecánica Automotriz",
+  quimica: "Química"
+};
+
+// Endpoint que suma puntaje
+app.post("/api/resultados", async (req, res) => {
+  const { especialidad } = req.body; // ej: "civiles"
+  const nombre = MAPA_ESPECIALIDADES[especialidad]; // ej: "Construcciones Civiles"
+  try {
+    await db.query(
+      "UPDATE resultados_test SET puntaje = puntaje + 1 WHERE id = $1",
+      [nombre]
+    );
+    res.json({ status: "ok" });
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ error: "Error al actualizar puntaje" });
+  }
+});
 
 // Obtener todas las publicaciones con id, fuente y tamaño
 app.get("/api/publicaciones", async (req, res) => {

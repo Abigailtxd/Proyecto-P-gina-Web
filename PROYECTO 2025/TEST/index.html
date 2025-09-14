@@ -281,6 +281,13 @@ function renderChart(){
     <div class="chart-row" id="row1">${firstRow.map(([k,a])=>createBarHtml(k,a)).join('')}</div>
     <div class="chart-row" id="row2">${secondRow.map(([k,a])=>createBarHtml(k,a)).join('')}</div>
   `;
+
+  // Enviar la especialidad ganadora al backend
+  fetch("http://localhost:3000/api/resultados", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ especialidad: topKey })
+  }).catch(err => console.error("Error enviando resultado:", err));
 }
 
 /* ====================== CONFETTI ====================== */
