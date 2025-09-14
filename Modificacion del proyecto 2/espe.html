@@ -16,6 +16,11 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
+body {
+  padding-top: 70px; /* ajusta según la altura de tu navbar */
+}
+</style>
+<style>
 	.btn-contacto {
   border: 2px solid #AB2A3E; /* borde granate */
   color: #AB2A3E !important;           /* texto granate */
@@ -100,14 +105,20 @@
   </video>
 <div class="container">
 <div class="row">
-<div class="col-md-12"><!-- Heading Title Area -->
-<div class="header-text text-center white">
-<h1>Nuestras Especialidades</h1>
-
-<hr class="borderwhite-sm" />
-<h2 class="text-uppercase">El Colegio T&eacute;cnico Nacional ofrece 8 especialidades para los estudiantes.</h2>
-
-<p class="mrgn-60-top"><a class="page-scroll btn btn-blue-sm text-uppercase" href="#services">Ver m&aacute;s</a></p>
+<div class="row align-items-center">
+  <div class="col-md-6 text-center white" style="padding-top: 70px;">
+    <h1>¡Prueba nuestro test vocacional!</h1>
+    <hr class="borderwhite-sm" />
+    <h2 class="text-uppercase">Descubre con emoción la especialidad que mejor se adapta a ti y a tu futuro.</h2>
+    <p class="mrgn-60-top">
+      <a class="page-scroll btn btn-blue-sm text-uppercase btn-contacto" style="border-radius: 2em;" href="C:\Users\eleme\Downloads\editor_publicaciones\editor_publicaciones\PROYECTO 2025\TEST\index.html">
+        ¡Haz el test vocacional!
+      </a>
+    </p>
+  </div>
+  <div class="col-md-6">
+    <canvas id="graficoEspecialidades" height="300"></canvas>
+  </div>
 </div>
 </div>
 </div>
@@ -1196,6 +1207,75 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 });
 });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+fetch('http://localhost:3000/api/puntajes')
+  .then(res => res.json())
+  .then(data => {
+    const nombres = data.map(d => d.especialidad);
+    const puntajes = data.map(d => d.puntaje);
+    const total = puntajes.reduce((a,b) => a + b, 0);
+    const porcentajes = puntajes.map(p => ((p/total)*100).toFixed(1));
+
+    const logosEspecialidades = [
+      'Img/eik_c.png',
+      'Img/emca_c.png',
+      'Img/info_c.png',
+      'Img/qca_c.png',
+      'Img/cc_c.png',
+      'Img/auto_c.png',
+      'Img/indu_c.png',
+      'Img/edad_c.png'
+    ];
+
+    const ctx = document.getElementById('graficoEspecialidades').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: nombres,
+        datasets: [{
+          label: 'Porcentaje',
+          data: porcentajes,
+          backgroundColor: [
+            '#808080','#0000FF','#AB2A3E','#03BB85',
+            '#FFFACD','#000080','#008000','#87CEEB'
+          ],
+          borderRadius: 10
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: { display: true, text: 'Especialidades con más puntajes (%)' }
+        },
+        scales: {
+          y: { beginAtZero: true, max: 100, ticks: { callback: value => value + '%' } }
+        }
+      },
+      plugins: [{
+        id: 'logoSobreBarras',
+        afterDatasetsDraw(chart, args, options) {
+          const {ctx, data, chartArea: {top, bottom, left, right}, scales: {x, y}} = chart;
+          chart.data.datasets[0].data.forEach((value, index) => {
+            const xPos = x.getPixelForValue(index);
+            const yPos = y.getPixelForValue(value);
+            const img = new Image();
+            img.src = logosEspecialidades[index];
+            img.onload = () => {
+              ctx.drawImage(img, xPos - 25, yPos - 50, 50, 50);
+            };
+          });
+        }
+      }]
+    });
+  })
+  .catch(err => console.error(err));
+</script>
+
+
 
 </body>
 </html>

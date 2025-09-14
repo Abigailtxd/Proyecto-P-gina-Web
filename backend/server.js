@@ -6,6 +6,17 @@ const { Pool } = require("pg");
 app.use(cors());
 app.use(express.json());
 
+// Obtener puntajes de todas las especialidades
+app.get("/api/puntajes", async (req, res) => {
+  try {
+    const result = await db.query("SELECT id AS especialidad, puntaje FROM resultados_test ORDER BY puntaje DESC");
+    res.json(result.rows);
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ error: "Error al obtener puntajes" });
+  }
+});
+
 const db = new Pool({
   user: "postgres",
   host: "localhost",
