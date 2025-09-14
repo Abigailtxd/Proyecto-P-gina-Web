@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario - Colegio Técnico Nacional</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('imagen/slide-1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            position: relative; 
+            overflow: hidden; 
+        }
+
+        .content-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        
+        .header-images {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            margin-bottom: 20px; 
+            padding: 0 20px; 
+        }
+
+        .header-image {
+            width: 150px; 
+            height: auto;
+            max-width: 45%; 
+        }
+
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 30px; 
+        }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #555;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        p, ul {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .final-note {
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="content-section">
+        <div class="header-images">
+            <img src="imagen/logo.png" alt="Logo Derecho" class="header-image">
+        </div>
+        <h1>MANUAL DE USUARIO</h1>
+    </div>
+
+    <div class="content-section">
+        <p>¡Bienvenidos al manual de usuario de la <strong>página web oficial del Colegio Tecnico Nacional de Asunción</strong>!</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Función</h2>
+        <p>Esta plataforma ha sido creada con el objetivo principal de ser una fuente de información completa y accesible para toda la comunidad educativa y el público en general. Aquí podrás encontrar datos relevantes sobre nuestra institución, eventos, noticias y, de manera muy especial, una sección dedicada a las ocho especialidades técnicas que ofrecemos.</p>
+        <p>La página te permitirá explorar en detalle cada una de ellas:</p>
+        <ul>
+            <li>Construcciones Civiles</li>
+            <li>Electricidad</li>
+            <li>Electrónica</li>
+            <li>Electromecánica</li>
+            <li>Informática</li>
+            <li>Mecánica Automotriz</li>
+            <li>Química Industrial</li>
+            <li>Mecánica General</li>
+        </ul>
+        <p>Cada una exclusivamente expuesta por los propios coordinadores que ofrecieron la informacion para la realizacion de la pagina.</p>
+        <p>Nuestro propósito es mantenerte siempre informado, facilitando el acceso a todo lo que necesitas saber sobre el colegio y las oportunidades de formación que ofrecemos.</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Sección de Especialidades</h2>
+        <p>La sección de Especialidades es el corazón de la página, diseñada para que explores en detalle las ocho opciones técnicas que ofrecemos. En esta área, encontrarás un menú interactivo y ordenado, donde cada especialidad está claramente identificada por su propio logo.</p>
+        <p>Al seleccionar cada una, podrás acceder a una página dedicada con información completa, que incluye:</p>
+        <ul>
+            <li><strong>Descripción detallada:</strong> Un texto que explica en qué consiste la especialidad, los conocimientos que adquirirás y las habilidades que desarrollarás.</li>
+            <li><strong>Imágenes visuales:</strong> Una galería de fotos que muestran el trabajo práctico, los talleres y los proyectos que realizan los estudiantes en esa área. Esto te permitirá tener una idea clara y visual de cómo es el día a día en cada especialidad.</li>
+            <li><strong>Títulos y subtítulos:</strong> La información está organizada de manera clara y con un formato fácil de leer, para que encuentres rápidamente lo que buscas.</li>
+        </ul>
+        <p>Esta sección es ideal para que conozcas a fondo cada una de las carreras técnicas, facilitando la comparación entre ellas para que puedas tomar una decisión informada sobre tu futuro.</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Sección de Noticias</h2>
+        <p>El apartado de <strong>Noticias</strong> es el lugar donde mantenemos a la comunidad informada sobre los eventos y actividades más importantes del colegio. Es un sistema de publicaciones dinámico, gestionado por el administrador, que te permite ver las últimas novedades a través de imágenes y textos.</p>
+        <p>Para una mejor organización, las noticias se dividen en dos categorías principales:</p>
+        <ul>
+            <li><strong>Noticias Principales:</strong> Son los comunicados y eventos más relevantes del momento. Se muestran en un tamaño más grande y destacado para asegurar que no te pierdas la información crucial.</li>
+            <li><strong>Noticias Secundarias:</strong> Aquí se publican temas interesantes o eventos que ya han ocurrido, pero que siguen siendo de interés para la comunidad. Aunque se muestran en un formato más pequeño, son igual de importantes para conocer a fondo la vida escolar.</li>
+        </ul>
+        <p>El objetivo de esta sección es ofrecer un vistazo rápido y claro de todo lo que sucede en el colegio, manteniéndote siempre al tanto de lo más reciente y relevante.</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Test Vocacional</h2>
+        <p>El <strong>Test Vocacional</strong> es una herramienta diseñada para ayudarte a explorar tus intereses y descubrir cuál de nuestras especialidades técnicas se alinea mejor con tus habilidades y gustos personales.</p>
+        <p>Este test consta de 56 preguntas y busca evaluar tu inclinación vocacional basándose en:</p>
+        <ul>
+            <li><strong>Intereses personales:</strong> Lo que te apasiona y disfrutas hacer.</li>
+            <li><strong>Habilidades blandas:</strong> Cualidades como la responsabilidad y la paciencia.</li>
+            <li><strong>Aptitudes técnicas:</strong> Tu predisposición hacia las habilidades duras, que son fundamentales para cada especialidad.</li>
+        </ul>
+        <p>Para cada pregunta, tendrás tres opciones de respuesta: <strong>Sí</strong>, <strong>Depende</strong> y <strong>No</strong>.</p>
+        <p>Para obtener el mejor resultado, te recomendamos <strong>responder con total honestidad</strong>. Así, el sistema podrá ofrecerte un resultado más preciso y personalizado, guiándote hacia la especialidad que mejor se ajuste a tu perfil.</p>
+        <p>Es muy importante recordar que este test es solo una guía orientativa. La decisión final sobre tu futuro académico y profesional es completamente tuya. No dejes que el resultado del test sea el único factor que influya en tu elección. Te invitamos a participar en nuestra actividad anual, la <strong>Expotécnica</strong>, donde podrás conocer en persona el funcionamiento de cada especialidad, hablar con profesores y estudiantes, y así tomar una decisión más informada y segura.</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Gráfico de Resultados por Especialidad 📊</h2>
+        <p>En la página de inicio, verás un <strong>gráfico de barras</strong> que muestra los resultados generales del Test Vocacional. Este gráfico es una representación visual de las preferencias de todos los estudiantes que han realizado la prueba.</p>
+        <p>Cada barra del gráfico representa una de las ocho especialidades técnicas del colegio, y su altura indica el porcentaje de veces que esa especialidad fue el resultado final del test. En otras palabras, te muestra <strong>cuál es la especialidad más popular o con mayor inclinación vocacional</strong> entre los usuarios que han completado el test.</p>
+        <p>Este gráfico se actualiza de forma automática cada vez que un estudiante finaliza el test, sumando su resultado a los datos existentes. De esta manera, siempre podrás ver una visión actualizada de las tendencias y preferencias vocacionales de la comunidad estudiantil.</p>
+    </div>
+
+    <div class="content-section">
+        <div class="final-note">
+            <p>Agradecemos sinceramente tu tiempo y tu interés en explorar a fondo este manual y nuestra página web. Cada sección ha sido creada pensando en ti, con el objetivo de ser una herramienta útil que te ayude a conocer mejor nuestra institución.</p>
+            <p>En nuestro colegio, cada estudiante trabaja arduamente por un futuro prometedor, un futuro que construimos <strong>por y para nuestro país</strong>. Sabemos que el camino puede ser desafiante, y es por eso que nuestra institución se enorgullece de ser una guía sólida y confiable en ese viaje. No es solo la calidad de nuestras instalaciones lo que nos define como el mejor centro de excelencia técnica; es el <strong>compromiso y la pasión de nuestros maestros</strong> y el ambiente de compañerismo que nutre el crecimiento de cada uno de nuestros estudiantes.</p>
+            <p>Hecho por estudiantes de 3ro de Informática guiado por la institución.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const sections = document.querySelectorAll('.content-section');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
+</body>
+</html>
