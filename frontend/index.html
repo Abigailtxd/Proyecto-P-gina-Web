@@ -198,87 +198,117 @@ Dato curioso: El nombre "Pusheen" viene de la palabra irlandesa puisín, que sig
     return texto.slice(0, corte > 0 ? corte : maxLength - 3) + "…";
   }
 
-  function renderizar() {
-    const cont = document.getElementById("publicaciones");
-    cont.innerHTML = "";
-    publicaciones.forEach((p, idx) => {
-      const div = document.createElement("div");
-      div.className = `publicacion relative flex flex-col md:flex-row gap-8 p-8 rounded-3xl shadow-xl border-l-[8px] 
-        ${p.tipo === "principal" ? "border-[#800000] bg-gradient-to-br from-[#fff0f0] to-white" : "border-[#b22222] bg-white/90"}
-        hover:shadow-[0_8px_32px_0_rgba(128,0,0,0.13)] transition duration-300`;
+function renderizar() {
+  const cont = document.getElementById("publicaciones");
+  cont.innerHTML = "";
+  publicaciones.forEach((p, idx) => {
+    const div = document.createElement("div");
+    div.className = `publicacion relative flex flex-col md:flex-row gap-8 p-8 rounded-3xl shadow-xl border-l-[8px] 
+      ${p.tipo === "principal" ? "border-[#800000] bg-gradient-to-br from-[#fff0f0] to-white" : "border-[#b22222] bg-white/90"}
+      hover:shadow-[0_8px_32px_0_rgba(128,0,0,0.13)] transition duration-300`;
 
-      // Carrusel de imágenes (tamaño normal)
-      const carrusel = crearCarrusel(p.imagenes, p.id, false);
-      if (carrusel) {
-        const imgWrap = document.createElement("div");
-        imgWrap.className = "flex-shrink-0 flex items-center justify-center";
-        imgWrap.appendChild(carrusel);
-        div.appendChild(imgWrap);
-      }
+    // Menú desplegable en la esquina superior izquierda
+    const menuWrap = document.createElement("div");
+    menuWrap.className = "absolute top-4 left-4 z-10";
+    const menuBtn = document.createElement("button");
+    menuBtn.type = "button";
+    menuBtn.innerHTML = `<svg class="w-8 h-8 text-[#800000] hover:text-[#b22222] transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+    </svg>`;
+    menuBtn.className = "focus:outline-none";
+    menuWrap.appendChild(menuBtn);
 
-      // Contenido textual
-      const contenido = document.createElement("div");
-      contenido.className = "flex flex-col justify-between flex-1";
+    const menu = document.createElement("div");
+    menu.className = "hidden absolute left-0 mt-2 w-36 bg-white rounded-xl shadow-lg border border-[#b22222]/20 z-20";
+    menu.innerHTML = `
+      <button class="w-full text-left px-5 py-3 hover:bg-yellow-100 text-[#b28500] font-semibold transition" type="button">Editar</button>
+      <button class="w-full text-left px-5 py-3 hover:bg-[#ffeaea] text-[#b22222] font-semibold rounded-b-xl transition" type="button">Eliminar</button>
+    `;
+    menuWrap.appendChild(menu);
 
-      // Título
-      const titulo = document.createElement("h4");
-      titulo.textContent = p.titulo;
-      titulo.className = "text-2xl font-extrabold text-[#800000] mb-1 tracking-wide";
-      contenido.appendChild(titulo);
+    menuBtn.onclick = (e) => {
+      e.stopPropagation();
+      document.querySelectorAll(".menu-acciones").forEach(m => { if (m !== menu) m.classList.add("hidden"); });
+      menu.classList.toggle("hidden");
+    };
+    document.addEventListener("click", () => menu.classList.add("hidden"));
+    menu.children[0].onclick = (e) => { e.stopPropagation(); menu.classList.add("hidden"); editarPublicacion(idx); };
+    menu.children[1].onclick = (e) => { e.stopPropagation(); menu.classList.add("hidden"); eliminarPublicacion(idx); };
+    menu.classList.add("menu-acciones");
+    div.appendChild(menuWrap);
 
-      // Tipo
-      const tipo = document.createElement("span");
-      tipo.textContent = p.tipo.charAt(0).toUpperCase() + p.tipo.slice(1);
-      tipo.className = `inline-block px-4 py-1 rounded-full text-xs font-semibold mb-3 shadow
-        ${p.tipo === "principal" ? "bg-[#800000] text-white" : "bg-[#b22222] text-white"}`;
-      contenido.appendChild(tipo);
+    // Carrusel de imágenes (tamaño normal)
+    const carrusel = crearCarrusel(p.imagenes, p.id, false);
+    if (carrusel) {
+      const imgWrap = document.createElement("div");
+      imgWrap.className = "flex-shrink-0 flex items-center justify-center";
+      imgWrap.appendChild(carrusel);
+      div.appendChild(imgWrap);
+    }
 
-      // Descripción truncada
-      const desc = document.createElement("p");
-      desc.textContent = truncarTexto(p.descripcion, 220);
-      desc.style.fontFamily = p.fuente || "Arial";
-      desc.className = "text-gray-800 text-lg mb-4 leading-relaxed";
-      contenido.appendChild(desc);
+    // Contenido textual
+    const contenido = document.createElement("div");
+    contenido.className = "flex flex-col justify-between flex-1";
 
-      // Fuente (con select para cambiar)
-      const fuenteWrap = document.createElement("div");
-      fuenteWrap.className = "flex items-center gap-2 mt-2";
-      const fuenteLabel = document.createElement("span");
-      fuenteLabel.textContent = "Fuente:";
-      fuenteLabel.className = "text-xs text-gray-500 italic";
-      fuenteWrap.appendChild(fuenteLabel);
+    // Título
+    const titulo = document.createElement("h4");
+    titulo.textContent = p.titulo;
+    titulo.className = "text-2xl font-extrabold text-[#800000] mb-1 tracking-wide";
+    contenido.appendChild(titulo);
 
-      const fuenteSelect = document.createElement("select");
-      ["Arial", "Courier New", "Times New Roman", "Verdana", "Georgia"].forEach(f => {
-        const opt = document.createElement("option");
-        opt.value = f;
-        opt.textContent = f;
-        if (p.fuente === f) opt.selected = true;
-        fuenteSelect.appendChild(opt);
-      });
-      fuenteSelect.className = "rounded border border-[#b22222] px-2 py-1 text-xs focus:border-[#800000] focus:ring-1 focus:ring-[#80000022] transition";
-      fuenteSelect.onchange = () => {
-        p.fuente = fuenteSelect.value;
-        renderizar();
-      };
-      fuenteWrap.appendChild(fuenteSelect);
-      contenido.appendChild(fuenteWrap);
+    // Tipo
+    const tipo = document.createElement("span");
+    tipo.textContent = p.tipo.charAt(0).toUpperCase() + p.tipo.slice(1);
+    tipo.className = `inline-block px-4 py-1 rounded-full text-xs font-semibold mb-3 shadow
+      ${p.tipo === "principal" ? "bg-[#800000] text-white" : "bg-[#b22222] text-white"}`;
+    contenido.appendChild(tipo);
 
-      // Botón Ver más (siempre visible)
-      const verMasBtn = document.createElement("button");
-      verMasBtn.textContent = "Ver más";
-      verMasBtn.className = "mt-4 self-start bg-gradient-to-r from-[#800000] to-[#b22222] text-white font-semibold px-6 py-2 rounded-lg shadow transition hover:from-[#4b0000] hover:to-[#800000] active:scale-95";
-      verMasBtn.onclick = () => mostrarDetalle(p);
-      contenido.appendChild(verMasBtn);
+    // Descripción truncada
+    const desc = document.createElement("p");
+    desc.textContent = truncarTexto(p.descripcion, 220);
+    desc.style.fontFamily = p.fuente || "Arial";
+    desc.className = "text-gray-800 text-lg mb-4 leading-relaxed";
+    contenido.appendChild(desc);
 
-      div.appendChild(contenido);
+    // Fuente (con select para cambiar)
+    const fuenteWrap = document.createElement("div");
+    fuenteWrap.className = "flex items-center gap-2 mt-2";
+    const fuenteLabel = document.createElement("span");
+    fuenteLabel.textContent = "Fuente:";
+    fuenteLabel.className = "text-xs text-gray-500 italic";
+    fuenteWrap.appendChild(fuenteLabel);
 
-      // Sombra decorativa
-      div.style.boxShadow = "0 8px 32px 0 rgba(128,0,0,0.10), 0 1.5px 8px 0 rgba(178,34,34,0.08)";
-
-      cont.appendChild(div);
+    const fuenteSelect = document.createElement("select");
+    ["Arial", "Courier New", "Times New Roman", "Verdana", "Georgia"].forEach(f => {
+      const opt = document.createElement("option");
+      opt.value = f;
+      opt.textContent = f;
+      if (p.fuente === f) opt.selected = true;
+      fuenteSelect.appendChild(opt);
     });
-  }
+    fuenteSelect.className = "rounded border border-[#b22222] px-2 py-1 text-xs focus:border-[#800000] focus:ring-1 focus:ring-[#80000022] transition";
+    fuenteSelect.onchange = () => {
+      p.fuente = fuenteSelect.value;
+      renderizar();
+    };
+    fuenteWrap.appendChild(fuenteSelect);
+    contenido.appendChild(fuenteWrap);
+
+    // Botón Ver más (siempre visible, debajo del texto)
+    const verMasBtn = document.createElement("button");
+    verMasBtn.textContent = "Ver más";
+    verMasBtn.className = "mt-4 self-start bg-gradient-to-r from-[#800000] to-[#b22222] text-white font-semibold px-6 py-2 rounded-lg shadow transition hover:from-[#4b0000] hover:to-[#800000] active:scale-95";
+    verMasBtn.onclick = () => mostrarDetalle(p);
+    contenido.appendChild(verMasBtn);
+
+    div.appendChild(contenido);
+
+    // Sombra decorativa
+    div.style.boxShadow = "0 8px 32px 0 rgba(128,0,0,0.10), 0 1.5px 8px 0 rgba(178,34,34,0.08)";
+
+    cont.appendChild(div);
+  });
+}
 
   function mostrarDetalle(pub) {
     const modal = document.getElementById("modal");
@@ -321,6 +351,28 @@ Dato curioso: El nombre "Pusheen" viene de la palabra irlandesa puisín, que sig
     modalContenido.appendChild(fuente);
 
     modal.classList.remove("hidden");
+  }
+
+  // Eliminar publicación
+  function eliminarPublicacion(idx) {
+    if (confirm("¿Seguro que deseas eliminar esta publicación?")) {
+      publicaciones.splice(idx, 1);
+      renderizar();
+    }
+  }
+
+  // Editar publicación
+  function editarPublicacion(idx) {
+    const pub = publicaciones[idx];
+    document.getElementById("titulo").value = pub.titulo;
+    document.getElementById("texto").value = pub.descripcion;
+    document.getElementById("tipo").value = pub.tipo;
+    document.getElementById("imagenes").value = (pub.imagenes || []).join(", ");
+    document.getElementById("fuente").value = pub.fuente || "Arial";
+
+    // Elimina la publicación original para que al guardar se reemplace
+    publicaciones.splice(idx, 1);
+    renderizar();
   }
 
   document.getElementById("cerrarModal").onclick = function() {
