@@ -98,8 +98,8 @@ function crearCarrusel(imagenes, id, grande = false) {
   img.src = imagenes[index];
   img.alt = "Imagen de la publicación";
   img.className = (grande
-    ? "max-w-[520px] max-h-[340px] rounded-2xl border-2 border-[#b22222]/30 shadow-lg object-cover transition-all duration-500 aspect-video bg-white"
-    : "max-w-[340px] max-h-[220px] rounded-xl border-2 border-[#b22222]/30 shadow-lg object-cover transition-all duration-500 aspect-video bg-white");
+    ? "w-[520px] h-[340px] rounded-2xl border-2 border-[#b22222]/30 shadow-lg object-cover aspect-video bg-white"
+    : "w-[340px] h-[220px] rounded-xl border-2 border-[#b22222]/30 shadow-lg object-cover aspect-video bg-white");
   cont.appendChild(img);
 
   if (imagenes.length > 1) {
@@ -180,8 +180,9 @@ function crearCarrusel(imagenes, id, grande = false) {
 function truncarTexto(texto, maxLength = 220) {
   if (!texto) return "";
   if (texto.length <= maxLength) return texto;
-  const corte = texto.lastIndexOf(" ", maxLength - 3);
-  return texto.slice(0, corte > 0 ? corte : maxLength - 3) + "…";
+  let corte = texto.lastIndexOf(" ", maxLength - 1);
+  if (corte === -1) corte = maxLength - 1;
+  return texto.slice(0, corte).replace(/\s+$/, "") + " \u2026";
 }
 
 /* ---------------------------
@@ -218,9 +219,11 @@ async function publicar() {
   const texto = document.getElementById("texto").value.trim();
   const tipo = document.getElementById("tipo").value;
   const imagenesInput = document.getElementById("imagenes").value;
-  const imagenes = imagenesInput.split(",").map(s => s.trim()).filter(s => s);
+  // Permitir múltiples URLs separadas por coma o salto de línea
+  const imagenes = imagenesInput.split(/,|\n/).map(s => s.trim()).filter(s => s);
   const fuente = document.getElementById("fuente").value || "Arial";
-  const imagen_url = imagenes.length ? imagenes[0] : null;
+  // Guardar todas las imágenes en imagen_url como string separado por coma
+  const imagen_url = imagenes.length ? imagenes.join(",") : null;
 
   if (!titulo && !texto && !imagen_url) return;
 
@@ -409,7 +412,9 @@ function renderizar() {
     const desc = document.createElement("p");
     desc.textContent = truncarTexto(p.descripcion || "", 220);
     desc.style.fontFamily = p.fuente || "Arial";
-    desc.className = "text-gray-800 text-lg mb-4 leading-relaxed";
+    desc.className = "text-gray-800 text-lg mb-4 leading-relaxed break-words max-h-24 overflow-hidden w-full whitespace-normal";
+    desc.style.wordBreak = "break-word";
+    desc.style.hyphens = "auto";
     contenido.appendChild(desc);
 
     // Fuente (select para cambiar y persistir)
@@ -492,7 +497,7 @@ function mostrarDetalle(pub) {
   const desc = document.createElement("p");
   desc.textContent = pub.descripcion || "";
   desc.style.fontFamily = pub.fuente || "Arial";
-  desc.className = "text-gray-800 text-lg mb-4 leading-relaxed";
+  desc.className = "text-gray-800 text-lg mb-4 leading-relaxed break-words";
   modalContenido.appendChild(desc);
 
   const fuente = document.createElement("span");

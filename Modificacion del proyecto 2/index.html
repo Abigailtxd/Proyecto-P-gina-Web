@@ -89,6 +89,31 @@
   border-color: #AB2A3E;     /* borde granate */
   color: white !important;              /* texto blanco */
 }
+  /* Centrar imagen en el modal de noticia */
+  .noticia-modal .modal-body img {
+    max-width: 100%;
+    border-radius: 1em;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    .noticia-modal .carousel {
+      margin-bottom: 20px;
+    }
+    .noticia-modal .carousel-inner {
+      border-radius: 1em;
+    }
+    .noticia-modal .carousel-control {
+      background: rgba(171,42,62,0.5);
+      border-radius: 2em;
+    }
+    .noticia-modal .modal-body p {
+      word-break: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
+      white-space: pre-line;
+    }
 /* Estilo general del navbar */
 #lightnav {
     background-color: #AB2A3E;
@@ -131,8 +156,31 @@
     transition: color 0.3s;
 }
 .dropdown-menu a:hover {
+  /* Noticias en fila */
+  #contenedor-noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  #contenedor-noticias > .col-md-8,
+  #contenedor-noticias > .col-md-4 {
+    float: none;
+    display: flex;
+    flex-direction: column;
+  }
     color: black !important;
 }
+  /* Limitar texto largo en publicaciones */
+  .card .descripcion-corta,
+  .thumbnail .descripcion-corta {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 6.6em;
+    white-space: normal;
+  }
 </style>
 </head>
 <body>
@@ -210,6 +258,19 @@
     </div>
   </div>
 </section>
+<!-- Modal para mostrar noticia -->
+<div class="modal fade noticia-modal" id="modalNoticia" tabindex="-1" role="dialog" aria-labelledby="modalNoticiaLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modalNoticiaLabel"></h4>
+      </div>
+      <div class="modal-body" id="modalNoticiaBody">
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Case Studies -->
 
@@ -338,7 +399,8 @@ async function cargarNoticias() {
             <div class="caption">
               <h2><b>${principal.titulo}</b></h2>
               <p><small><i class="fa fa-calendar"></i> ${new Date(principal.fecha_publicacion).toLocaleDateString()}</small></p>
-              <p>${principal.descripcion}</p>
+                <p class="descripcion-corta">${principal.descripcion}</p>
+                <button class='btn btn-contacto' style='border-radius:2em;' onclick='mostrarNoticiaModal(${JSON.stringify(principal)})'>Ver más</button>
             </div>
           </div>
         </div>
@@ -354,7 +416,8 @@ async function cargarNoticias() {
           <div class="caption">
             <h4><b>${pub.titulo}</b></h4>
             <p><small><i class="fa fa-calendar"></i> ${new Date(pub.fecha_publicacion).toLocaleDateString()}</small></p>
-            <p>${pub.descripcion}</p>
+              <p class="descripcion-corta">${pub.descripcion}</p>
+              <button class='btn btn-contacto' style='border-radius:2em;' onclick='mostrarNoticiaModal(${JSON.stringify(pub)})'>Ver más</button>
           </div>
         </div>
       `;
@@ -369,6 +432,64 @@ async function cargarNoticias() {
 }
 
 // Llamar al cargar la página
+// Función para mostrar la noticia en el modal
+function mostrarNoticiaModal(pub) {
+  document.getElementById('modalNoticiaLabel').innerHTML = `<b>${pub.titulo}</b>`;
+  let imagenes = [];
+  if (Array.isArray(pub.imagenes) && pub.imagenes.length > 0) {
+    imagenes = pub.imagenes;
+  } else if (pub.imagen_url) {
+    imagenes = [pub.imagen_url];
+  } else {
+    imagenes = ['assets/images/noticias/placeholder.jpg'];
+  }
+
+  let carruselHtml = '';
+  if (imagenes.length > 1) {
+    // Indicadores
+    let indicators = '<ol class="carousel-indicators">';
+    for (let i = 0; i < imagenes.length; i++) {
+      indicators += `<li data-target="#carruselNoticia" data-slide-to="${i}"${i === 0 ? ' class="active"' : ''}></li>`;
+    }
+    indicators += '</ol>';
+
+    // Slides
+    let slides = imagenes.map((img, i) => `
+      <div class="item${i === 0 ? ' active' : ''}">
+        <img src="${img}" alt="Imagen noticia" class="img-responsive" />
+      </div>
+    `).join('');
+
+    carruselHtml = `
+      <div id="carruselNoticia" class="carousel slide" data-ride="carousel">
+        ${indicators}
+        <div class="carousel-inner">
+          ${slides}
+        </div>
+        <a class="left carousel-control" href="#carruselNoticia" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carruselNoticia" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    `;
+    // Inicializar el carrusel y ponerlo en la primera imagen cada vez que se abre el modal
+    setTimeout(function(){
+      $('#carruselNoticia').carousel(0);
+    }, 300);
+  } else {
+    carruselHtml = `<img src="${imagenes[0]}" alt="Imagen noticia" class="img-responsive" />`;
+  }
+
+  document.getElementById('modalNoticiaBody').innerHTML = `
+    ${carruselHtml}
+    <p><small><i class='fa fa-calendar'></i> ${new Date(pub.fecha_publicacion).toLocaleDateString()}</small></p>
+    <p style='font-family:${pub.fuente};'>${pub.descripcion}</p>
+  `;
+  $('#modalNoticia').modal('show');
+}
+
 cargarNoticias();
 </script>
 </body>
