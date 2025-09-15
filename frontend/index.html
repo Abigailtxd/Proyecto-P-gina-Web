@@ -30,7 +30,7 @@
 
   <h1 class="text-center text-4xl font-extrabold text-[#800000] mt-14 mb-10 tracking-wider drop-shadow-lg">Editor de Publicaciones</h1>
 
-  <form id="formulario" class="bg-white/90 backdrop-blur rounded-3xl shadow-2xl max-w-md w-full p-10 flex flex-col gap-6 mb-12 border border-[#b22222]/20">
+  <form id="formulario" class="bg-white/90 backdrop-blur rounded-3xl shadow-2xl max-w-md w-full p-10 flex flex-col gap-6 mb-12 border border-[#b22222]/20" onsubmit="return false;">
     <textarea id="texto" rows="3" placeholder="Contenido de la noticia." class="w-full rounded-xl border border-[#b22222] focus:border-[#800000] focus:ring-2 focus:ring-[#80000022] p-4 text-gray-800 text-base resize-vertical outline-none transition placeholder:italic placeholder:text-[#b22222]/60"></textarea>
     
     <input type="text" id="titulo" placeholder="Título de la noticia." class="rounded-xl border border-[#b22222] p-3 focus:border-[#800000] focus:ring-2 focus:ring-[#80000022] transition placeholder:italic placeholder:text-[#b22222]/60">
@@ -50,7 +50,8 @@
       <option value="Georgia">Georgia</option>
     </select>
 
-    <button type="button" onclick="publicar()" class="w-full bg-gradient-to-r from-[#800000] to-[#b22222] text-white font-bold py-3 rounded-xl shadow-lg text-lg transition hover:from-[#4b0000] hover:to-[#800000] active:scale-95 tracking-wide">Publicar</button>
+    <!-- le puse id al botón para cambiar el texto cuando editás -->
+    <button id="btnPublicar" type="button" onclick="publicar()" class="w-full bg-gradient-to-r from-[#800000] to-[#b22222] text-white font-bold py-3 rounded-xl shadow-lg text-lg transition hover:from-[#4b0000] hover:to-[#800000] active:scale-95 tracking-wide">Publicar</button>
   </form>
 
   <h2 class="text-2xl font-bold text-[#800000] mb-8 tracking-wide">Publicaciones</h2>
@@ -69,135 +70,275 @@
   </div>
 
 <script>
-  let publicaciones = [
-    { 
-      id: 1, 
-      titulo: "¡Pusheen!", 
-      descripcion: "Hoy presentamos nuestras nuevas fotos de pusheen :3.",
-      tipo: "principal", 
-      fuente: "Arial", 
-      imagenes: [
-        "https://i.pinimg.com/736x/da/41/53/da415360c87042bb11ad4d5714ed150c.jpg",
-        "https://i.pinimg.com/736x/31/8f/c5/318fc55b23c5fa518d93990e30820190.jpg",
-        "https://i.pinimg.com/1200x/cf/d4/9e/cfd49e37557b54170ffc22031d9816d8.jpg",
-        "https://i.pinimg.com/736x/47/7a/de/477ade91ea46aa71f8bc8e7a9a5c6f3c.jpg"
-      ]
-    },
-    { 
-      id: 2, 
-      titulo: "Pusheen", 
-      descripcion: `Pusheen es un gato virtual que se ha convertido en un fenómeno global gracias a su ternura y personalidad divertida. Creado por Claire Belton y Andrew Duff en 2010, Pusheen comenzó como un personaje de webcomic en el sitio "Everyday Cute", y rápidamente ganó popularidad gracias a sus expresivas ilustraciones y stickers que se usan en redes sociales y aplicaciones de mensajería.
+/* ---------------------------
+  Editor conectado a /api/publicaciones
+  - GET /api/publicaciones
+  - POST /api/publicaciones
+  - PUT /api/publicaciones/:id (intentamos; si falla hacemos fallback)
+  - DELETE /api/publicaciones/:id
+  Mantiene TODO el estilo original (carrusel, modal, menú, select fuente, etc.)
+----------------------------*/
+const API_URL = "http://localhost:3000/api/publicaciones";
+let publicaciones = [];
+let editMode = false;
+let editId = null;
 
-Este gatito gris, regordete y siempre adorable, representa momentos cotidianos de manera humorística: desde comer pizza y dormir la siesta hasta celebrar cumpleaños y aventuras imaginarias. Su encanto radica en la simplicidad de sus diseños y la facilidad con la que cualquiera puede identificarse con sus emociones y travesuras.
+/* ---------------------------
+   Crear carrusel (copia extendida del original)
+   devuelve un elemento DOM con interval automáticamente
+----------------------------*/
+function crearCarrusel(imagenes, id, grande = false) {
+  if (!imagenes || imagenes.length === 0) return null;
 
-Hoy, Pusheen no solo aparece en cómics y stickers digitales, sino también en peluches, ropa, accesorios y todo tipo de merchandising. Es un ejemplo de cómo un personaje sencillo puede convertirse en un ícono cultural moderno, capaz de unir a fans de todas las edades en torno a la ternura felina y el humor ligero.
+  let index = 0;
+  const cont = document.createElement("div");
+  cont.className = "relative flex items-center justify-center mt-2 group";
 
-Dato curioso: El nombre "Pusheen" viene de la palabra irlandesa puisín, que significa "gatito".`,
-      tipo: "secundaria", 
-      fuente: "Georgia", 
-      imagenes: ["https://i.pinimg.com/736x/d2/58/09/d258091f47517406b5b51246d181f431.jpg"] 
-    }
-  ];
+  const img = document.createElement("img");
+  img.src = imagenes[index];
+  img.alt = "Imagen de la publicación";
+  img.className = (grande
+    ? "max-w-[520px] max-h-[340px] rounded-2xl border-2 border-[#b22222]/30 shadow-lg object-cover transition-all duration-500 aspect-video bg-white"
+    : "max-w-[340px] max-h-[220px] rounded-xl border-2 border-[#b22222]/30 shadow-lg object-cover transition-all duration-500 aspect-video bg-white");
+  cont.appendChild(img);
 
-  // Carrusel moderno con auto-slide
-  function crearCarrusel(imagenes, id, grande = false) {
-    if (!imagenes || imagenes.length === 0) return null;
+  if (imagenes.length > 1) {
+    const indicadores = document.createElement("div");
+    indicadores.className = "absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10";
+    imagenes.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.className = "w-2.5 h-2.5 rounded-full transition-all duration-300 border border-[#b22222] " +
+        (i === index ? "bg-[#b22222] scale-110 shadow" : "bg-white/80 hover:bg-[#b22222]/60");
+      dot.onclick = (e) => {
+        e.stopPropagation();
+        index = i;
+        img.src = imagenes[index];
+        actualizarIndicadores();
+        reiniciarAutoSlide();
+      };
+      indicadores.appendChild(dot);
+    });
+    cont.appendChild(indicadores);
 
-    let index = 0;
-    const cont = document.createElement("div");
-    cont.className = "relative flex items-center justify-center mt-2 group";
-
-    const img = document.createElement("img");
-    img.src = imagenes[index];
-    img.alt = "Imagen de la publicación";
-    // Solo grande en el modal (cuando grande=true)
-    img.className = (grande
-      ? "max-w-[520px] max-h-[340px] rounded-2xl border-2 border-[#b22222]/30 shadow-lg object-cover transition-all duration-500 aspect-video bg-white"
-      : "max-w-[340px] max-h-[220px] rounded-xl border-2 border-[#b22222]/30 shadow-lg object-cover transition-all duration-500 aspect-video bg-white");
-    cont.appendChild(img);
-
-    // Indicadores
-    if (imagenes.length > 1) {
-      const indicadores = document.createElement("div");
-      indicadores.className = "absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10";
-      imagenes.forEach((_, i) => {
-        const dot = document.createElement("button");
+    function actualizarIndicadores() {
+      Array.from(indicadores.children).forEach((dot, i) => {
         dot.className = "w-2.5 h-2.5 rounded-full transition-all duration-300 border border-[#b22222] " +
           (i === index ? "bg-[#b22222] scale-110 shadow" : "bg-white/80 hover:bg-[#b22222]/60");
-        dot.onclick = (e) => {
-          e.stopPropagation();
-          index = i;
-          img.src = imagenes[index];
-          actualizarIndicadores();
-          reiniciarAutoSlide();
-        };
-        indicadores.appendChild(dot);
       });
-      cont.appendChild(indicadores);
+    }
 
-      function actualizarIndicadores() {
-        Array.from(indicadores.children).forEach((dot, i) => {
-          dot.className = "w-2.5 h-2.5 rounded-full transition-all duration-300 border border-[#b22222] " +
-            (i === index ? "bg-[#b22222] scale-110 shadow" : "bg-white/80 hover:bg-[#b22222]/60");
-        });
-      }
+    const btnPrev = document.createElement("button");
+    btnPrev.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>';
+    btnPrev.className = "absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-[#800000] hover:text-white text-[#800000] rounded-full p-1.5 shadow transition opacity-0 group-hover:opacity-100";
+    btnPrev.onclick = (e) => {
+      e.stopPropagation();
+      index = (index - 1 + imagenes.length) % imagenes.length;
+      img.src = imagenes[index];
+      actualizarIndicadores();
+      reiniciarAutoSlide();
+    };
+    cont.appendChild(btnPrev);
 
-      // Botones
-      const btnPrev = document.createElement("button");
-      btnPrev.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>';
-      btnPrev.className = "absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-[#800000] hover:text-white text-[#800000] rounded-full p-1.5 shadow transition opacity-0 group-hover:opacity-100";
-      btnPrev.onclick = (e) => {
-        e.stopPropagation();
-        index = (index - 1 + imagenes.length) % imagenes.length;
-        img.src = imagenes[index];
-        actualizarIndicadores();
-        reiniciarAutoSlide();
-      };
-      cont.appendChild(btnPrev);
+    const btnNext = document.createElement("button");
+    btnNext.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>';
+    btnNext.className = "absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-[#800000] hover:text-white text-[#800000] rounded-full p-1.5 shadow transition opacity-0 group-hover:opacity-100";
+    btnNext.onclick = (e) => {
+      e.stopPropagation();
+      index = (index + 1) % imagenes.length;
+      img.src = imagenes[index];
+      actualizarIndicadores();
+      reiniciarAutoSlide();
+    };
+    cont.appendChild(btnNext);
 
-      const btnNext = document.createElement("button");
-      btnNext.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>';
-      btnNext.className = "absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-[#800000] hover:text-white text-[#800000] rounded-full p-1.5 shadow transition opacity-0 group-hover:opacity-100";
-      btnNext.onclick = (e) => {
-        e.stopPropagation();
-        index = (index + 1) % imagenes.length;
-        img.src = imagenes[index];
-        actualizarIndicadores();
-        reiniciarAutoSlide();
-      };
-      cont.appendChild(btnNext);
+    // Auto-slide
+    let interval = setInterval(() => {
+      index = (index + 1) % imagenes.length;
+      img.src = imagenes[index];
+      actualizarIndicadores();
+    }, 3500);
 
-      // Auto-slide
-      let interval = setInterval(() => {
+    function reiniciarAutoSlide() {
+      clearInterval(interval);
+      interval = setInterval(() => {
         index = (index + 1) % imagenes.length;
         img.src = imagenes[index];
         actualizarIndicadores();
       }, 3500);
-
-      function reiniciarAutoSlide() {
-        clearInterval(interval);
-        interval = setInterval(() => {
-          index = (index + 1) % imagenes.length;
-          img.src = imagenes[index];
-          actualizarIndicadores();
-        }, 3500);
-      }
-
-      // Limpiar intervalo al remover el carrusel
-      cont.addEventListener("DOMNodeRemoved", () => clearInterval(interval));
     }
 
-    return cont;
+    // Limpiar intervalo al remover el carrusel
+    cont.addEventListener("DOMNodeRemoved", () => clearInterval(interval));
   }
 
-  // Truncar texto con "..."
-  function truncarTexto(texto, maxLength = 220) {
-    if (!texto) return "";
-    if (texto.length <= maxLength) return texto;
-    const corte = texto.lastIndexOf(" ", maxLength - 3);
-    return texto.slice(0, corte > 0 ? corte : maxLength - 3) + "…";
+  return cont;
+}
+
+/* ---------------------------
+   Util: truncar texto
+----------------------------*/
+function truncarTexto(texto, maxLength = 220) {
+  if (!texto) return "";
+  if (texto.length <= maxLength) return texto;
+  const corte = texto.lastIndexOf(" ", maxLength - 3);
+  return texto.slice(0, corte > 0 ? corte : maxLength - 3) + "…";
+}
+
+/* ---------------------------
+   Cargar publicaciones desde backend
+----------------------------*/
+async function cargar() {
+  try {
+    const res = await fetch(API_URL);
+    if (!res.ok) throw new Error("No se pudo obtener publicaciones");
+    publicaciones = await res.json();
+
+    // convertir imagen_url -> imagenes[] para mantener carrusel
+    publicaciones.forEach(p => {
+      // algunos registros podrían almacenar varias urls separadas por coma en imagen_url
+      if (p.imagen_url && p.imagen_url.includes(",")) {
+        p.imagenes = p.imagen_url.split(",").map(s => s.trim()).filter(Boolean);
+      } else {
+        p.imagenes = p.imagen_url ? [p.imagen_url] : [];
+      }
+      p.fuente = p.fuente || "Arial";
+    });
+
+    renderizar();
+  } catch (err) {
+    console.error("Error al cargar publicaciones:", err);
+  }
+}
+
+/* ---------------------------
+   Publicar (POST) o Guardar cambios (PUT con fallback)
+----------------------------*/
+async function publicar() {
+  const titulo = document.getElementById("titulo").value.trim();
+  const texto = document.getElementById("texto").value.trim();
+  const tipo = document.getElementById("tipo").value;
+  const imagenesInput = document.getElementById("imagenes").value;
+  const imagenes = imagenesInput.split(",").map(s => s.trim()).filter(s => s);
+  const fuente = document.getElementById("fuente").value || "Arial";
+  const imagen_url = imagenes.length ? imagenes[0] : null;
+
+  if (!titulo && !texto && !imagen_url) return;
+
+  // Si estamos en modo edición, actualizamos (PUT) el registro editId
+  if (editMode && editId) {
+    const data = { titulo, descripcion: texto, imagen_url, fuente, tipo };
+    const ok = await actualizarPublicacion(editId, data);
+    if (ok) {
+      editMode = false;
+      editId = null;
+      document.getElementById("btnPublicar").textContent = "Publicar";
+      document.getElementById("formulario").reset();
+      await cargar();
+    }
+    return;
   }
 
+  // Crear nueva publicación (POST)
+  try {
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ titulo, descripcion: texto, imagen_url, fuente, tipo })
+    });
+    if (res.ok) {
+      document.getElementById("formulario").reset();
+      await cargar();
+    } else {
+      console.error("Error al publicar:", res.statusText);
+    }
+  } catch (err) {
+    console.error("Error al publicar:", err);
+  }
+}
+
+/* ---------------------------
+   Intentar PUT, si falla -> fallback: DELETE + POST
+   (esto asegura que EDIT funcione aunque el backend PUT no actualice todos los campos)
+----------------------------*/
+async function actualizarPublicacion(id, data) {
+  try {
+    const res = await fetch(`${API_URL}/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    if (res.ok) return true;
+    // si PUT no fue ok, intentamos fallback
+    console.warn("PUT falló, intentando fallback (DELETE+POST).");
+  } catch (err) {
+    console.warn("PUT arrojó error:", err);
+  }
+
+  // fallback: borrar y crear nueva (mantiene continuidad visual, la id cambiará)
+  try {
+    await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+    const postRes = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    return postRes.ok;
+  } catch (err) {
+    console.error("Fallback de actualización falló:", err);
+    return false;
+  }
+}
+
+/* ---------------------------
+   Eliminar publicación (usa id real en DB)
+----------------------------*/
+async function eliminarPublicacion(idx) {
+  const pub = publicaciones[idx];
+  if (!pub || !pub.id) {
+    // si por alguna razón no hay id, sólo removemos localmente
+    if (confirm("¿Seguro que deseas eliminar esta publicación local?")) {
+      publicaciones.splice(idx, 1);
+      renderizar();
+    }
+    return;
+  }
+
+  if (!confirm("¿Seguro que deseas eliminar esta publicación?")) return;
+
+  try {
+    const res = await fetch(`${API_URL}/${pub.id}`, { method: "DELETE" });
+    if (res.ok) {
+      await cargar();
+    } else {
+      console.error("Error al eliminar:", res.statusText);
+    }
+  } catch (err) {
+    console.error("Error al eliminar:", err);
+  }
+}
+
+/* ---------------------------
+   Editar publicación: cargar datos en el formulario
+----------------------------*/
+function editarPublicacion(idx) {
+  const pub = publicaciones[idx];
+  if (!pub) return;
+  document.getElementById("titulo").value = pub.titulo || "";
+  document.getElementById("texto").value = pub.descripcion || "";
+  document.getElementById("tipo").value = pub.tipo || "secundaria";
+  document.getElementById("imagenes").value = (pub.imagenes || []).join(", ");
+  document.getElementById("fuente").value = pub.fuente || "Arial";
+
+  editMode = true;
+  editId = pub.id || null;
+  document.getElementById("btnPublicar").textContent = "Guardar cambios";
+  // scroll to top so user sees the form (optional)
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+/* ---------------------------
+   Renderizado (manteniendo el estilo original)
+----------------------------*/
 function renderizar() {
   const cont = document.getElementById("publicaciones");
   cont.innerHTML = "";
@@ -207,7 +348,7 @@ function renderizar() {
       ${p.tipo === "principal" ? "border-[#800000] bg-gradient-to-br from-[#fff0f0] to-white" : "border-[#b22222] bg-white/90"}
       hover:shadow-[0_8px_32px_0_rgba(128,0,0,0.13)] transition duration-300`;
 
-    // Menú desplegable en la esquina superior izquierda
+    // Menú desplegable
     const menuWrap = document.createElement("div");
     menuWrap.className = "absolute top-4 left-4 z-10";
     const menuBtn = document.createElement("button");
@@ -228,10 +369,12 @@ function renderizar() {
 
     menuBtn.onclick = (e) => {
       e.stopPropagation();
+      // ocultar otros
       document.querySelectorAll(".menu-acciones").forEach(m => { if (m !== menu) m.classList.add("hidden"); });
       menu.classList.toggle("hidden");
     };
-    document.addEventListener("click", () => menu.classList.add("hidden"));
+    document.addEventListener("click", () => document.querySelectorAll(".menu-acciones").forEach(m => m.classList.add("hidden")));
+    // asociar acciones (capturamos idx actual)
     menu.children[0].onclick = (e) => { e.stopPropagation(); menu.classList.add("hidden"); editarPublicacion(idx); };
     menu.children[1].onclick = (e) => { e.stopPropagation(); menu.classList.add("hidden"); eliminarPublicacion(idx); };
     menu.classList.add("menu-acciones");
@@ -252,25 +395,24 @@ function renderizar() {
 
     // Título
     const titulo = document.createElement("h4");
-    titulo.textContent = p.titulo;
+    titulo.textContent = p.titulo || "";
     titulo.className = "text-2xl font-extrabold text-[#800000] mb-1 tracking-wide";
     contenido.appendChild(titulo);
 
     // Tipo
-    const tipo = document.createElement("span");
-    tipo.textContent = p.tipo.charAt(0).toUpperCase() + p.tipo.slice(1);
-    tipo.className = `inline-block px-4 py-1 rounded-full text-xs font-semibold mb-3 shadow
-      ${p.tipo === "principal" ? "bg-[#800000] text-white" : "bg-[#b22222] text-white"}`;
-    contenido.appendChild(tipo);
+    const tipoSpan = document.createElement("span");
+    tipoSpan.textContent = p.tipo ? (p.tipo.charAt(0).toUpperCase() + p.tipo.slice(1)) : "Secundaria";
+    tipoSpan.className = `inline-block px-4 py-1 rounded-full text-xs font-semibold mb-3 shadow ${p.tipo === "principal" ? "bg-[#800000] text-white" : "bg-[#b22222] text-white"}`;
+    contenido.appendChild(tipoSpan);
 
     // Descripción truncada
     const desc = document.createElement("p");
-    desc.textContent = truncarTexto(p.descripcion, 220);
+    desc.textContent = truncarTexto(p.descripcion || "", 220);
     desc.style.fontFamily = p.fuente || "Arial";
     desc.className = "text-gray-800 text-lg mb-4 leading-relaxed";
     contenido.appendChild(desc);
 
-    // Fuente (con select para cambiar)
+    // Fuente (select para cambiar y persistir)
     const fuenteWrap = document.createElement("div");
     fuenteWrap.className = "flex items-center gap-2 mt-2";
     const fuenteLabel = document.createElement("span");
@@ -283,18 +425,29 @@ function renderizar() {
       const opt = document.createElement("option");
       opt.value = f;
       opt.textContent = f;
-      if (p.fuente === f) opt.selected = true;
+      if ((p.fuente || "Arial") === f) opt.selected = true;
       fuenteSelect.appendChild(opt);
     });
     fuenteSelect.className = "rounded border border-[#b22222] px-2 py-1 text-xs focus:border-[#800000] focus:ring-1 focus:ring-[#80000022] transition";
-    fuenteSelect.onchange = () => {
-      p.fuente = fuenteSelect.value;
-      renderizar();
+    fuenteSelect.onchange = async () => {
+      const nueva = fuenteSelect.value;
+      // intentamos actualizar solo la fuente en backend
+      const data = { descripcion: p.descripcion || "", fuente: nueva, tamano: null };
+      // usamos la función actualizarPublicacion (que hace PUT o fallback)
+      const ok = await actualizarPublicacion(p.id, { titulo: p.titulo, descripcion: p.descripcion, imagen_url: p.imagenes.join(", "), fuente: nueva, tipo: p.tipo });
+      if (ok) {
+        // recargar para reflejar persistencia real
+        await cargar();
+      } else {
+        // si no pudo, actualizamos localmente para no romper UX
+        p.fuente = nueva;
+        renderizar();
+      }
     };
     fuenteWrap.appendChild(fuenteSelect);
     contenido.appendChild(fuenteWrap);
 
-    // Botón Ver más (siempre visible, debajo del texto)
+    // Botón Ver más (abre modal)
     const verMasBtn = document.createElement("button");
     verMasBtn.textContent = "Ver más";
     verMasBtn.className = "mt-4 self-start bg-gradient-to-r from-[#800000] to-[#b22222] text-white font-semibold px-6 py-2 rounded-lg shadow transition hover:from-[#4b0000] hover:to-[#800000] active:scale-95";
@@ -310,111 +463,61 @@ function renderizar() {
   });
 }
 
-  function mostrarDetalle(pub) {
-    const modal = document.getElementById("modal");
-    const modalContenido = document.getElementById("modalContenido");
-    modalContenido.innerHTML = "";
+/* ---------------------------
+   Mostrar detalle en modal (carrusel grande y texto completo)
+----------------------------*/
+function mostrarDetalle(pub) {
+  const modal = document.getElementById("modal");
+  const modalContenido = document.getElementById("modalContenido");
+  modalContenido.innerHTML = "";
 
-    // Título
-    const titulo = document.createElement("h3");
-    titulo.textContent = pub.titulo;
-    titulo.className = "text-3xl font-extrabold text-[#800000] mb-2";
-    modalContenido.appendChild(titulo);
+  const titulo = document.createElement("h3");
+  titulo.textContent = pub.titulo || "";
+  titulo.className = "text-3xl font-extrabold text-[#800000] mb-2";
+  modalContenido.appendChild(titulo);
 
-    // Tipo
-    const tipo = document.createElement("span");
-    tipo.textContent = pub.tipo.charAt(0).toUpperCase() + pub.tipo.slice(1);
-    tipo.className = `inline-block px-4 py-1 rounded-full text-xs font-semibold mb-3 shadow
-      ${pub.tipo === "principal" ? "bg-[#800000] text-white" : "bg-[#b22222] text-white"}`;
-    modalContenido.appendChild(tipo);
+  const tipo = document.createElement("span");
+  tipo.textContent = pub.tipo ? (pub.tipo.charAt(0).toUpperCase() + pub.tipo.slice(1)) : "Secundaria";
+  tipo.className = `inline-block px-4 py-1 rounded-full text-xs font-semibold mb-3 shadow ${pub.tipo === "principal" ? "bg-[#800000] text-white" : "bg-[#b22222] text-white"}`;
+  modalContenido.appendChild(tipo);
 
-    // Carrusel (tamaño grande)
-    const carrusel = crearCarrusel(pub.imagenes, pub.id + "_detalle", true);
-    if (carrusel) {
-      const imgWrap = document.createElement("div");
-      imgWrap.className = "flex items-center justify-center my-4";
-      imgWrap.appendChild(carrusel);
-      modalContenido.appendChild(imgWrap);
-    }
-
-    // Descripción completa
-    const desc = document.createElement("p");
-    desc.textContent = pub.descripcion;
-    desc.style.fontFamily = pub.fuente || "Arial";
-    desc.className = "text-gray-800 text-lg mb-4 leading-relaxed";
-    modalContenido.appendChild(desc);
-
-    // Fuente
-    const fuente = document.createElement("span");
-    fuente.textContent = `Fuente: ${pub.fuente || "Arial"}`;
-    fuente.className = "text-xs text-gray-500 italic";
-    modalContenido.appendChild(fuente);
-
-    modal.classList.remove("hidden");
+  const carrusel = crearCarrusel(pub.imagenes, pub.id + "_detalle", true);
+  if (carrusel) {
+    const imgWrap = document.createElement("div");
+    imgWrap.className = "flex items-center justify-center my-4";
+    imgWrap.appendChild(carrusel);
+    modalContenido.appendChild(imgWrap);
   }
 
-  // Eliminar publicación
-  function eliminarPublicacion(idx) {
-    if (confirm("¿Seguro que deseas eliminar esta publicación?")) {
-      publicaciones.splice(idx, 1);
-      renderizar();
-    }
-  }
+  const desc = document.createElement("p");
+  desc.textContent = pub.descripcion || "";
+  desc.style.fontFamily = pub.fuente || "Arial";
+  desc.className = "text-gray-800 text-lg mb-4 leading-relaxed";
+  modalContenido.appendChild(desc);
 
-  // Editar publicación
-  function editarPublicacion(idx) {
-    const pub = publicaciones[idx];
-    document.getElementById("titulo").value = pub.titulo;
-    document.getElementById("texto").value = pub.descripcion;
-    document.getElementById("tipo").value = pub.tipo;
-    document.getElementById("imagenes").value = (pub.imagenes || []).join(", ");
-    document.getElementById("fuente").value = pub.fuente || "Arial";
+  const fuente = document.createElement("span");
+  fuente.textContent = `Fuente: ${pub.fuente || "Arial"}`;
+  fuente.className = "text-xs text-gray-500 italic";
+  modalContenido.appendChild(fuente);
 
-    // Elimina la publicación original para que al guardar se reemplace
-    publicaciones.splice(idx, 1);
-    renderizar();
-  }
+  modal.classList.remove("hidden");
+}
 
-  document.getElementById("cerrarModal").onclick = function() {
-    document.getElementById("modal").classList.add("hidden");
-  };
-  document.getElementById("modal").onclick = function(e) {
-    if (e.target === this) this.classList.add("hidden");
-  };
+/* ---------------------------
+   Modal: cerrar
+----------------------------*/
+document.getElementById("cerrarModal").onclick = function() {
+  document.getElementById("modal").classList.add("hidden");
+};
+document.getElementById("modal").onclick = function(e) {
+  if (e.target === this) this.classList.add("hidden");
+};
 
-  renderizar();
+/* ---------------------------
+   Iniciar: cargar desde backend
+----------------------------*/
+cargar();
 
-  function publicar() {
-    const titulo = document.getElementById("titulo").value;
-    const texto = document.getElementById("texto").value;
-    const tipo = document.getElementById("tipo").value;
-    const imagenesInput = document.getElementById("imagenes").value;
-    const fuente = document.getElementById("fuente").value;
-    const imagenes = imagenesInput.split(",").map(url => url.trim()).filter(url => url !== "");
-
-    if (!titulo && !texto && imagenes.length === 0) return;
-
-    const nuevaPub = {
-      id: publicaciones.length + 1,
-      titulo,
-      descripcion: texto,
-      tipo,
-      fuente,
-      imagenes
-    };
-
-    publicaciones.unshift(nuevaPub); // Aparece primero
-    renderizar();
-    limpiarFormulario();
-  }
-
-  function limpiarFormulario() {
-    document.getElementById("titulo").value = "";
-    document.getElementById("texto").value = "";
-    document.getElementById("imagenes").value = "";
-    document.getElementById("tipo").value = "secundaria";
-    document.getElementById("fuente").value = "Arial";
-  }
 </script>
 </body>
 </html>

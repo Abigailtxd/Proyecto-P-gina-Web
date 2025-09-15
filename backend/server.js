@@ -20,8 +20,8 @@ app.get("/api/puntajes", async (req, res) => {
 const db = new Pool({
   user: "postgres",
   host: "localhost",
-  database: "red_social",
-  password: "ilyemily",
+  database: "bsd",
+  password: "1234",
   port: 5432
 });
 const MAPA_ESPECIALIDADES = {
