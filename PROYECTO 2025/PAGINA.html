@@ -3,132 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <title>Prueba publicaciones</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    #formulario {
-      background: #fff;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
-      margin-bottom: 20px;
-    }
-    #publicaciones {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .publicacion {
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px #ccc;
-      position: relative;
-    }
-    .eliminar {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: red;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    img {
-      max-width: 200px;
-      display: block;
-      margin-top: 10px;
-    }
-    .archivo {
-      margin-top: 10px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Prueba publicaciones</h1>
-
-  <div id="formulario">
-    <textarea id="contenido" rows="4" style="width:100%;" placeholder="texto"></textarea><br>
-    <input type="file" id="archivo" accept=".png,.pdf"><br><br>
-    <button onclick="agregarPublicacion()">Publicar</button>
-  </div>
-
-  <div id="publicaciones"></div>
-
+<body class="bg-gray-50 min-h-screen flex flex-col items-center font-sans">
+  <h1 class="text-center text-3xl font-semibold text-[#800000] mt-12 mb-8 tracking-wide">Prueba publicaciones</h1>
+  <form id="formulario" class="bg-white rounded-2xl shadow-lg max-w-md w-full p-8 flex flex-col gap-6">
+    <label for="contenido" class="sr-only">Publicación</label>
+    <textarea
+      id="contenido"
+      rows="4"
+      placeholder="Escribe tu publicación aquí…"
+      class="w-full rounded-lg border border-[#b22222] focus:border-[#800000] focus:ring-2 focus:ring-[#80000022] p-4 text-gray-800 text-base resize-vertical transition outline-none"
+      aria-label="Escribe tu publicación aquí…"
+      required
+    ></textarea>
+    <div class="flex flex-col gap-2">
+      <label for="archivo" class="inline-block">
+        <span class="inline-block bg-gradient-to-r from-[#800000] to-[#b22222] text-white px-5 py-2 rounded-lg font-medium cursor-pointer shadow hover:from-[#4b0000] hover:to-[#800000] transition">
+          Seleccionar archivos
+        </span>
+        <input type="file" id="archivo" accept=".png,.pdf" multiple class="hidden" aria-describedby="file-count">
+      </label>
+      <span id="file-count" class="text-sm text-[#800000] font-medium min-h-[1.5em]"></span>
+    </div>
+    <button
+      id="publicar-btn"
+      type="button"
+      class="w-full bg-gradient-to-r from-[#800000] to-[#b22222] text-white font-semibold py-3 rounded-lg shadow-md text-lg transition hover:from-[#4b0000] hover:to-[#800000] disabled:opacity-50 disabled:cursor-not-allowed"
+      disabled
+    >
+      Publicar
+    </button>
+  </form>
+  <div id="publicaciones" class="w-full max-w-2xl mt-10 flex flex-col gap-6"></div>
   <script>
-    const publicaciones = JSON.parse(localStorage.getItem("publicaciones") || "[]");
+    // Habilitar/deshabilitar botón Publicar según textarea
+    const textarea = document.getElementById('contenido');
+    const publicarBtn = document.getElementById('publicar-btn');
+    textarea.addEventListener('input', () => {
+      publicarBtn.disabled = textarea.value.trim().length === 0;
+    });
 
+    // Mostrar nombre o cantidad de archivos seleccionados
+    const archivoInput = document.getElementById('archivo');
+    const fileCount = document.getElementById('file-count');
+    archivoInput.addEventListener('change', function() {
+      const files = Array.from(this.files);
+      if (files.length === 0) {
+        fileCount.textContent = '';
+      } else if (files.length === 1) {
+        fileCount.textContent = files[0].name;
+      } else {
+        fileCount.textContent = `${files.length} archivos seleccionados`;
+      }
+    });
+
+    // Guardar y mostrar publicaciones (solo frontend, localStorage)
+    const publicaciones = JSON.parse(localStorage.getItem("publicaciones") || "[]");
     function mostrarPublicaciones() {
       const contenedor = document.getElementById("publicaciones");
       contenedor.innerHTML = "";
       publicaciones.forEach((pub, index) => {
         const div = document.createElement("div");
-        div.className = "publicacion";
-
-        // Texto
-        const texto = document.createElement("p");
-        texto.textContent = pub.texto;
-        div.appendChild(texto);
-
-        // Archivo
-        if (pub.tipo === "image") {
-          const img = document.createElement("img");
-          img.src = pub.archivo;
-          div.appendChild(img);
-        } else if (pub.tipo === "pdf") {
-          const link = document.createElement("a");
-          link.href = pub.archivo;
-          link.textContent = "Ver PDF";
-          link.target = "_blank";
-          link.className = "archivo";
-          div.appendChild(link);
+        div.className = "bg-white rounded-xl shadow p-6 border-l-4 border-[#800000] relative";
+        if (pub.texto && pub.texto.trim() !== "") {
+          const texto = document.createElement("p");
+          texto.textContent = pub.texto;
+          texto.className = "text-gray-800 text-base mb-3";
+          div.appendChild(texto);
         }
-
-        // Botón eliminar
+        if (pub.archivos && pub.archivos.length > 0) {
+          const archivosDiv = document.createElement("div");
+          archivosDiv.className = "flex flex-wrap gap-4";
+          pub.archivos.forEach((archivoObj) => {
+            if (archivoObj.tipo === "image") {
+              const img = document.createElement("img");
+              img.src = archivoObj.archivo;
+              img.className = "max-w-[120px] max-h-[120px] rounded-lg border border-[#b22222] shadow";
+              archivosDiv.appendChild(img);
+            } else if (archivoObj.tipo === "pdf") {
+              const link = document.createElement("a");
+              link.href = archivoObj.archivo;
+              link.textContent = "Ver PDF";
+              link.target = "_blank";
+              link.className = "inline-block text-[#800000] font-semibold underline underline-offset-2";
+              archivosDiv.appendChild(link);
+            }
+          });
+          div.appendChild(archivosDiv);
+        }
         const btn = document.createElement("button");
         btn.textContent = "Eliminar";
-        btn.className = "eliminar";
+        btn.className = "absolute top-4 right-4 bg-[#b22222] hover:bg-[#800000] text-white px-4 py-1 rounded font-medium text-sm shadow transition";
         btn.onclick = () => eliminarPublicacion(index);
         div.appendChild(btn);
-
         contenedor.appendChild(div);
       });
     }
 
     function agregarPublicacion() {
-      const texto = document.getElementById("contenido").value.trim();
-      const archivoInput = document.getElementById("archivo");
-      const archivo = archivoInput.files[0];
-
-      if (!texto && !archivo) return;
-
-      if (archivo) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          let tipo = "";
-          if (archivo.type === "image/png") tipo = "image";
-          else if (archivo.type === "application/pdf") tipo = "pdf";
-          else return alert("Solo se permiten PNG y PDF");
-
-          publicaciones.unshift({
-            texto,
-            archivo: e.target.result,
-            tipo
-          });
-
-          guardarYMostrar();
-        };
-        reader.readAsDataURL(archivo);
+      const texto = textarea.value.trim();
+      const archivos = Array.from(archivoInput.files);
+      if (!texto && archivos.length === 0) return;
+      if (archivos.length > 0) {
+        const archivosProcesados = [];
+        let archivosLeidos = 0;
+        archivos.forEach((archivo) => {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            let tipo = "";
+            if (archivo.type === "image/png") tipo = "image";
+            else if (archivo.type === "application/pdf") tipo = "pdf";
+            else {
+              archivosLeidos++;
+              if (archivosLeidos === archivos.length) {
+                publicaciones.unshift({ texto, archivos: archivosProcesados });
+                guardarYMostrar();
+              }
+              return;
+            }
+            archivosProcesados.push({ archivo: e.target.result, tipo });
+            archivosLeidos++;
+            if (archivosLeidos === archivos.length) {
+              publicaciones.unshift({ texto, archivos: archivosProcesados });
+              guardarYMostrar();
+            }
+          };
+          reader.readAsDataURL(archivo);
+        });
       } else {
-        publicaciones.unshift({ texto, archivo: null, tipo: null });
+        publicaciones.unshift({ texto, archivos: [] });
         guardarYMostrar();
       }
     }
@@ -142,13 +148,15 @@
 
     function guardarYMostrar() {
       localStorage.setItem("publicaciones", JSON.stringify(publicaciones));
-      document.getElementById("contenido").value = "";
-      document.getElementById("archivo").value = "";
+      textarea.value = "";
+      archivoInput.value = "";
+      fileCount.textContent = "";
+      publicarBtn.disabled = true;
       mostrarPublicaciones();
     }
 
+    publicarBtn.addEventListener('click', agregarPublicacion);
     mostrarPublicaciones();
   </script>
 </body>
 </html>
-
