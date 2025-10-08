@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Vocacional Técnico</title>
+<style>
+  :root{ --chart-max-px: 100px; }
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./Img/slide-3.jpg');
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 24px;
+  min-height: 100vh;
+ display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 🔹 antes era center */
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 60px; /* 🔹 espacio para que baje un poco */
+  position: relative;
+  overflow-x: hidden;
+
+  /* 🔹 Fondo translúcido encima de la imagen (sin difuminarla) */
+  backdrop-filter: none;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(0, 0, 0, 0.3); /* leve oscurecido */
+  backdrop-filter: blur(10px); /* 🔹 Borroso */
+  -webkit-backdrop-filter: blur(10px);
+
+  z-index: 0; /* queda detrás del cuadro */
+}
+  .card{     position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto;background:white;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,0.2);width:90%;max-width:1100px;overflow:hidden; margin-bottom:24px;}
+  .header{ padding:24px;border-bottom:1px solid #eee; }
+  .header h1{ margin:0;font-size:24px; }
+  .header p{ color:#666;margin:6px 0 0;font-size:14px; }
+
+  .progress-wrap{padding:0 24px;display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+  .progressbar{flex:1;height:10px;background:#eee;border-radius:999px;overflow:hidden;}
+  .progressbar>i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#111827,#374151);transition:width .25s;}
+  .progress-text{font-size:12px;color:#666;white-space:nowrap;}
+
+  .stage{padding:24px;display:grid;gap:16px;}
+  .q-text{font-size:18px;font-weight:600;}
+  .answers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.btn {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #fff;
+  transform: translateY(0);
+}
+
+/* Efecto hover y active: invierte colores */
+.btn:hover, .btn:active {
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+/* Botón “Sí” */
+.btn-yes {
+  background: #16a34a;
+  border: 1px solid #16a34a;
+}
+.btn-yes:hover, .btn-yes:active {
+  color: #16a34a;
+}
+
+/* Botón “Tal vez” */
+.btn-maybe {
+  background: #ca8a04;
+  border: 1px solid #ca8a04;
+}
+.btn-maybe:hover, .btn-maybe:active {
+  color: #ca8a04;
+}
+
+/* Botón “No” */
+.btn-no {
+  background: #dc2626;
+  border: 1px solid #dc2626;
+}
+.btn-no:hover, .btn-no:active {
+  color: #dc2626;
+}
+
+  .btn.link{background:none;border:none;color:#111;font-size:16px;text-decoration:underline;}
+  .actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* espacio entre botones */
+  margin-top: 20px;
+}
+
+.actions .btn {
+  padding: 12px 20px;       /* tamaño del botón */
+  border-radius: 12px;
+  border: 2px solid #111;   /* borde visible */
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;               /* texto blanco */
+  background: #111;          /* fondo del color del borde */
+  transition: all 0.25s ease;
+}
+
+.actions .btn:hover,
+.actions .btn:active {
+  background: #fff;          /* fondo blanco al pasar cursor o click */
+  color: #111;               /* texto del color original del botón */
+  transform: translateY(-1px);
+}
+  /* Resultados */
+  .result{padding:24px;display:grid;gap:16px;}
+  
+  .top-display{ display:flex; flex-direction:column; align-items:center; gap:8px; margin-bottom:14px; position:relative; overflow:visible; }
+  .top-display img{ width:160px; height:auto; border-radius:8px; box-shadow:0 6px 14px rgba(0,0,0,0.08); border:2px solid #ddd; background:#fff; display:block; }
+  .top-display .top-text{ font-weight:800; font-size:16px; text-align:center; color:#222; max-width:820px; }
+
+  .jump { animation: jump-anim 700ms cubic-bezier(.2,.9,.2,1); }
+  @keyframes jump-anim {
+    0%   { transform: translateY(28px) scale(0.9); opacity: 0; }
+    45%  { transform: translateY(-12px) scale(1.08); opacity: 1; }
+    70%  { transform: translateY(6px) scale(0.98); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  .confetti-layer{ pointer-events:none; position:absolute; top:0; left:0; right:0; bottom:0; overflow:visible; z-index:999; }
+  .confetti-piece{ position:absolute; width:10px; height:14px; opacity:0.95; will-change: transform, opacity; border-radius:2px; transform-origin: center; animation: confetti-fall 1400ms linear forwards; }
+  @keyframes confetti-fall {
+    0%   { transform: translate3d(0,-20px,0) rotate(0deg) scale(1); opacity:1; }
+    100% { transform: translate3d(0,260px,0) rotate(720deg) scale(0.9); opacity:0.9; }
+  }
+
+  /* Barras verticales de resultados */
+  .chart-area{ padding:18px 24px 6px 24px; border-radius:8px; }
+  .chart-row{ display:flex; justify-content:space-around; gap:36px; align-items:flex-end; height: calc(var(--chart-max-px) + 64px); margin-bottom:20px; }
+  .bar-column{ display:flex; flex-direction:column; align-items:center; width:120px; }
+  .bar-vertical{ position:relative; width:86px; height: calc(var(--chart-max-px) + 6px); display:block; border:2px solid #000; background:#fff; box-sizing:border-box; overflow:visible; }
+  .bar-fill{ position:absolute; left:0; bottom:0; width:100%; display:flex; align-items:flex-end; justify-content:center; font-weight:700; font-size:13px; line-height:1; transition: height 700ms cubic-bezier(.2,.9,.2,1), opacity .3s; box-sizing:border-box; padding-bottom:4px; }
+  .bar-fill .pct-inside{ position:relative; z-index:2; pointer-events:none; }
+  .pct-top{ position:absolute; top:-22px; width:100%; text-align:center; font-weight:800; font-size:13px; color:#000; z-index:3; }
+  .small-icon{ display:block; margin-bottom:4px; font-size:18px; }
+</style>
+</head>
+<body>
+<div class="card" id="app"></div>
+
+<script>
+/* ====================== DATOS DEL TEST ====================== */
+const AREAS = [
+  {key:'civiles',icon:'🏗️',name:'Construcciones Civiles',questions:[
+    '¿Te interesa planificar y supervisar obras desde el diseño hasta su finalización?',
+    '¿Te sientes cómodo trabajando con planos arquitectónicos y estructurales?',
+    '¿Podrías adaptarte a supervisar equipos en obras al aire libre?',
+    '¿Te atrae calcular materiales y costos para proyectos de construcción?',
+    '¿Te gusta resolver problemas prácticos relacionados con estructuras?',
+    '¿Te interesaría aprender sobre normas de seguridad e higiene?',
+    '¿Te motiva coordinar distintos profesionales para cumplir un plazo de obra?'
+  ]},
+  {key:'electricidad',icon:'⚡',name:'Electricidad',questions:[
+    '¿Te atrae instalar y reparar sistemas eléctricos?',
+    '¿Te interesa comprender el funcionamiento de circuitos eléctricos?',
+    '¿Trabajarías con comodidad con tensión y corriente bajo protocolos de seguridad?',
+    '¿Te motiva diagnosticar fallas eléctricas y proponer soluciones?',
+    '¿Podrías mantenerte concentrado para evitar accidentes?',
+    '¿Te atrae calcular capacidad de cables, transformadores y protecciones?',
+    '¿Te interesa mantenerse actualizado sobre nuevas tecnologías de energía?'
+  ]},
+  {key:'electronica',icon:'🔌',name:'Electrónica',questions:[
+    '¿Te atrae armar y reparar placas electrónicas?',
+    '¿Disfrutas interpretar esquemas y diagramas electrónicos?',
+    '¿Te motiva trabajar con herramientas de precisión?',
+    '¿Podrías dedicar tiempo a soldar, medir y calibrar componentes delicados?',
+    '¿Te interesa programar sistemas electrónicos embebidos?',
+    '¿Te gusta investigar nuevas aplicaciones de la electrónica?',
+    '¿Podrías seguir procedimientos técnicos detallados durante varias horas?'
+  ]},
+  {key:'electromecanica',icon:'⚙️',name:'Electromecánica',questions:[
+    '¿Te interesa trabajar en sistemas que combinan electricidad y mecánica?',
+    '¿Te atrae comprender maquinaria industrial automatizada?',
+    '¿Podrías realizar tareas de diagnóstico eléctrico y mecánico?',
+    '¿Te motiva resolver problemas técnicos interdisciplinarios?',
+    '¿Te gustaría trabajar con equipos de gran porte?',
+    '¿Podrías adaptarte a trabajos que implican esfuerzo físico y precisión?',
+    '¿Te interesa participar en proyectos de mejora industrial?'
+  ]},
+  {key:'informatica',icon:'💻',name:'Informática',questions:[
+    '¿Te motiva programar soluciones a problemas?',
+    '¿Te gusta trabajar con bases de datos y sistemas de información?',
+    '¿Podrías pasar horas concentrado frente a una computadora?',
+    '¿Te interesa la ciberseguridad y el resguardo de datos?',
+    '¿Te atrae diseñar interfaces o mejorar la experiencia de usuario?',
+    '¿Podrías aprender nuevas herramientas y lenguajes por tu cuenta?',
+    '¿Disfrutas resolver problemas con análisis y lógica?'
+  ]},
+  {key:'mecanica',icon:'🔧',name:'Mecánica General',questions:[
+    '¿Te gusta trabajar con herramientas manuales y maquinaria?',
+    '¿Te interesa fabricar o reparar piezas metálicas?',
+    '¿Podrías interpretar planos mecánicos con precisión?',
+    '¿Te atrae comprender sistemas mecánicos complejos?',
+    '¿Te motiva mejorar la eficiencia de máquinas y herramientas?',
+    '¿Podrías mantenerte enfocado en tareas repetitivas?',
+    '¿Te interesaría aprender soldadura y técnicas de unión de metales?'
+  ]},
+  {key:'automotriz',icon:'🚗',name:'Mecánica Automotriz',questions:[
+    '¿Te gusta diagnosticar y reparar fallas en automóviles?',
+    '¿Te interesa comprender motores y sistemas híbridos o eléctricos?',
+    '¿Podrías trabajar en un taller rodeado de ruidos y aceites?',
+    '¿Te atrae aprender sobre transmisión, frenos y suspensión?',
+    '¿Te motiva buscar soluciones rápidas para vehículos?',
+    '¿Podrías adaptarte a herramientas mecánicas y sistemas electrónicos?',
+    '¿Te interesaría estar al día con innovaciones automotrices?'
+  ]},
+  {key:'quimica',icon:'⚗️',name:'Química Industrial',questions:[
+    '¿Te atrae analizar y transformar materiales mediante procesos químicos?',
+    '¿Te interesa trabajar en laboratorios con normas de seguridad estrictas?',
+    '¿Podrías seguir protocolos experimentales con precisión?',
+    '¿Te motiva aprender sobre control de calidad y tratamiento de residuos?',
+    '¿Te atrae trabajar en industrias alimenticias, farmacéuticas o petroquímicas?',
+    '¿Te interesa medir y controlar variables como temperatura y presión?',
+    '¿Podrías registrar y reportar resultados técnicos de forma ordenada?'
+  ]}
+];
+
+const COLORS = {
+  informatica:"#800020", quimica:"#FFFFFF", electromecanica:"#0000FF",
+  civiles:"#FFFDD0", electricidad:"#87CEEB", automotriz:"#000080",
+  electronica:"#808080", mecanica:"#008000"
+};
+
+const IMAGE_PATHS = {
+  civiles:       './Img/cc_c.png',
+  electricidad:  './Img/edad_c.png',
+  electronica:   './Img/eik_c.png',
+  electromecanica:'./Img/emca_c.png',
+  informatica:   './Img/info_c.png',
+  mecanica:      './Img/indu_c.png',
+  automotriz:    './Img/auto_c.png',
+  quimica:       './Img/qca_c.png'
+};
+
+const IMAGE_TEXTS = {
+  civiles: 'Construcciones Civiles — Supervisar y planificar obras, cálculos y coordinación de equipos.',
+  electricidad: 'Electricidad — Instalación, diagnóstico y trabajo con circuitos y sistemas eléctricos.',
+  electronica: 'Electrónica — Montaje y reparación de placas, microcontroladores y dispositivos electrónicos.',
+  electromecanica: 'Electromecánica — Mantenimiento e integración entre sistemas eléctricos y mecánicos.',
+  informatica: 'Informática — Programación, bases de datos, ciberseguridad y desarrollo de software.',
+  mecanica: 'Mecánica General — Fabricación y reparación de piezas, uso de herramientas y precisión mecánica.',
+  automotriz: 'Mecánica Automotriz — Diagnóstico y reparación de vehículos, motores y sistemas automotrices.',
+  quimica: 'Química Industrial — Procesos químicos, control de calidad y trabajo en laboratorio.'
+};
+
+const ALL = AREAS.flatMap(a=>a.questions.map((q,i)=>({text:q,area:a.key,index:i}))); 
+const TOTAL = ALL.length;
+let current = -1;
+const answers = Array(TOTAL).fill(null);
+
+const app = document.getElementById('app');
+
+/* ====================== FUNCIONES PRINCIPALES ====================== */
+function render(){
+  if(current===-1){
+    app.innerHTML=`<div class="header"><h1>Test Vocacional Técnico</h1><p>Este test está pensado para orientarte y mostrarte las áreas técnicas que más coinciden con tus respuestas. No define tu futuro, solo te da una idea según tus intereses y habilidades.</p></div>
+    <div class="stage"><button class="btn link" onclick="next()">Comenzar</button></div>`;
+  }else if(current<TOTAL){
+    const q=ALL[current];
+    app.innerHTML=`<div class="header"><h1>Pregunta ${current+1} de ${TOTAL}</h1>
+      <div class="progress-wrap">
+        <div class="progressbar"><i style="width:${(current/TOTAL*100)}%"></i></div>
+        <div class="progress-text">${current+1} / ${TOTAL}</div>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="q-text">${q.text}</div>
+      <div class="answers">
+        <button class="btn btn-yes" onclick="answer(2)">Sí</button>
+        <button class="btn btn-maybe" onclick="answer(1)">Depende</button>
+        <button class="btn btn-no" onclick="answer(0)">No</button>
+      </div>
+    </div>`;
+  }else renderResults();
+}
+function next(){current++;render();}
+function answer(v){answers[current]=v;next();}
+
+/* ====================== RESULTADOS ====================== */
+function renderResults(){
+  app.innerHTML=`<div class="header"><h1>Resultados</h1></div>
+  <div class="result">
+    <div id="topDisplay" class="top-display"></div>
+    <div class="confetti-layer" id="confetti"></div>
+    <div id="chart" class="chart-area"></div>
+<div class="actions">
+  <button class="btn link" onclick="location.reload()">Volver a intentar</button>
+  <button class="btn link" onclick="window.location.href='espe.html'">Ir al inicio</button>
+</div>
+
+  </div>`;
+  renderChart();
+  launchConfetti();
+}
+
+/* ====================== CÁLCULOS ====================== */
+function computeByArea(){
+  const byArea=Object.fromEntries(AREAS.map(a=>[a.key,{name:a.name,icon:a.icon,score:0,max:(a.questions.length)*2}]));
+  ALL.forEach((q,i)=>{byArea[q.area].score+=answers[i];});
+  for(let k in byArea)byArea[k].pct=(byArea[k].score/byArea[k].max*100);
+  return byArea;
+}
+
+/* ====================== RENDER CHART ====================== */
+function renderChart(){
+  const byArea=computeByArea();
+  const entries=Object.entries(byArea);
+  const topEntry=entries.slice().sort((a,b)=>b[1].pct-a[1].pct)[0];
+  const topKey=topEntry[0];
+  const topData=topEntry[1];
+
+  const topDisplay=document.getElementById('topDisplay');
+  const imgSrc=IMAGE_PATHS[topKey]||'';
+  const imgText=IMAGE_TEXTS[topKey]||topData.name;
+  topDisplay.innerHTML=`<img class="jump" src="${imgSrc}" alt="${topData.name}" /><div class="top-text">${imgText}</div>`;
+
+  const chart=document.getElementById('chart');
+  chart.innerHTML='';
+
+  // Organizar barras en dos filas
+  const firstRow=entries.slice(0,4);
+  const secondRow=entries.slice(4);
+
+  function createBarHtml(key,data){
+    const pct=Math.round(data.pct);
+    const pxHeight=pct;
+    const color=COLORS[key]||"#999";
+    const isDarkTextWhite = ["informatica","automotriz","electromecanica"].includes(key);
+    const showInside=(pxHeight>20)||(key==='quimica');
+    const insideColor=(key==='quimica')?'#000':(isDarkTextWhite?'#fff':'#000');
+    const insideHtml=`<div class="pct-inside" style="color:${insideColor}">${pct}%</div>`;
+    const topLabel=!showInside?`<div class="pct-top">${pct}%</div>`:'';
+    return `
+      <div class="bar-column">
+        <div class="bar-vertical" data-key="${key}">
+          ${topLabel}
+          <div class="bar-fill" style="height:${pxHeight}px;background:${color};">${insideHtml}</div>
+        </div>
+        <div class="bar-label"><span class="small-icon">${data.icon}</span>${data.name}</div>
+      </div>
+    `;
+  }
+
+  chart.innerHTML=`
+    <div class="chart-row" id="row1">${firstRow.map(([k,a])=>createBarHtml(k,a)).join('')}</div>
+    <div class="chart-row" id="row2">${secondRow.map(([k,a])=>createBarHtml(k,a)).join('')}</div>
+  `;
+}
+
+/* ====================== CONFETTI ====================== */
+function launchConfetti(){
+  const layer = document.getElementById('confetti');
+  for(let i = 0; i < 100; i++){
+    const c = document.createElement('div');
+    c.className = 'confetti-piece';
+    c.style.background = ['#ff0','#f00','#0f0','#0ff','#00f','#f0f'][Math.floor(Math.random()*6)];
+    c.style.left = Math.random()*100 + '%';
+    c.style.animationDuration = (Math.random()*1000+800) + 'ms';
+    layer.appendChild(c);
+  }
+
+  // Limpiar confeti después de 3 segundos (3000ms)
+  setTimeout(() => {
+    layer.innerHTML = '';
+  }, 3000);
+}
+
+/* ====================== INICIO ====================== */
+render();
+</script>
+</body>
+</html>
+
+
