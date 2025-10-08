@@ -23,9 +23,61 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
+  /* Botones circulares */
+.carousel-control.left,
+.carousel-control.right {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #471c0c; /* círculo granate por defecto */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Flechas */
+.carousel-control.left span,
+.carousel-control.right span {
+  font-size: 20px;
+  color: #ffd380; /* flecha blanca en reposo */
+  transition: color 0.3s ease;
+}
+/* Mostrar botones al pasar mouse por el carrusel */
+#carruselNoticia:hover .carousel-control.left,
+#carruselNoticia:hover .carousel-control.right {
+  opacity: 1;
+}
+
+/* Hover de los botones */
+.carousel-control.left:hover,
+.carousel-control.right:hover {
+  background-color: #ffd380; /* círculo blanco */
+}
+
+.carousel-control.left:hover span,
+.carousel-control.right:hover span {
+  color: #471c0c; /* flecha granate */
+}
+
+  #carruselNoticia {position: relative;border-radius: 10px;overflow: hidden;}
+#carruselNoticia .carousel-inner .item img {width: 100%;height: 300px;object-fit: cover;}
+.carousel-control.left,.carousel-control.right {
+  width: 40px;height: 40px;top: 50%;transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);border-radius: 50%;
+  text-align: center;line-height: 40px;opacity: 0;transition: opacity 0.3s;z-index: 10;
+}
+.carousel-control.left span,.carousel-control.right span {font-size: 20px;color: #ffd380;}
+#carruselNoticia:hover .carousel-control.left,#carruselNoticia:hover .carousel-control.right {opacity: 1;}
+.carousel-indicators {bottom: 10px;}
+.carousel-indicators li {width: 10px;height: 10px;border-radius: 50%;background-color: rgba(255,255,255,0.7);}
+.carousel-indicators .active {background-color: #471c0c;}
   /* Fuerza estilo granate en las otras páginas */
 #lightnav.navbar-default .dropdown-menu {
-  background-color: #AB2A3E !important;
+  background-color: #471c0c !important;
   border-radius: 0 0 2em 2em !important; /* mantiene bordes redondeados */
   max-height: 0;
   opacity: 0;
@@ -40,7 +92,7 @@
 }
 
 #institucional-btn {
-  background-color: #AB2A3E !important;
+  background-color: #471c0c !important;
   color: white !important;
   border-radius: 2em;
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -54,40 +106,68 @@
 }
 
 #lightnav.navbar-default .dropdown-menu > li > a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* efecto hover */
+  background-color: #ffd380; /* efecto hover */
+  transition: background-color 0.4s ease, color 0.4s ease;
+  color: #471c0c !important;
+}
+.btn-contacto3 {
+  border: 2px solid #ffd380; /* borde granate */
+  color: #ffd380 !important;           /* texto granate */
+  background-color: transparent; 
+  transition: all 0.4s ease;
+}
+.btn-contacto3:hover {
+  background-color: #ffd380; /* fondo granate */
+  border-color: #ffd380;
+  color: #471c0c !important;              /* texto blanco */
+}
+.btn-contacto4 {
+  border: 2px solid #471c0c; /* borde granate */
+  color: #471c0c !important;           /* texto granate */
+  background-color: transparent; 
+  transition: all 0.4s ease;
 }
 
-.btn-white-sm {
-    background-color: transparent;
-    color: white; /* granate */
-    border: 2px solid white;
-    transition: all 0.3s ease;
+.btn-contacto4:hover {
+  background-color: #471c0c; /* fondo granate */
+  border-color: #471c0c;     /* borde granate */
+  color: #ffd380 !important;              /* texto blanco */
+}
+.btn-contacto5 {
+  border: 2px solid #471c0c; /* borde granate */
+  color: #471c0c !important;           /* texto granate */
+  background-color: transparent; 
+  transition: all 0.4s ease;
 }
 
-.btn-white-sm:hover {
-    background-color: #FFF !important;
-    color: #AB2A3E !important;
+.btn-contacto5:hover {
+  background-color: #ffd380; /* fondo granate */
+  border-color: #ffd380;     /* borde granate */
+  color: #ffd380 !important;              /* texto blanco */
+}
+.btn-contacto2 {
+  border: 2px solid #471c0c; /* borde granate */
+  color: #471c0c !important;           /* texto granate */
+  background-color: transparent; 
+  transition: all 0.4s ease;
 }
 
-.btn-white-sm:focus,
-.btn-white-sm:active {
-    background-color: transparent;
-    color: white;
-    outline: none;
-    box-shadow: none;
+.btn-contacto2:hover {
+  background-color: #471c0c; /* fondo granate */
+  border-color: #471c0c;     /* borde granate */
+  color: #ffd380 !important;              /* texto blanco */
 }
-
     .btn-contacto {
-  border: 2px solid #AB2A3E; /* borde granate */
-  color: #AB2A3E !important;           /* texto granate */
+  border: 2px solid #ffd380; /* borde granate */
+  color: #ffd380 !important;           /* texto granate */
   background-color: transparent; 
   transition: all 0.4s ease;
 }
 
 .btn-contacto:hover {
-  background-color: #AB2A3E; /* fondo granate */
-  border-color: #AB2A3E;     /* borde granate */
-  color: white !important;              /* texto blanco */
+  background-color: #ffd380; /* fondo granate */
+  border-color: #ffd380;     /* borde granate */
+  color: #471c0c !important;              /* texto blanco */
 }
   /* Centrar imagen en el modal de noticia */
   .noticia-modal .modal-body img {
@@ -105,7 +185,7 @@
       border-radius: 1em;
     }
     .noticia-modal .carousel-control {
-      background: rgba(171,42,62,0.5);
+      background: #471c0c;
       border-radius: 2em;
     }
     .noticia-modal .modal-body p {
@@ -116,7 +196,7 @@
     }
 /* Estilo general del navbar */
 #lightnav {
-    background-color: #AB2A3E;
+    background-color: #471c0c;
     font-weight: bold;
     font-size: 16px;
 }
@@ -129,12 +209,12 @@
     transition: color 0.3s;
 }
 #lightnav a:hover {
-    color: black !important;
+    color: #ffd380 !important;
 }
 
 /* Dropdown */
 .dropdown-menu {
-    background-color: #AB2A3E !important;
+    background-color: #471c0c !important;
     border-radius: 0 0 2em 2em !important;
     max-height: 0;
     opacity: 0;
@@ -151,7 +231,7 @@
 
 /* Links dentro del dropdown */
 .dropdown-menu a {
-    color: white !important;
+    color: #ffd380 !important;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -181,25 +261,62 @@
     max-height: 6.6em;
     white-space: normal;
   }
+  .logo-container {
+  position: relative;
+  width: auto;
+  height: 50px;
+  display: inline-block;
+  margin-top: -12px;
+  margin-left: -100px;
+}
+
+.logo-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  transition: opacity 0.4s ease;
+}
+
+.logo-base {
+  z-index: 1;
+  opacity: 1;
+}
+
+.logo-hovered {
+  z-index: 2;
+  opacity: 0;
+}
+
+.logo-container:hover .logo-hovered {
+  opacity: 1;
+}
+
+.logo-container:hover .logo-base {
+  opacity: 0;
+}
 </style>
 </head>
 <body>
 <p>--&gt;</p>
 <!-- Nav -->
-<nav class="navbar navbar-default navbar-fixed-top" id="lightnav" style="background-color: #AB2A3E;">
+<nav class="navbar navbar-default navbar-fixed-top" id="lightnav" style="background-color: #471c0c;">
 <div class="container">
-<div class="navbar-header page-scroll"><button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand page-scroll text-uppercase pddn-10" href="index.html"><img src="assets/images/themelogo/logo.png" style="margin-top: -12px; margin-left: -100px;" width="auto" height="50" /></a></div>
-
+<div class="navbar-header page-scroll"><button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand page-scroll text-uppercase pddn-10" href="index.html"><div class="logo-container">
+  <img src="assets/images/themelogo/logo3.png" class="logo-base" />
+  <img src="assets/images/themelogo/logo.png" class="logo-hovered" />
+</div>
+</a></div>
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-right: -100px;">
 <ul class="nav navbar-nav navbar-right"><!-- Dropdown -->
-	<li class="dropdown" role="presentation"><a href="index.html"><font color="#ca6624">Inicio</font></a> <!-- /.Dropdown --> <!-- Dropdown Services --></li>
+	<li class="dropdown" role="presentation"><a href="index.html"><font color="#ffd380">Inicio</font></a> <!-- /.Dropdown --> <!-- Dropdown Services --></li>
 	<li class="dropdown"><a href="espe.html">Especialidades</a></li>
 	<!-- /.Dropdown About --><!-- Portafolio -->
-	<li class="dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" style="background-color: #AB2A3E;">Institucional <span class="caret"></span></a>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" style="background-color: #471c0c;">Institucional <span class="caret"></span></a>
 	<ul class="dropdown-menu">
 		<li><a href="direccion.html">Direcci&oacute;n General</a></li>
 		<li><a href="admision.html">Admision</a></li>
-    <li><a href="cetna.html">CETNA</a></li>
+    <li><a href="Formularios.html">Formularios</a></li>
 	</ul>
 	</li>
 	<!-- /.Dropdown Team --><!-- Dropdown Contact -->
@@ -216,7 +333,7 @@
 <header class="indexbg1" id="hero">
   <!-- video de fondo -->
   <video autoplay muted loop playsinline class="bgvideo">
-    <source src="C:\Users\eleme\Downloads\editor_publicaciones\editor_publicaciones\Modificacion del proyecto 2\video\background.mp4" type="video/mp4">
+    <source src="video\background3.mp4" type="video/mp4">
   </video>
 
   <!-- Contenido encima del video -->
@@ -228,14 +345,14 @@
           <h2>Bienvenidos</h2>
           <p>____________________________</p>
           <h2>
-            Si no lo <span class="text-primary"><font color="#fffc00"><b>viv&iacute;s</b></font></span>
-            no lo <span class="text-primary"><font color="#fffc00"><b>sent&iacute;s</b></font></span>
+            Si no lo <span class="text-primary"><font color="#ffd380"><b>viv&iacute;s</b></font></span>
+            no lo <span class="text-primary"><font color="#ffd380"><b>sent&iacute;s</b></font></span>
           </h2>
 
           <p class="mrgn-60-top">
             <a class="page-scroll btn btn-white-sm text-uppercase hidden-xs" style="border-radius: 2em;" href="#noticias"><b>Noticias CTN</b></a>
             <span class="hidden-xs">&nbsp; &nbsp;</span>
-            <b><a class="page-scroll btn btn-white-sm text-uppercase hidden-xs" style="border-radius: 2em;" href="admision.html">Admisión</a></b>
+            <a class="page-scroll btn btn-white-sm text-uppercase hidden-xs" style="border-radius: 2em;" href="admision.html"><b>Admisión</b></a>
           </p>
         </div>
         <!-- /.Heading Title Area -->
@@ -289,7 +406,7 @@
 <!-- /.container --></section>
 <!-- /.Services Section --><!-- Call-To-Action Section -->
 
-<section class="bg-dark" id="cta">
+<section class="bg-dark" id="cta" style="background-color: #471c0c;">
 <div class="container"><!-- Call-To-Action Content Area -->
 <div class="row">
 <div class="col-md-12 text-center">
@@ -307,13 +424,13 @@
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-4 no-padding"><!-- Case Study 01 -->
-<div class="case-study-01" style="background-color: #cf4f63;">
+<div class="case-study-01" style="background-color: #ffd380;">
 <div class="feature-box-plain">
-<h2><font color="black"><b><i>Encu&eacute;ntranos</i></b></font></h2>
+<h2><font color="#471c0c"><b><i>Encu&eacute;ntranos</i></b></font></h2>
 
-<p><font color="black"><b>Visita nuestra p&aacute;gina de contacto para ubicar y charlar con nuestro equipo t&eacute;cnico. </b></font></p>
+<p><font color="#471c0c"><b>Visita nuestra p&aacute;gina de contacto para ubicar y charlar con nuestro equipo t&eacute;cnico. </b></font></p>
 
-<p class="mrgn-30-top"><font color="black"><b><a class="btn btn-white-sm text-uppercase btn-contacto" style="border-radius: 2em;" href="contact2.html"><font color="black">Ver m&aacute;s</font></a></b></font></p>
+<p class="mrgn-30-top"><font color="#471c0c"><b><a class="btn btn-white-sm text-uppercase btn-contacto4"style="border-radius: 2em;" href="contact2.html"><font>Ver m&aacute;s</font></a></b></font></p>
 </div>
 </div>
 <!-- /.Case Study 01 --></div>
@@ -321,23 +438,23 @@
 <div class="col-md-4 no-padding"><!-- Case Study 02 -->
 <div class="case-study-02">
 <div class="feature-box-plain">
-<h2><font color="black"><b><i>Trayectoria</i></b></font></h2>
+<h2><font color="#471c0c"><b><i>Trayectoria</i></b></font></h2>
 
-<p><font color="black"><b>Ent&eacute;rate de la historia y de la trayectoria del Colegio T&eacute;cnico Nacional de Asunci&oacute;n.</b></font></p>
+<p><font color="#471c0c"><b>Ent&eacute;rate de la historia y de la trayectoria del Colegio T&eacute;cnico Nacional de Asunci&oacute;n.</b></font></p>
 
-<p class="mrgn-30-top"><font color="black"><b><a class="btn btn-blue-sm btn-contacto" style="border-radius: 2em;" href="acerca.html"><font color="black">Ver m&aacute;s</font></a></b></font></p>
+<p class="mrgn-30-top"><font color="black"><b><a class="btn btn-blue-sm btn-contacto5" style="border-radius: 2em;" href="acerca.html"><font color="#471c0c">Ver m&aacute;s</font></a></b></font></p>
 </div>
 </div>
 <!-- /.Case Study 02 --></div>
 
 <div class="col-md-4 no-padding"><!-- Case Study 03 -->
-<div class="case-study-03" style="background-color: #71202c;">
+<div class="case-study-03" style="background-color: #341409;">
 <div class="feature-box-plain">
-<h2><font color="black"><b><i>Direcci&oacute;n</i></b></font></h2>
+<h2><font color="#ffd380"><b><i>Direcci&oacute;n</i></b></font></h2>
 
-<p><font color="black"><b>Consulta informaci&oacute;n fundamental acerca de nuestra direcci&oacute;n general. </b></font></p>
+<p><font color="#ffd380"><b>Consulta informaci&oacute;n fundamental acerca de nuestra direcci&oacute;n general. </b></font></p>
 
-<p class="mrgn-30-top"><font color="black"><b><a class="btn btn-white-sm text-uppercase btn-contacto" style="border-radius: 2em;" href="direccion.html"><font color="black">Ver m&aacute;s</font></a></b></font></p>
+<p class="mrgn-30-top"><font color="#471c0c"><b><a class="btn btn-white-sm text-uppercase btn-contacto3" style="border-radius: 2em;" href="direccion.html"><fontd>Ver m&aacute;s</font></a></b></font></p>
 </div>
 </div>
 <!-- /.Case Study 03 --></div>
@@ -363,17 +480,13 @@
 <!-- /.container --></section>
 <!-- /.CTA Section --><!-- Footer -->
 
-<footer class="bg-dark-blue" style="background-color: #AB2A3E; color: white;">
+<footer class="bg-dark-blue" style="background-color: #471c0c; color: white;">
 <div class="container">
 <div class="row"><!-- Address, Social Links & Copyright -->
 <div class="col-md-4 col-md-offset-4">
 <p>R.I. 3 Corrales c/ Dr. Hassler<br />
 Campos Cervera, Asunci&oacute;n<br />
 Tel: (021) 608 663</p>
-
-<ul class="list-inline social-buttons mrgn-10-top">
-    <li><a href="https://www.facebook.com/ctnoficial/"><i class="fa fa-facebook"></i></a> </li>
-</ul>
 <span class="copyright">Copyright &copy; Desarrollado en la especialidad de Inform&aacute;tica.</span></div>
 </div>
 <!-- /.Address, Social Links & Copyright --></div>
@@ -400,7 +513,7 @@ async function cargarNoticias() {
               <h2><b>${principal.titulo}</b></h2>
               <p><small><i class="fa fa-calendar"></i> ${new Date(principal.fecha_publicacion).toLocaleDateString()}</small></p>
                 <p class="descripcion-corta">${principal.descripcion}</p>
-                <button class='btn btn-contacto' style='border-radius:2em;' onclick='mostrarNoticiaModal(${JSON.stringify(principal)})'>Ver más</button>
+                <button class='btn btn-contacto2' style='border-radius:2em;' onclick='mostrarNoticiaModal(${JSON.stringify(principal)})'>Ver más</button>
             </div>
           </div>
         </div>
@@ -417,7 +530,7 @@ async function cargarNoticias() {
             <h4><b>${pub.titulo}</b></h4>
             <p><small><i class="fa fa-calendar"></i> ${new Date(pub.fecha_publicacion).toLocaleDateString()}</small></p>
               <p class="descripcion-corta">${pub.descripcion}</p>
-              <button class='btn btn-contacto' style='border-radius:2em;' onclick='mostrarNoticiaModal(${JSON.stringify(pub)})'>Ver más</button>
+              <button class='btn btn-contacto2' style='border-radius:2em;' onclick='mostrarNoticiaModal(${JSON.stringify(pub)})'>Ver más</button>
           </div>
         </div>
       `;
@@ -435,52 +548,53 @@ async function cargarNoticias() {
 // Función para mostrar la noticia en el modal
 function mostrarNoticiaModal(pub) {
   document.getElementById('modalNoticiaLabel').innerHTML = `<b>${pub.titulo}</b>`;
+
   let imagenes = [];
-  if (Array.isArray(pub.imagenes) && pub.imagenes.length > 0) {
-    imagenes = pub.imagenes;
-  } else if (pub.imagen_url) {
+
+  // Caso: varias URLs separadas por coma en la columna imagen_url
+  if (pub.imagen_url && pub.imagen_url.includes(',')) {
+    imagenes = pub.imagen_url.split(',').map(img => img.trim());
+  } 
+  // Caso: una sola URL
+  else if (pub.imagen_url) {
     imagenes = [pub.imagen_url];
-  } else {
+  } 
+  // Caso: sin imágenes
+  else {
     imagenes = ['assets/images/noticias/placeholder.jpg'];
   }
 
-  let carruselHtml = '';
-  if (imagenes.length > 1) {
-    // Indicadores
-    let indicators = '<ol class="carousel-indicators">';
-    for (let i = 0; i < imagenes.length; i++) {
-      indicators += `<li data-target="#carruselNoticia" data-slide-to="${i}"${i === 0 ? ' class="active"' : ''}></li>`;
-    }
-    indicators += '</ol>';
-
-    // Slides
-    let slides = imagenes.map((img, i) => `
-      <div class="item${i === 0 ? ' active' : ''}">
-        <img src="${img}" alt="Imagen noticia" class="img-responsive" />
-      </div>
-    `).join('');
-
-    carruselHtml = `
-      <div id="carruselNoticia" class="carousel slide" data-ride="carousel">
-        ${indicators}
-        <div class="carousel-inner">
-          ${slides}
-        </div>
-        <a class="left carousel-control" href="#carruselNoticia" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" href="#carruselNoticia" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-      </div>
-    `;
-    // Inicializar el carrusel y ponerlo en la primera imagen cada vez que se abre el modal
-    setTimeout(function(){
-      $('#carruselNoticia').carousel(0);
-    }, 300);
-  } else {
-    carruselHtml = `<img src="${imagenes[0]}" alt="Imagen noticia" class="img-responsive" />`;
+ let carruselHtml = '';
+if (imagenes.length > 1) {
+  let indicators = '<ol class="carousel-indicators">';
+  for (let i = 0; i < imagenes.length; i++) {
+    indicators += `<li data-target="#carruselNoticia" data-slide-to="${i}"${i===0?' class="active"':''}></li>`;
   }
+  indicators += '</ol>';
+
+  let slides = imagenes.map((img,i)=>
+    `<div class="item${i===0?' active':''}">
+      <img src="${img}" alt="Imagen noticia" />
+    </div>`).join('');
+
+  carruselHtml = `
+    <div id="carruselNoticia" class="carousel slide" data-ride="carousel">
+      ${indicators}
+      <div class="carousel-inner">
+        ${slides}
+      </div>
+      <a class="left carousel-control" href="#carruselNoticia" data-slide="prev">
+  <span style="font-size:20px;color:none;">&#10094;</span>
+</a>
+<a class="right carousel-control" href="#carruselNoticia" data-slide="next">
+  <span style="font-size:20px;color:none;">&#10095;</span>
+</a>
+    </div>`;
+  setTimeout(()=>$('#carruselNoticia').carousel(0),300);
+} else {
+  carruselHtml = `<img src="${imagenes[0]}" alt="Imagen noticia" class="img-responsive" />`;
+}
+
 
   document.getElementById('modalNoticiaBody').innerHTML = `
     ${carruselHtml}

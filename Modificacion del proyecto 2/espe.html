@@ -15,24 +15,156 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" />
 <style>
+.especialidades-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.especialidades-tabs li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.especialidad-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.especialidad-icon {
+  width: 60px;
+  height: 60px;
+  transition: all 0.4s ease;
+}
+
+.especialidad-label {
+  font-size: 0;
+  margin-left: 0;
+  opacity: 0;
+  font-weight: bold;
+  transition: all 0.4s ease;
+}
+
+/* Activa: ícono grande, desplazado, texto revelado */
+.especialidades-tabs li.active .especialidad-icon {
+  width: 100px;
+  height: 100px;
+  transform: translateX(-10px);
+}
+
+.especialidades-tabs li.active .especialidad-label {
+  font-size: 22px;
+  margin-left: 14px;
+  opacity: 1;
+}
+
+/* Colores temáticos */
+.especialidad-info .especialidad-label { color: #AB2A3E; }
+.especialidad-mecanica_ind .especialidad-label { color: #008000; }
+.especialidad-mecanica_auto .especialidad-label { color: #000080; }
+.especialidad-construccion .especialidad-label { color: #FFFACD; }
+.especialidad-electronica .especialidad-label { color: #808080; }
+.especialidad-electromecanica .especialidad-label { color: #0000FF; }
+.especialidad-electricidad .especialidad-label { color: #87CEEB; }
+.especialidad-quimica .especialidad-label { color: #03BB85; }
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 100%; /* Asegura que todas crezcan igual */
+}
+
+.card p {
+  flex-grow: 1;
+  min-height: 120px;
+  margin-bottom: 1rem; /* Espacio antes del botón */
+}
+
+.btn-contacto {
+  margin-top: auto;
+}
+.card {
+  min-height: 340px; /* Ajusta según el contenido más largo */
+}
+
+
+  .btn-contacto {
+  border: 2px solid transparent;
+  border-radius: 2em;   /* mismo estilo redondeado */
+  padding: 8px 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+  #lightnav a {
+  color: white;
+  transition: color 0.3s;
+}
+/* Ajustar solo el texto de Informática */
+#info .post-wrapper {
+  max-width: 900px;   /* mismo ancho que las columnas de Mecánica */
+  margin: 0 auto;     /* centrado */
+}
+
+.flexslider {
+  max-width: 800px;   /* o el ancho que quieras */
+  margin: 0 auto;     /* centrado */
+}
+
+#lightnav.nav-especial a {
+  color: black !important;
+}
+#lightnav.nav-especial a:hover {
+  color: white !important;
+}
 body {
   padding-top: 70px; /* ajusta según la altura de tu navbar */
 }
 </style>
 <style>
-	.btn-contacto {
-  border: 2px solid #AB2A3E; /* borde granate */
-  color: #AB2A3E !important;           /* texto granate */
-  background-color: transparent; 
+/* estilo normal (granate) */
+.btn-contacto {
+  border: 2px solid #AB2A3E;
+  color: #AB2A3E; /* quitar !important */
+  background-color: transparent;
   transition: all 0.4s ease;
 }
-
 .btn-contacto:hover {
-  background-color: #AB2A3E; /* fondo granate */
-  border-color: #AB2A3E;     /* borde granate */
-  color: white !important;              /* texto blanco */
+  background-color: #AB2A3E;
+  border-color: #AB2A3E;
+  color: white;
 }
+
+/* estilo cuando se activa especialidad */
+.nav-especial .btn-contacto {
+  color: black;
+  background-color: transparent !important;
+}
+.nav-especial .btn-contacto:hover {
+  color: black !important;
+}
+
+/* enlaces de la navbar en especialidad */
+.nav-especial a {
+  color: black !important;
+  transition: color 0.3s;
+}
+.nav-especial a:hover {
+  color: black !important; /* se mantiene negro al pasar */
+}
+
 #institucional-btn {
   transition: background-color 1s ease, color 0.5s ease !important;
 }
@@ -69,23 +201,60 @@ body {
 #lightnav a:hover {
     color: black !important;
 }
+.logo-container {
+  position: relative;
+  width: auto;
+  height: 50px;
+  display: inline-block;
+  margin-top: -12px;
+  margin-left: -100px;
+}
+
+.logo-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  transition: opacity 0.4s ease;
+}
+
+.logo-base {
+  z-index: 1;
+  opacity: 1;
+}
+
+.logo-hovered {
+  z-index: 2;
+  opacity: 0;
+}
+
+.logo-container:hover .logo-hovered {
+  opacity: 1;
+}
+
+.logo-container:hover .logo-base {
+  opacity: 0;
+}
 </style>
 </head>
 <body><!-- Nav -->
 <nav class="navbar navbar-default navbar-fixed-top" id="lightnav" style="background-color: #AB2A3E;">
 <div class="container">
-<div class="navbar-header page-scroll"><button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand page-scroll text-uppercase pddn-10" href="index.html"><img style="margin-top: -12px; margin-left: -100px;" width="auto" height="50" src="assets/images/themelogo/logo.png" /></a></div>
-
+<div class="navbar-header page-scroll"><button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand page-scroll text-uppercase pddn-10" href="index.html"><div class="logo-container">
+  <img src="assets/images/themelogo/logo3.png" class="logo-base" />
+  <img src="assets/images/themelogo/logo.png" class="logo-hovered" />
+</div>
+</a></div>
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-right: -100px;">
 <ul class="nav navbar-nav navbar-right"><!-- Dropdown -->
 	<li class="dropdown" role="presentation"><a href="index.html">Inicio</a> <!-- /.Dropdown --> <!-- Dropdown Services --></li>
-	<li class="dropdown"><a href="espe.html"><font color="#ca6624">Especialidades</font></a></li>
+	<li class="dropdown"><a href="espe.html"><font>Especialidades</font></a></li>
 	<!-- /.Dropdown About --><!-- Portafolio -->
-	<li class="dropdown"><a id="institucional-btn" style="background-color: #AB2A3E;" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Institucional </a>
+	<li class="dropdown"><a id="institucional-btn" style="background-color: #AB2A3E;" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Institucional<span class="caret"></span></a>
 	<ul class="dropdown-menu">
-		<li><a href="direccion.html">Dirección General</a></li>
+		<li><a href="direccion.html">Direccion General</a></li>
 		<li><a href="admision.html">Admision</a></li>
-		<li><a href="cetna.html">CETNA</a></li>
+    <li><a href="Formularios.html">Formularios</a></li>
 	</ul>
 	</li>
 	<!-- /.Dropdown Team --><!-- Dropdown Contact -->
@@ -107,12 +276,12 @@ body {
 <div class="row">
 <div class="row align-items-center">
   <div class="col-md-6 text-center white" style="padding-top: 70px;">
-    <h1>¡Prueba nuestro test vocacional!</h1>
+    <h1>Prueba nuestro test vocacional!</h1>
     <hr class="borderwhite-sm" />
-    <h2 class="text-uppercase">Descubre con emoción la especialidad que mejor se adapta a ti y a tu futuro.</h2>
+    <h2 class="text-uppercase">Descubre con emocion la especialidad que mejor se adapta a ti y a tu futuro.</h2>
     <p class="mrgn-60-top">
       <a class="page-scroll btn btn-blue-sm text-uppercase btn-contacto" style="border-radius: 2em;" href="C:\Users\eleme\Downloads\editor_publicaciones\editor_publicaciones\PROYECTO 2025\TEST\index.html">
-        ¡Haz el test vocacional!
+        Haz el test vocacional!
       </a>
     </p>
   </div>
@@ -142,20 +311,76 @@ body {
 </div>
 </div>
 <!-- Tabs -->
-<ul class="nav nav-tabs text-center">
-  <li class="active"><a data-toggle="tab" href="#info">Informática</a></li>
-  <li><a data-toggle="tab" href="#mecanica_ind">Mecánica Industrial</a></li>
-  <li><a data-toggle="tab" href="#mecanica_auto">Mecánica Automotriz</a></li>
-  <li><a data-toggle="tab" href="#construccion">Construcciones Civiles</a></li>
-  <li><a data-toggle="tab" href="#electronica">Electrónica</a></li>
-  <li><a data-toggle="tab" href="#electromecanica">Electromecánica</a></li>
-  <li><a data-toggle="tab" href="#electricidad">Electricidad</a></li>
-  <li><a data-toggle="tab" href="#quimica">Química</a></li>
+<ul class="nav nav-tabs especialidades-tabs">
+  <li class="active especialidad-info">
+    <a data-toggle="tab" href="#info">
+      <div class="especialidad-wrapper">
+        <img src="Img/info_c.png" alt="informatica" class="especialidad-icon">
+        <span class="especialidad-label">informatica</span>
+      </div>
+    </a>
+  </li>
+  <li class="especialidad-mecanica_ind">
+    <a data-toggle="tab" href="#mecanica_ind">
+      <div class="especialidad-wrapper">
+        <img src="Img/indu_c.png" alt="mecanica industrial" class="especialidad-icon">
+        <span class="especialidad-label">mecanica industrial</span>
+      </div>
+    </a>
+  </li>
+  <li class="especialidad-mecanica_auto">
+    <a data-toggle="tab" href="#mecanica_auto">
+      <div class="especialidad-wrapper">
+        <img src="Img/auto_c.png" alt="mecanica automotriz" class="especialidad-icon">
+        <span class="especialidad-label">mecanica automotriz</span>
+      </div>
+    </a>
+  </li>
+  <li class="especialidad-construccion">
+    <a data-toggle="tab" href="#construccion">
+      <div class="especialidad-wrapper">
+        <img src="Img/cc_c.png" alt="construcciones civiles" class="especialidad-icon">
+        <span class="especialidad-label">construcciones civiles</span>
+      </div>
+    </a>
+  </li>
+  <li class="especialidad-electronica">
+    <a data-toggle="tab" href="#electronica">
+      <div class="especialidad-wrapper">
+        <img src="Img/eik_c.png" alt="electronica" class="especialidad-icon">
+        <span class="especialidad-label">electronica</span>
+      </div>
+    </a>
+  </li>
+  <li class="especialidad-electromecanica">
+    <a data-toggle="tab" href="#electromecanica">
+      <div class="especialidad-wrapper">
+        <img src="Img/emca_c.png" alt="electromecanica" class="especialidad-icon">
+        <span class="especialidad-label">electromecanica</span>
+      </div>
+    </a>
+  </li>
+  <li class="especialidad-electricidad">
+    <a data-toggle="tab" href="#electricidad">
+      <div class="especialidad-wrapper">
+        <img src="Img/edad_c.png" alt="electricidad" class="especialidad-icon">
+        <span class="especialidad-label">electricidad</span>
+      </div>
+    </a>
+  </li>
+  <li class="especialidad-quimica">
+    <a data-toggle="tab" href="#quimica">
+      <div class="especialidad-wrapper">
+        <img src="Img/qca_c.png" alt="quimica" class="especialidad-icon">
+        <span class="especialidad-label">quimica</span>
+      </div>
+    </a>
+  </li>
 </ul>
 
 <div class="tab-content" style="margin-top:20px">
   <div id="info" class="tab-pane fade in active">
-    <h3>Informática</h3>
+    <h3>Informatica</h3>
   <div class="container">
     <div class="header-text text-center black777">
       <img alt="" height="400" src="assets/images/icons/icon-bl-info.png" width="400" />
@@ -243,9 +468,10 @@ body {
       </ul>
 
       <div class="tags">
-        <span class="tag tag-main"><a class="btn btn-blue-sm" data-target="#coordinador" data-toggle="modal" href="#">COORDINADOR</a></span>&nbsp;
-        <span class="tag tag-main"><a class="btn btn-blue-sm" data-target="#procedimiento" data-toggle="modal" href="#">Procedimiento Interno</a></span>&nbsp;
-        <span class="tag tag-main"><a class="btn btn-blue-sm" data-target="#documentos" data-toggle="modal" href="#">Documentos</a></span>&nbsp;
+        <span class="tag tag-main"><a class="btn-contacto" data-target="#coordinador" data-toggle="modal" href="#">COORDINADOR</a></span>&nbsp;
+        <span class="tag tag-main">
+    <a class="btn-contacto" data-toggle="modal" data-target="#formularios" href="#">FORMULARIOS</a>
+  </span>
       </div>
 
       <!-- MODALES: mantenlos fuera del contenedor del tab o en la raíz del body para evitar problemas -->
@@ -253,7 +479,7 @@ body {
   </div>
   </div>
   <div id="mecanica_ind" class="tab-pane fade">
-    <h3>Mecánica Industrial</h3>
+    <h3>Mecanica Industrial</h3>
 <header id="single-plain-indum">
 <div class="container"><!-- Header Project Title -->
 <div class="row">
@@ -335,7 +561,7 @@ body {
 </ul>
 <!-- Single Post Content --><!-- Single Post Tags -->
 
-<div class="tags"><span class="tag tag-main"><a class="btn btn-blue-sm" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a> </span>
+<div class="tags"><span class="tag tag-main"><a class="btn-contacto" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a> </span>
 
 <p></p>
 </div>
@@ -346,7 +572,7 @@ body {
 <!-- /.container --><!-- Main Content --><!-- Footer -->
   </div>
   <div id="mecanica_auto" class="tab-pane fade">
-    <h3>Mecánica Automotriz</h3>
+    <h3>Mecanica Automotriz</h3>
     <header id="single-plain-automov">
 <div class="container"><!-- Header Project Title -->
 <div class="row">
@@ -427,7 +653,7 @@ body {
 </ul>
 <!-- Single Post Content --><!-- Single Post Tags -->
 
-<div class="tags"><span class="tag tag-main"><a class="btn btn-blue-sm" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a> </span>
+<div class="tags"><span class="tag tag-main"><a class="btn-contacto" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a> </span>
 
 <p></p>
 <span class="tag tag-main"> </span></div>
@@ -561,7 +787,7 @@ Matricula Nro: 39441.<br />
 </ul>
 <!-- Single Post Content --><!-- Single Post Tags -->
 
-<div class="tags"><span class="tag tag-main"><a class="btn btn-blue-sm" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a> </span>
+<div class="tags"><span class="tag tag-main"><a class="btn-contacto" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a> </span>
 
 <p></p>
 </div>
@@ -572,7 +798,7 @@ Matricula Nro: 39441.<br />
 <!-- /.container --><!-- Main Content --><!-- Footer -->
   </div>
   <div id="electronica" class="tab-pane fade">
-    <h3>Electrónica</h3>
+    <h3>Electronica</h3>
 <header id="single-plain-eiko">
 <div class="container"><!-- Header Project Title -->
 <div class="row">
@@ -643,7 +869,7 @@ Matricula Nro: 39441.<br />
 <p class="lead">Cada uno de estos alcances particulares sobre la electr&oacute;nica de los equipos, componentes, productos e instalaciones; en los &aacute;mbitos de control, telecomunicaciones, instrumentos, o electr&oacute;nica industrial; tendr&aacute;n en cuenta criterios de seguridad, cuidado del ambiente, ergonom&iacute;a, calidad, productividad, y costos; seg&uacute;n las definiciones estrat&eacute;gicas surgidas de los estamentos t&eacute;cnicos y jer&aacute;rquicos correspondientes con autonom&iacute;a y responsabilidad sobre su propio trabajo y sobre el trabajo de otros a su cargo.</p>
 <!-- Single Post Content --><!-- Single Post Tags -->
 
-<div class="tags"><span class="tag tag-main"><a class="btn btn-blue-sm" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOra</a></span>&nbsp;</div>
+<div class="tags"><span class="tag tag-main"><a class="btn-contacto" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOra</a></span>&nbsp;</div>
 <!-- /.Single Post Tags --><!-- Bootstrap Modals for Job Applications --><!-- Digital Researcher Job Application --><!-- Job Modal -->
 
 <div aria-labelledby="DigitalResearch" class="modal fade" id="DigitalResearch" role="dialog" tabindex="-1">
@@ -697,7 +923,7 @@ Matricula Nro: 39441.<br />
 <!-- /.container --><!-- Main Content --><!-- Footer -->
   </div>
   <div id="electromecanica" class="tab-pane fade">
-    <h3>Electromecánica</h3>
+    <h3>Electromecanica</h3>
 <header id="single-plain-emco">
 <div class="container"><!-- Header Project Title -->
 <div class="row">
@@ -767,7 +993,7 @@ Matricula Nro: 39441.<br />
 <p class="lead">Del an&aacute;lisis de las actividades profesionales que se desprenden del Perfil Profesional, se establecen como habilitaciones para el T&eacute;cnico: -Realizar las fases del proyecto de: componentes, equipos e instalaciones: mec&aacute;nicas, el&eacute;ctricas, electromec&aacute;nicas, t&eacute;rmicas, hidr&aacute;ulicas, neum&aacute;ticas, y oleohidr&aacute;ulicas. Sistemas neum&aacute;ticos y oleohidra&uacute;licos. Sistemas estacionarios, m&oacute;viles y de transporte. Circuitos y/o sistemas de distribuci&oacute;n de energ&iacute;a. Control de automatismo. Herramientas y dispositivos. Programas de mantenimiento.</p>
 <!-- Single Post Content --><!-- Single Post Tags -->
 
-<div class="tags"><span class="tag tag-main"><a class="btn btn-blue-sm" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a></span>&nbsp;</div>
+<div class="tags"><span class="tag tag-main"><a class="btn-contacto" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a></span>&nbsp;</div>
 <!-- /.Single Post Tags --><!-- Bootstrap Modals for Job Applications --><!-- Digital Researcher Job Application --><!-- Job Modal -->
 
 <div aria-labelledby="DigitalResearch" class="modal fade" id="DigitalResearch" role="dialog" tabindex="-1">
@@ -899,7 +1125,7 @@ Matricula Nro: 39441.<br />
 <p></p>
 <!-- Single Post Content --><!-- Single Post Tags -->
 
-<div class="tags"><span class="tag tag-main"><a class="btn btn-blue-sm" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a> </span>
+<div class="tags"><span class="tag tag-main"><a class="btn-contacto" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a> </span>
 
 <p></p>
 </div>
@@ -910,7 +1136,7 @@ Matricula Nro: 39441.<br />
 <!-- /.container --><!-- Main Content --><!-- Footer -->
   </div>
   <div id="quimica" class="tab-pane fade">
-    <h3>Química</h3>
+    <h3>Quimica</h3>
     <header id="single-plain-qca">
 <div class="container"><!-- Header Project Title -->
 <div class="row">
@@ -996,7 +1222,7 @@ Matricula Nro: 39441.<br />
 <p class="lead">El campo ocupacional espec&iacute;fico del t&eacute;cnico se define por su participaci&oacute;n bajo supervisi&oacute;n o de manera independiente seg&uacute;n requerimientos de terceros en: El desempe&ntilde;o eficiente y eficaz en empresas de servicios p&uacute;blicos y/o privados.</p>
 <!-- Single Post Content --><!-- Single Post Tags -->
 
-<div class="tags"><span class="tag tag-main"><a class="btn btn-blue-sm" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a></span>&nbsp;</div>
+<div class="tags"><span class="tag tag-main"><a class="btn-contacto" data-target="#JuniorWeb" data-toggle="modal" href="#">COORDINADOR</a></span>&nbsp;</div>
 <!-- /.Single Post Tags --><!-- Bootstrap Modals for Job Applications --><!-- Digital Researcher Job Application --><!-- Job Modal -->
 
 <div aria-labelledby="DigitalResearch" class="modal fade" id="DigitalResearch" role="dialog" tabindex="-1">
@@ -1093,7 +1319,7 @@ Matricula Nro: 39441.<br />
 <!-- /.container --></section>
 <!-- /.Clients Section --><!-- Footer -->
 
-<footer class="bg-dark-blue">
+<footer id="footer" class="bg-dark-blue">
 <div class="container">
 <div class="row"><!-- Address, Social Links & Copyright -->
 <div class="col-md-4 col-md-offset-4">
@@ -1107,14 +1333,35 @@ Tel: (021) 608 663</p>
 </div>
 <!-- /.Address, Social Links & Copyright --></div>
 <!-- /.container --></footer>
-<!-- /.Footer --><!-- jQuery --><script src="assets/js/jquery.js"></script><!-- Bootstrap Core JavaScript --><script src="assets/js/bootstrap.min.js"></script><!-- JavaScript Plugins --><script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script><script src="assets/js/isotope.pkgd.min.js"></script><script src="assets/js/wow.min.js"></script><script src="assets/owl-carousel/owl.carousel.js"></script><script src="assets/js/counterup/jquery.counterup.min.js"></script><script src="assets/js/jquery.easy-pie-chart.js"></script><script src="assets/magnific-popup/jquery.magnific-popup.min.js"></script><!-- Contact Form JavaScript --><script src="assets/js/jqBootstrapValidation.js"></script><script src="assets/js/contact_me.js"></script><!-- Custom Theme JavaScript --><script src="assets/js/blueridge.js"></script>
-<!-- MODAL COORDINADOR -->
+<!-- jQuery -->
+<script src="assets/js/jquery.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/owl-carousel/owl.carousel.js"></script>
+<script src="assets/js/counterup/jquery.counterup.min.js"></script>
+<script src="assets/js/jquery.easy-pie-chart.js"></script>
+<script src="assets/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<!-- FlexSlider (después de jQuery y Bootstrap) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+
+<!-- Tus scripts personalizados -->
+<script src="assets/js/blueridge.js"></script>
+<script src="assets/js/contact_me.js"></script>
+<script src="assets/js/jqBootstrapValidation.js"></script>
+
 <div aria-labelledby="coordinadorLabel" class="modal fade" id="coordinador" role="dialog" tabindex="-1">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
         <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title" id="coordinadorLabel">Graciela Noem&iacute; L&oacute;pez Molinas</h3>
+        <h3 class="modal-title" id="coordinadorLabel" style="font-size:22px; font-weight:bold; color:#AB2A3E;">Graciela Noem&iacute; L&oacute;pez Molinas</h3>
       </div>
       <div class="modal-body">
         <p>Egresada de la <i> Facultad Polit&eacute;cnica de la Universidad Nacional de Asunci&oacute;n </i> con el Titulo Licenciatura en An&aacute;lisis de Sistemas Inform&aacute;ticos.<br />
@@ -1127,6 +1374,80 @@ Tel: (021) 608 663</p>
           <li>Matricula Nro: 5.183</li>
         </ul>
       </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="formularios" tabindex="-1" role="dialog" aria-labelledby="formulariosLabel">
+  <div class="modal-dialog modal-lg" role="document"> <!-- modal-lg para más ancho -->
+    <div class="modal-content">
+      
+      <!-- Header -->
+      <div class="modal-header">
+        <h3 class="modal-title" style="font-size:22px; font-weight:bold; color:#AB2A3E;" id="formulariosLabel">Formularios</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+  <div class="modal-body">
+  <div class="row text-center align-items-stretch">
+
+    <!-- Formulario 1 -->
+    <div class="col-md-3 d-flex">
+      <div class="card shadow-sm p-3 mb-4 w-100 d-flex flex-column" style="border-radius:12px; background:#fff; color:#333;">
+        <h4 style="font-size:22px; font-weight:bold; color:#AB2A3E;">Plan de Estudios</h4>
+        <p style="font-size:15px; font-weight:bold; text-align:justify; flex-grow:1; min-height:120px;">
+          Documento curricular que define objetivos, perfil de egreso, perfil ocupacional, competencias y materias de la especialidad de Informatica.
+        </p>
+        <a href="https://drive.google.com/uc?export=download&id=1ztvtpxZ4xe-pvSBygCMVf-Cxscy5tu85" class="btn-contacto mt-auto" download>
+          Descargar Formulario
+        </a>
+      </div>
+    </div>
+
+    <!-- Formulario 2 -->
+    <div class="col-md-3 d-flex">
+      <div class="card shadow-sm p-3 mb-4 w-100 d-flex flex-column" style="border-radius:12px; background:#fff; color:#333;">
+        <h4 style="font-size:22px; font-weight:bold; color:#AB2A3E;">Eleccion de Autoridades</h4>
+        <p style="font-size:15px; font-weight:bold; text-align:justify; flex-grow:1; min-height:120px;">
+          Reglamento que indica requisitos, proceso de votacion, cargos y funciones de los representantes de padres en la especialidad.
+        </p>
+        <a href="https://drive.google.com/uc?export=download&id=1oFOu7kpCadbXkV-2FtVY5mKd-x5nFI0h" class="btn-contacto mt-auto" download>
+          Descargar Formulario
+        </a>
+      </div>
+    </div>
+
+    <!-- Formulario 3 -->
+    <div class="col-md-3 d-flex">
+      <div class="card shadow-sm p-3 mb-4 w-100 d-flex flex-column" style="border-radius:12px; background:#fff; color:#333;">
+        <h4 style="font-size:22px; font-weight:bold; color:#AB2A3E;">Procedimientos del Laboratorio y Sala Virtual</h4>
+        <p style="font-size:15px; font-weight:bold; text-align:justify; flex-grow:1; min-height:120px;">
+          Normas internas que regulan el uso del Laboratorio de Software y la Sala Virtual, indicando responsabilidades de alumnos y docentes, limpieza, manejo de equipos y conducta durante las practicas.
+        </p>
+        <a href="https://drive.google.com/uc?export=download&id=1gnO-_Q8QhVcA5mqYeGXNDIqaPxCLR9K1" class="btn-contacto mt-auto" download>
+          Descargar Formulario
+        </a>
+      </div>
+    </div>
+
+    <!-- Formulario 4 -->
+    <div class="col-md-3 d-flex">
+      <div class="card shadow-sm p-3 mb-4 w-100 d-flex flex-column" style="border-radius:12px; background:#fff; color:#333;">
+        <h4 style="font-size:22px; font-weight:bold; color:#AB2A3E;">Registro de Delegados</h4>
+        <p style="font-size:15px; font-weight:bold; text-align:justify; flex-grow:1; min-height:120px;">
+          Formulario para registrar delegados, tesoreros y encargados de materiales del curso (notebooks, proyectores, cuadernos), garantizando el control y la organizacion del curso.
+        </p>
+        <a href="https://drive.google.com/uc?export=download&id=1PiHN82qUHvAiKbXZkpSrXIOf6YWfC2wm" class="btn-contacto mt-auto" download>
+          Descargar Formulario
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+      
     </div>
   </div>
 </div>
@@ -1169,6 +1490,132 @@ Tel: (021) 608 663</p>
 
 <script>
 $(document).ready(function () {
+function actualizarFooter(especialidad) {
+  const colores = {
+    info: "#AB2A3E",
+    mecanica_ind: "#008000",
+    mecanica_auto: "#000080",
+    construccion: "#FFFACD",
+    electronica: "#808080",
+    electromecanica: "#0000FF",
+    electricidad: "#87CEEB",
+    quimica: "#03BB85"
+  };
+
+  const textos = {
+    info: "Desarrollado en la especialidad de Informática.",
+    mecanica_ind: "Desarrollado en la especialidad de Mecánica Industrial.",
+    mecanica_auto: "Desarrollado en la especialidad de Mecánica Automotriz.",
+    construccion: "Desarrollado en la especialidad de Construcción.",
+    electronica: "Desarrollado en la especialidad de Electrónica.",
+    electromecanica: "Desarrollado en la especialidad de Electromecánica.",
+    electricidad: "Desarrollado en la especialidad de Electricidad.",
+    quimica: "Desarrollado en la especialidad de Química."
+  };
+
+  let color = colores[especialidad] || "#AB2A3E";
+  let texto = textos[especialidad] || textos["info"];
+  let textColor = ["electronica","construccion","quimica","electricidad"].includes(especialidad) ? "black" : "white";
+
+  // Aplicar estilos con !important usando atributo style directamente
+  $("#footer").attr("style", `background-color: ${color} !important; color: ${textColor} !important; transition: all 0.3s ease !important;`);
+  $("#footer-address").attr("style", `color: ${textColor} !important;`);
+  $("#footer-copyright").text(texto).attr("style", `color: ${textColor} !important;`);
+}
+$(document).ready(function () {
+  // Detectar pestaña activa al cargar
+  var pestañaActiva = $(".tab-pane.active").attr("id"); // ej: "info"
+  if (pestañaActiva) {
+    actualizarFooter(pestañaActiva);
+  }
+
+  // Mantener el evento para cuando cambies de pestaña
+  $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+    var target = $(e.target).attr("href").replace("#", "");
+    actualizarFooter(target);
+  });
+});
+
+function actualizarBoton(especialidad) {
+  const btn = $(".btn-contacto");
+
+  const colores = {
+    info: "#AB2A3E",
+    mecanica_ind: "#008000",
+    mecanica_auto: "#000080",
+    construccion: "#FFFACD",
+    electronica: "#808080",
+    electromecanica: "#0000FF",
+    electricidad: "#87CEEB",
+    quimica: "#03BB85"
+  };
+
+  let color = colores[especialidad] || "#AB2A3E";
+  let especialesNegro = ["electronica","construccion","quimica","electricidad"];
+
+  btn.css({
+    "background-color": "transparent",
+    "border-color": color,
+    "color": color,
+    "transition": "all 0.3s ease"
+  });
+
+  btn.off("mouseenter mouseleave").hover(
+    function() {
+      $(this).css("background-color", color);
+      $(this).css("color", especialesNegro.includes(especialidad) ? "black" : "white");
+    },
+    function() {
+      $(this).css({
+        "background-color": "transparent",
+        "color": color
+      });
+    }
+  );
+}
+
+
+
+$('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+  var target = $(e.target).attr("href").replace("#","");
+  actualizarBoton(target);
+});
+
+
+// Evento al cambiar tab
+$('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+  var target = $(e.target).attr("href").replace("#","");
+  actualizarBoton(target);
+});
+
+
+
+// Evento al cambiar tab
+$('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+  var target = $(e.target).attr("href").replace("#","");
+  actualizarBoton(target);
+  actualizarFooter(target);
+});
+function aplicarEstilos(especialidad) {
+  $("#lightnav").removeClass("nav-especial").css("background-color", "#471c0c");
+
+  $(".navbar-brand img").stop(true,true).fadeOut(300, function(){
+    $(this).attr("src", "assets/images/themelogo/logo3.png").fadeIn(300);
+  });
+
+  if (["electronica","construccion","quimica","electricidad"].includes(especialidad)) {
+    $("#lightnav").addClass("nav-especial").css("background-color", "white");
+    $(".navbar-brand img").stop(true,true).fadeOut(300, function(){
+      $(this).attr("src", "assets/images/themelogo/logo.png").fadeIn(300);
+    });
+  }
+}
+
+  // evento cuando cambia el tab de especialidad
+  $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+    var target = $(e.target).attr("href").replace("#", "");
+    aplicarEstilos(target);
+  });
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   var target = $(e.target).attr("href"); // id del tab activo
   var colorNav = ""; // variable para color del nav
@@ -1205,18 +1652,78 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     $("#institucional-btn + .dropdown-menu a").css("color", textColor);
   }
 });
+// Al cargar la página, inicializar botones y footer con la pestaña activa
+var pestañaActiva = $(".tab-pane.active").attr("id"); // ej: "info"
+if (pestañaActiva) {
+  actualizarBoton(pestañaActiva);
+}
+
 });
 </script>
+<script>
+$(document).ready(function () {
+  // Función para inicializar un carrusel si aún no fue activado
+  function activarCarrusel($slider) {
+    if (!$slider.hasClass("flexslider-initialized")) {
+      $slider.flexslider({
+        animation: "slide",
+        controlNav: true,
+        directionNav: true,
+        slideshowSpeed: 4000,
+        animationSpeed: 600,
+        pauseOnHover: true
+      });
+      $slider.addClass("flexslider-initialized");
+    }
+  }
+
+  // Inicializar todos los carruseles visibles al cargar
+  $(".tab-pane.active .flexslider").each(function () {
+    activarCarrusel($(this));
+  });
+
+  // Cuando se activa una pestaña, inicializar su carrusel
+  $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+    var target = $(e.target).attr("href"); // ejemplo: "#info"
+    var $slider = $(target).find(".flexslider");
+    activarCarrusel($slider);
+  });
+});
+</script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 fetch('http://localhost:3000/api/puntajes')
   .then(res => res.json())
   .then(data => {
-    const nombres = data.map(d => d.especialidad);
-    const puntajes = data.map(d => d.puntaje);
-    const total = puntajes.reduce((a,b) => a + b, 0);
-    const porcentajes = puntajes.map(p => ((p/total)*100).toFixed(1));
+    // Normalizar nombres de la API
+    const normalizar = str => str
+      .toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // quita tildes
+
+    // Orden fijo de especialidades
+    const nombres = [
+      'electronica',
+      'electromecanica',
+      'informatica',
+      'quimica',
+      'construcciones civiles',
+      'mecanica automotriz',
+      'mecanica industrial',
+      'electricidad'
+    ];
+
+    const colores = [
+      '#808080',
+      '#0000FF',
+      '#AB2A3E',
+      '#03BB85',
+      '#FFFACD',
+      '#000080',
+      '#008000',
+      '#87CEEB'
+    ];
 
     const logosEspecialidades = [
       'Img/eik_c.png',
@@ -1229,6 +1736,21 @@ fetch('http://localhost:3000/api/puntajes')
       'Img/edad_c.png'
     ];
 
+    const imagenes = logosEspecialidades.map(src => {
+      const img = new Image();
+      img.src = src;
+      return img;
+    });
+
+    // Mapear puntajes segun el orden fijo
+    const puntajes = nombres.map(nombre => {
+      const item = data.find(d => normalizar(d.especialidad) === nombre);
+      return item ? item.puntaje : 0;
+    });
+
+    const total = puntajes.reduce((a,b) => a + b, 0);
+    const porcentajes = puntajes.map(p => total > 0 ? ((p/total)*100).toFixed(1) : 0);
+
     const ctx = document.getElementById('graficoEspecialidades').getContext('2d');
 
     new Chart(ctx, {
@@ -1238,10 +1760,7 @@ fetch('http://localhost:3000/api/puntajes')
         datasets: [{
           label: 'Porcentaje',
           data: porcentajes,
-          backgroundColor: [
-            '#808080','#0000FF','#AB2A3E','#03BB85',
-            '#FFFACD','#000080','#008000','#87CEEB'
-          ],
+          backgroundColor: colores,
           borderRadius: 10
         }]
       },
@@ -1249,24 +1768,56 @@ fetch('http://localhost:3000/api/puntajes')
         responsive: true,
         plugins: {
           legend: { display: false },
-          title: { display: true, text: 'Especialidades con más puntajes (%)' }
+          title: { 
+            display: true, 
+            text: 'Especialidades con mas puntajes (%)',
+            color: '#fff'
+          },
+          tooltip: {
+            bodyColor: '#fff',
+            titleColor: '#fff'
+          }
         },
         scales: {
-          y: { beginAtZero: true, max: 100, ticks: { callback: value => value + '%' } }
+          x: {
+            ticks: {
+              callback: function(value, index) {
+                return nombres[index];
+              },
+              color: function(ctx) {
+                return colores[ctx.index];
+              },
+              font: {
+                weight: 'bold'
+              }
+            },
+            grid: { color: 'rgba(255,255,255,0.2)' }
+          },
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: { 
+              color: '#fff',
+              callback: value => value + '%'
+            },
+            grid: { color: 'rgba(255,255,255,0.2)' }
+          }
         }
       },
       plugins: [{
         id: 'logoSobreBarras',
-        afterDatasetsDraw(chart, args, options) {
-          const {ctx, data, chartArea: {top, bottom, left, right}, scales: {x, y}} = chart;
+        afterDatasetsDraw(chart) {
+          const {ctx, scales: {x, y}} = chart;
           chart.data.datasets[0].data.forEach((value, index) => {
             const xPos = x.getPixelForValue(index);
             const yPos = y.getPixelForValue(value);
-            const img = new Image();
-            img.src = logosEspecialidades[index];
-            img.onload = () => {
+            const img = imagenes[index];
+            if (img.complete) {
+              ctx.save();
+              ctx.globalCompositeOperation = 'source-over';
               ctx.drawImage(img, xPos - 25, yPos - 50, 50, 50);
-            };
+              ctx.restore();
+            }
           });
         }
       }]

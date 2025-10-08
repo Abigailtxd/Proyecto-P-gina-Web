@@ -30,7 +30,7 @@
 <style>
   /* Fuerza estilo granate en las otras páginas */
 #lightnav.navbar-default .dropdown-menu {
-  background-color: #AB2A3E !important;
+  background-color: #471c0c !important;
   border-radius: 0 0 2em 2em !important; /* mantiene bordes redondeados */
   max-height: 0;
   opacity: 0;
@@ -43,14 +43,6 @@
   max-height: 500px; /* altura animada */
   opacity: 1;
 }
-
-#institucional-btn {
-  background-color: #AB2A3E !important;
-  color: white !important;
-  border-radius: 2em;
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-
 /* Links dentro del menú */
 #lightnav.navbar-default .dropdown-menu > li > a {
   color: white !important;
@@ -59,22 +51,27 @@
 }
 
 #lightnav.navbar-default .dropdown-menu > li > a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* efecto hover */
+  background-color: #ffd380 !important; /* efecto hover */
+  transition: background-color 0.4s ease, color 0.4s ease;
+  color: #471c0c !important;
 }
-
-  .btn-contacto {
-  border: 2px solid #AB2A3E; /* borde granate */
-  color: #AB2A3E;           /* texto granate */
-  background-color: transparent; 
+.btn-contacto3 {
+  border: 2px solid #471c0c;
+  color: #471c0c; /* quitar !important */
+  background-color: transparent;
   transition: all 0.4s ease;
 }
-
-.btn-contacto:hover {
-  background-color: #AB2A3E; /* fondo granate */
-  border-color: #AB2A3E;     /* borde granate */
-  color: white;              /* texto blanco */
+.btn-contacto3:hover {
+  background-color: #471c0c;
+  border-color: #471c0c;
+  color: #ffd380;
 }
-
+/* Links dentro del menú */
+#lightnav.navbar-default .dropdown-menu > li > a {
+  color: white !important;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
 /* estilo base */
 .dropdown-menu {
   display: block !important;        /* siempre block para poder animar */
@@ -104,8 +101,9 @@
 }
 /* Estado normal */
 .social-buttons .fa-facebook {
-  color: black;              /* color inicial del ícono */
-  border: 3px solid #AB2A3E; /* borde granate */
+  color: #471c0c;              /* color inicial del ícono */
+  border: 4px solid #471c0c; /* borde granate */
+  border-radius: 0.25em;
   padding-top: 10px;
   transition: all 0.3s ease;
   margin-left: -2px; /* mueve hacia la derecha */
@@ -114,9 +112,43 @@
 
 /* Hover */
 .social-buttons .fa-facebook:hover {
-  color: white;              /* ícono blanco */
-  background-color: #AB2A3E; /* fondo granate */
-  border-color: #AB2A3E;     /* borde granate */
+  color: #ffd380;              /* ícono blanco */
+  background-color: #471c0c; /* fondo granate */
+  border-color: #471c0c;     /* borde granate */
+}
+.logo-container {
+  position: relative;
+  width: auto;
+  height: 50px;
+  display: inline-block;
+  margin-top: -12px;
+  margin-left: -100px;
+}
+
+.logo-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  transition: opacity 0.4s ease;
+}
+
+.logo-base {
+  z-index: 1;
+  opacity: 1;
+}
+
+.logo-hovered {
+  z-index: 2;
+  opacity: 0;
+}
+
+.logo-container:hover .logo-hovered {
+  opacity: 1;
+}
+
+.logo-container:hover .logo-base {
+  opacity: 0;
 }
 </style>
 </head>
@@ -127,37 +159,36 @@
 <!-- /.Loader --> 
 
 <!-- Nav -->
-<nav id="lightnav" class="navbar navbar-default navbar-fixed-top" style="background-color: #AB2A3E;">
-  <div class="container"> 
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll text-uppercase pddn-10"><img src="assets/images/themelogo/logo.png" style="margin-top: -12px; margin-left: -100px;" width="auto" height="50" /></a> </div>
-   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-right: -100px;">
-<ul class="nav navbar-nav navbar-right"><!-- Dropdown -->
-	<li class="dropdown" role="presentation"><a href="index.html">Inicio</a> <!-- /.Dropdown --> <!-- Dropdown Services --></li>
-	<li class="dropdown"><a href="espe.html">Especialidades</a></li>
-	<!-- /.Dropdown Portafolio --><!-- Dropdown Team -->
-        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="background-color: #AB2A3E;">Institucional <span class="caret"></span></a>
+<nav class="navbar navbar-default navbar-fixed-top" id="lightnav" style="background-color: #471c0c;">
+<div class="container">
+<div class="navbar-header page-scroll"><button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand page-scroll text-uppercase pddn-10" href="index.html"><div class="logo-container">
+  <img src="assets/images/themelogo/logo3.png" class="logo-base" />
+  <img src="assets/images/themelogo/logo.png" class="logo-hovered" />
+</div>
+</a></div>
 
-		<ul class="dropdown-menu">
-            <li><a href="direccion.html">Dirección General</a></li>
-            <li><a href="admision.html">Admision</a></li>
-            <li><a href="cetna.html">CETNA</a></li>
-            </ul>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-right: -100px;">
+<ul class="nav navbar-nav navbar-right"><!-- Dropdown -->
+	<li class="dropdown" role="presentation"><a href="index.html"><font>Inicio</font></a> <!-- /.Dropdown --> <!-- Dropdown Services --></li>
+	<li class="dropdown"><a href="espe.html">Especialidades</a></li>
+	<!-- /.Dropdown About --><!-- Portafolio -->
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" style="background-color: #471c0c;">Institucional <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="direccion.html">Direcci&oacute;n General</a></li>
+		<li><a href="admision.html">Admision</a></li>
+    <li><a href="Formularios.html">Formularios</a></li>
+	</ul>
 	</li>
 	<!-- /.Dropdown Team --><!-- Dropdown Contact -->
-	<li class="dropdown"><a href="contact2.html"><font color="#ca6624">Contacto</font></a></li>
-	<!-- /.Dropdown Contact --><!-- Dropdown About -->
+	<li class="dropdown"><a href="contact2.html" style="color: #ffd380 !important;">Contacto</a></li>
+	<!-- /.Dropdown Blog --><!-- Dropdown About -->
 	<li class="dropdown"><a href="acerca.html">Acerca de</a></li>
 	<!-- /.Dropdown About -->
 </ul>
 </div>
-    <!-- /.navbar-collapse --> 
-  </div>
-  <!-- /.container --> 
-</nav>
-<!-- /.Navigation --> 
-
+<!-- /.navbar-collapse --></div>
+<!-- /.container --></nav>
+<!-- /.Navigation -->
 <!-- Header -->
 <header id="agency-sm" class="indexbg1">
 	<video autoplay muted loop playsinline class="bgvideo">
@@ -216,7 +247,7 @@
         </div>
         <div class="clearfix"></div>
         <div id="success"></div>
-        <button type="submit" class="btn btn-larger btn-block btn-contacto" style="border-radius: 2em;">Enviar Mensaje</button>
+        <button type="submit" class="btn btn-larger btn-block btn-contacto3" style="border-radius: 2em;">Enviar Mensaje</button>
       </form>
     </div>
     <!-- /.Contact Form -->

@@ -284,15 +284,15 @@ footer ul.quicklinks {margin-bottom: 0;text-transform: uppercase;text-transform:
 footer ul.quicklinks li a {color: #1c1e21}
 footer ul.quicklinks li a:hover, footer ul.quicklinks li a:focus, footer ul.quicklinks li a:active {}
 footer ul.social-buttons {margin-bottom: 0;}
-footer ul.social-buttons li a {display: block;width: 40px;height: 40px;border-radius: 0%;font-size: 20px;line-height: 40px;outline: 0;color: #262626;border: 2px solid #262626;	background-color: transparent;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
+footer ul.social-buttons li a {display: block;width: 40px;height: 40px;border-radius: 0%;font-size: 20px;line-height: 40px;outline: 0;color: #ffd380;border: 2px solid #ffd380;	background-color: transparent;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
 footer ul.social-buttons li a:hover, footer ul.social-buttons li a:focus, footer ul.social-buttons li a:active {background-color: transparent;border: 2px solid #FFF;color: #FFF;}
 
 /*********  
 Social Buttons 
 *********/
 ul.social-buttons {	margin-bottom: 0;}
-ul.social-buttons li a {display: block;width: 40px;height: 40px;border-radius: 0%;font-size: 20px;line-height: 40px;outline: 0;color: #262626;border: 2px solid #262626;background-color: transparent;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
-ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active {background-color: transparent;border: 2px solid #AEA8D3;color: #AEA8D3;}
+ul.social-buttons li a {display: block;width: 40px;height: 40px;border-radius: 0%;font-size: 20px;line-height: 40px;outline: 0;color: #ffd380;border: 2px solid ;background-color: transparent;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
+ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active {background-color: transparent;border: 2px solid #ffd380;color: #AEA8D3;}
 
 /*********  
 Portfolio Modals 
