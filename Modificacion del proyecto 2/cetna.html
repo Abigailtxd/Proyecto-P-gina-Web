@@ -18,9 +18,9 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
-	/* Fuerza estilo granate en las otras páginas */
+  /* Fuerza estilo granate en las otras páginas */
 #lightnav.navbar-default .dropdown-menu {
-  background-color: #AB2A3E !important;
+  background-color: #471c0c !important;
   border-radius: 0 0 2em 2em !important; /* mantiene bordes redondeados */
   max-height: 0;
   opacity: 0;
@@ -34,13 +34,6 @@
   opacity: 1;
 }
 
-#institucional-btn {
-  background-color: #AB2A3E !important;
-  color: white !important;
-  border-radius: 2em;
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-
 /* Links dentro del menú */
 #lightnav.navbar-default .dropdown-menu > li > a {
   color: white !important;
@@ -49,9 +42,34 @@
 }
 
 #lightnav.navbar-default .dropdown-menu > li > a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* efecto hover */
+  background-color: #ffd380; /* efecto hover */
+  transition: background-color 0.4s ease, color 0.4s ease;
+  color: #471c0c !important;
 }
 
+/* Links dentro del menú */
+#lightnav.navbar-default .dropdown-menu > li > a {
+  color: white !important;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+#institucional-btn {
+  background-color: #AB2A3E !important;
+  color: white !important;
+  border-radius: 2em;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.btn-contacto {
+  border: 2px solid #471c0c; /* borde granate */
+  color: #471c0c !important;           /* texto granate */
+  background-color: transparent; 
+  transition: all 0.4s ease;
+}
+.btn-contacto:hover {
+  background-color: #471c0c; /* fondo granate */
+  border-color: #471c0c;
+  color: #ffd380 !important;              /* texto blanco */
+}
 /* estilo base */
 .dropdown-menu {
   display: block !important;        /* siempre block para poder animar */
@@ -129,12 +147,12 @@
 	<li class="dropdown" role="presentation"><a href="index.html"><font>Inicio</font></a> <!-- /.Dropdown --> <!-- Dropdown Services --></li>
 	<li class="dropdown"><a href="espe.html">Especialidades</a></li>
 	<!-- /.Dropdown About --><!-- Portafolio -->
-	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" style="background-color: #471c0c; color: #ffd380;">Institucional <span class="caret"></span></a>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" style="background-color: #471c0c; color: #ffd380 !important;">Institucional <span class="caret"></span></a>
 	<ul class="dropdown-menu">
 		<li><a href="direccion.html">Direcci&oacute;n General</a></li>
 		<li><a href="admision.html">Admision</a></li>
-    <li><a href="cetna.html" style="color: #ffd380 !important;">CETNA</a></li>
-    <li><a href="Formularios.html">Formularios</a></li>
+		<li><a href="cetna.html" style="color: #ffd380 !important;">CETNA</a></li>
+		<li><a href="Formularios.html">Formularios</a></li>
 	</ul>
 	</li>
 	<!-- /.Dropdown Team --><!-- Dropdown Contact -->
