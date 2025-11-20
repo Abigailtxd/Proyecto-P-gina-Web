@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {text-transform: uppercase;font-family: 'Dosis', sans-ser
 img::selection {background: 0 0;}
 img::-moz-selection {background: 0 0;}
 body {webkit-tap-highlight-color: #4AA8D3;}
-h1,.h1{font-size:38px}
+h1,.h1{font-size:48px}
 h2,.h2{font-size:28px}
 h3,.h3{font-size:21px}
 h4,.h4{font-size:16px}
@@ -46,6 +46,7 @@ Backgrounds & Colours
 .bg-darkest-gray {background-color: #222;}
 .bg-dark {background: #1c1e21;}
 .bg-dark-blue {background:#471c0c;color: white;}
+.bg-info{background: #820417;color: white}
 .bg-dark-80 {background-color:rgba(28,30,33,0.8);}
 
 /********* 
@@ -465,7 +466,7 @@ section h2.section-heading {margin-top: 0;margin-bottom: 15px;font-size: 24px;}
 section h3.section-subheading {margin-bottom: 15px;text-transform: none;font-family: 'Dosis', sans-serif;font-size: 16px;font-weight: 400;}
 
 @media(min-width:768px) {
-section {padding: 150px 0;}
+section {padding: 100px 0;}
 section h2.section-heading {margin-top: 0;margin-bottom: 15px;font-size: 28px;}
 }
 

@@ -190,7 +190,7 @@ section h2.section-heading {margin-top: 0;margin-bottom: 15px;font-size: 40px;}
 /*********  
 Section Services 
 *********/
-section#services {background: #f9f9f9}
+section#services { background: #f9f9f9}
 @media(max-width:767px) {
 #services p, h2 {text-align: center}
 }
