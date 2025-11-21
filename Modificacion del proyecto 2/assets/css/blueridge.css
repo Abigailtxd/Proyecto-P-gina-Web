@@ -461,12 +461,12 @@ Header Backgrounds
 /*********  
 Section Global Styles 
 *********/
-section {padding: 100px 0;}
+section {padding: 50px 0;}
 section h2.section-heading {margin-top: 0;margin-bottom: 15px;font-size: 24px;}
 section h3.section-subheading {margin-bottom: 15px;text-transform: none;font-family: 'Dosis', sans-serif;font-size: 16px;font-weight: 400;}
 
 @media(min-width:768px) {
-section {padding: 100px 0;}
+section {padding: 20px 0;}
 section h2.section-heading {margin-top: 0;margin-bottom: 15px;font-size: 28px;}
 }
 

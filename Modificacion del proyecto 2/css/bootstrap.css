@@ -675,6 +675,7 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 0;
 }
 .container:before,
 .container:after {
@@ -710,6 +711,7 @@ pre code {
 .row {
   margin-left: -15px;
   margin-right: -15px;
+  padding-bottom: 10px;
 }
 .row:before,
 .row:after {
